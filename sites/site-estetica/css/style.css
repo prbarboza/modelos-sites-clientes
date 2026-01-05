@@ -450,40 +450,31 @@ ol {
     margin-bottom: 35px;
 }
 
-/* --- AJUSTES PARA CELULAR (MOBILE) --- */
+/* --- CORREÇÃO DEFINITIVA PARA MOBILE --- */
 @media (max-width: 767px) {
-    .hero {
-        /* 1. Troca para a imagem específica do celular */
-        background-image: url('img/hero-mobile.jpg') !important; 
-        background-position: center top !important;
-        background-size: cover !important;
+    .hero.set-bg {
+        /* 1. Força o carregamento da imagem mesmo que o JS falhe */
+        background-image: url('img/hero-bg.jpg') !important; 
         
-        /* 2. Controla a altura para não ficar muito comprida */
-        padding-top: 50px !important;
-        padding-bottom: 40px !important;
-        min-height: 400px !important; 
-        display: flex;
-        align-items: flex-end; /* Empurra o texto para a base da imagem */
+        /* 2. Garante que a secção tenha altura (se estiver 0, a imagem não aparece) */
+        min-height: 500px !important; 
+        height: 60vh !important;
+        
+        /* 3. Posicionamento para não cortar a moça */
+        background-position: 75% center !important; 
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        
+        display: flex !important;
+        align-items: center !important;
     }
 
     .hero__text {
-        background: none !important; /* Limpa os fundos brancos das tentativas anteriores */
-        padding: 20px !important;
-        text-align: left;
-    }
-
-    .hero__text span {
-        font-size: 14px !important;
-        background: none !important;
-        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra leve para leitura */
-    }
-
-    .hero__text h2 {
-        font-size: 24px !important;
-        line-height: 1.3 !important;
-        background: none !important;
-        margin-bottom: 15px;
-        color: #111111;
+        width: 100%;
+        padding: 20px;
+        /* Cria um fundo semi-transparente para o texto não sumir */
+        background: rgba(255, 255, 255, 0.5); 
+        border-radius: 10px;
     }
 }
 /*---------------------
