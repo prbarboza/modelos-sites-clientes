@@ -2862,12 +2862,17 @@ ol {
 	}
 }
 
-/* Ajuste para o banner no Mobile */
+/* Imagem padrão para Computador */
+.hero.set-bg {
+    background-image: url('img/hero-bg.jpg');
+}
+
+/* Troca a imagem apenas no Celular */
 @media (max-width: 767px) {
     .hero.set-bg {
-        background-position: right center !important;
+        background-image: url('img/hero-mobile.jpg') !important;
+        background-position: center center;
         background-size: cover;
-        /* Se a imagem ainda parecer pequena, você pode aumentar a altura mínima */
-        min-height: 500px; 
+        min-height: 600px; /* Ajuste a altura para aparecer bem o rosto */
     }
 }
