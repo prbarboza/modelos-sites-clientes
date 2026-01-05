@@ -420,68 +420,47 @@ ol {
 }
 
 /*---------------------
-  Hero - Corrigido e Responsivo Final
+  Hero - Versão Equilibrada (Foco + Legibilidade)
 -----------------------*/
 
 .hero {
     padding-top: 145px;
     padding-bottom: 215px;
     background-size: cover;
-    background-position: center right; /* Foca na moça no Desktop */
+    background-position: center right;
     display: flex;
     align-items: center;
 }
 
-.hero__text span {
-    font-size: 18px;
-    font-weight: 800;
-    color: #13a2b7;
-    text-transform: uppercase;
-    display: block;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); 
-}
-
-.hero__text h2 {
-    font-size: 48px;
-    color: #111111;
-    font-weight: 700;
-    line-height: 60px;
-    margin-top: 10px;
-    margin-bottom: 35px;
-}
-
-/* --- AJUSTES PARA CELULAR (MOBILE) --- */
+/* --- AJUSTE PARA CELULAR (MOBILE) --- */
 @media (max-width: 767px) {
     .hero {
-        /* Aumentamos o topo para o texto descer e não cobrir os olhos da modelo */
-        padding-top: 260px !important; 
-        padding-bottom: 100px !important;
-        /* Ajusta o foco da imagem para o topo e centro */
-        background-position: center 10% !important; 
+        padding-top: 120px !important; 
+        padding-bottom: 80px !important;
+        /* Voltando para o foco que você gostou (mais afastado) */
+        background-position: 75% center !important; 
+        
+        /* O SEGREDO: Uma camada escura sutil apenas atrás do texto */
+        background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('img/hero-bg.jpg') !important;
     }
 
     .hero__text {
-        /* Adiciona um fundo suave para melhorar o contraste com a pele da modelo */
-        background: rgba(255, 255, 255, 0.6); 
-        padding: 15px;
-        border-radius: 8px;
-        display: inline-block;
-        width: 100%;
+        background: none !important; /* Removemos aquele bloco branco que ficou estranho */
+        padding: 0 15px !important;
     }
 
     .hero__text span {
-        font-size: 15px;
-        background: none; /* Removemos o fundo do span individual para usar no bloco todo */
-        padding: 0;
-        margin-bottom: 5px;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        color: #13a2b7 !important;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8) !important; /* Sombra escura para destacar no fundo claro */
     }
 
     .hero__text h2 {
-        font-size: 28px !important; /* Tamanho reduzido para não ocupar a tela toda */
+        font-size: 28px !important;
         line-height: 36px !important;
-        margin-bottom: 10px;
-        color: #000;
+        color: #ffffff !important; /* Texto branco lê muito melhor sobre fotos no mobile */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.9) !important;
     }
 }
 
