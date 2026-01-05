@@ -2933,3 +2933,16 @@ ol {
 	}
 }
 
+@media (max-width: 767px) {
+    /* Faz a palavra 'Páginas' ignorar cliques e deixar o botão de trás (o que abre) receber o toque */
+    .slicknav_item a {
+        pointer-events: none !important;
+    }
+
+    /* Faz a linha inteira ser o gatilho de abertura */
+    .slicknav_item {
+        cursor: pointer !important;
+        display: block !important;
+        width: 100% !important;
+    }
+}
