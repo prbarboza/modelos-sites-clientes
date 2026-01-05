@@ -2933,3 +2933,22 @@ ol {
 	}
 }
 
+@media (max-width: 768px) {
+
+  .header__menu ul li .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    background: #111111;
+  }
+
+  .header__menu ul li.open .dropdown {
+    display: block;
+  }
+
+  .header__menu ul li a {
+    padding: 12px 15px;
+  }
+}
