@@ -451,12 +451,14 @@ ol {
 }
 
 /* --- AJUSTES PARA CELULAR (MOBILE) --- */
-@media (max-width: 767px) {
-    .hero {
-        padding-top: 80px !important;
-        padding-bottom: 100px !important;
-        background-position: 70% center !important;
-    }
+@media (max-width: 768px) {
+  .hero {
+    background-image: url("../img/hero-bg-mobile.jpg") !important;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
 
     .hero__text span {
         font-size: 14px !important; /* Texto menor */
@@ -485,7 +487,7 @@ ol {
         border-radius: 8px;
         max-width: 90%;
     }
-}
+
 
 /*---------------------
   Consultation
