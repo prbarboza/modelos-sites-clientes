@@ -450,33 +450,43 @@ ol {
     margin-bottom: 35px;
 }
 
-/* --- CORREÇÃO DEFINITIVA PARA MOBILE --- */
+/* --- AJUSTES PARA CELULAR (MOBILE) --- */
 @media (max-width: 767px) {
-    .hero.set-bg {
-        /* 1. Força o carregamento da imagem mesmo que o JS falhe */
-        background-image: url('img/hero-bg.jpg') !important; 
-        
-        /* 2. Garante que a secção tenha altura (se estiver 0, a imagem não aparece) */
-        min-height: 500px !important; 
-        height: 60vh !important;
-        
-        /* 3. Posicionamento para não cortar a moça */
-        background-position: 75% center !important; 
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-        
-        display: flex !important;
-        align-items: center !important;
+    .hero {
+        padding-top: 80px !important;
+        padding-bottom: 100px !important;
+        background-position: 70% center !important;
     }
 
+    .hero__text span {
+        font-size: 14px !important; /* Texto menor */
+        background: rgba(255, 255, 255, 0.7);
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 3px;
+        margin-bottom: 10px; /* Espaço para não encostar no título */
+    }
+
+    .hero__text h2 {
+        font-size: 24px !important; /* Tamanho reduzido para evitar sobreposição */
+        line-height: 1.4 !important; /* Espaçamento maior entre as linhas */
+        margin-bottom: 20px;
+        color: #111111;
+        
+        /* Ajuste para o fundo não sobrepor */
+        display: block; 
+        background: none; /* Removemos o fundo do H2 para evitar o erro visual do print */
+    }
+    
+    /* Criamos uma "caixa" atrás do H2 para garantir leitura sem bugar as linhas */
     .hero__text {
-        width: 100%;
-        padding: 20px;
-        /* Cria um fundo semi-transparente para o texto não sumir */
         background: rgba(255, 255, 255, 0.5); 
-        border-radius: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        max-width: 90%;
     }
 }
+
 /*---------------------
   Consultation
 -----------------------*/
