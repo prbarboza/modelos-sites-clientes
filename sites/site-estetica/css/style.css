@@ -427,17 +427,16 @@ ol {
     padding-top: 145px;
     padding-bottom: 215px;
     background-size: cover;
-    background-position: center right; /* Foca na moça no Desktop */
+    background-position: center right;
 }
 
 .hero__text span {
-    font-size: 18px;             /* Aumentado de 15px para 18px */
-    font-weight: 800;             /* Extra negrito para legibilidade */
+    font-size: 18px;
+    font-weight: 800;
     color: #13a2b7;
     text-transform: uppercase;
     display: block;
-    letter-spacing: 1px;          /* Melhora o visual em caixa alta */
-    /* Sombra bem leve para destacar do fundo branco/claro */
+    letter-spacing: 1px;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); 
 }
 
@@ -453,30 +452,42 @@ ol {
 /* --- CORREÇÃO DEFINITIVA PARA MOBILE --- */
 @media (max-width: 767px) {
     .hero.set-bg {
-        /* 1. Força o carregamento da imagem mesmo que o JS falhe */
-        background-image: url('img/hero-bg.jpg') !important; 
+        /* AQUI ESTÁ A MUDANÇA: Apontando para a imagem de celular */
+        background-image: url('img/hero-mobile.jpg') !important; 
         
-        /* 2. Garante que a secção tenha altura (se estiver 0, a imagem não aparece) */
-        min-height: 500px !important; 
-        height: 60vh !important;
+        min-height: 450px !important; 
+        height: auto !important;
         
-        /* 3. Posicionamento para não cortar a moça */
-        background-position: 75% center !important; 
+        /* Ajuste de posição para a imagem mobile */
+        background-position: center center !important; 
         background-size: cover !important;
         background-repeat: no-repeat !important;
         
         display: flex !important;
         align-items: center !important;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
     }
 
     .hero__text {
         width: 100%;
         padding: 20px;
-        /* Cria um fundo semi-transparente para o texto não sumir */
-        background: rgba(255, 255, 255, 0.5); 
+        background: rgba(255, 255, 255, 0.3); /* Fundo bem sutil */
         border-radius: 10px;
     }
+
+    /* Ajuste do tamanho do título no mobile para não sobrepor */
+    .hero__text h2 {
+        font-size: 26px !important; 
+        line-height: 34px !important;
+        margin-bottom: 15px;
+    }
+    
+    .hero__text span {
+        font-size: 15px !important;
+    }
 }
+
 /*---------------------
   Consultation
 -----------------------*/
