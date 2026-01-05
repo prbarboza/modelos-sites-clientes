@@ -450,11 +450,13 @@ ol {
 /* --- AJUSTES PARA CELULAR (MOBILE) --- */
 @media (max-width: 768px) {
   .hero {
+    min-height: 70vh; /* um pouco mais de impacto */
     background-image: url("../img/hero-mobile.jpg") !important;
     background-position: center top;
     background-size: cover;
   }
 }
+
 
 .hero {
   min-height: 75vh;          /* aumenta o banner verticalmente */
