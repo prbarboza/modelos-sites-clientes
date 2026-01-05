@@ -455,21 +455,30 @@ ol {
     .hero {
         padding-top: 100px;      /* Reduz espaço no mobile */
         padding-bottom: 120px;
-        background-position: 70% center !important; /* Move a moça para o centro da tela do celular */
+        background-position: 70% center !important; /* Mantém o foco que você gostou */
     }
 
     .hero__text span {
         font-size: 16px;
-        background: rgba(255, 255, 255, 0.4); /* Fundo sutil para o texto "saltar" da imagem */
+        background: rgba(255, 255, 255, 0.6); /* Aumentei um pouco a opacidade para 0.6 */
         display: inline-block;
-        padding: 2px 5px;
+        padding: 2px 8px;
         border-radius: 3px;
+        margin-bottom: 5px;
     }
 
     .hero__text h2 {
-        font-size: 32px;         /* Título menor para caber na tela do celular */
-        line-height: 40px;
+        font-size: 28px;         /* Ajustado levemente para não ocupar a tela toda */
+        line-height: 36px;
         margin-bottom: 20px;
+        
+        /* ESTILO IGUAL AO SPAN */
+        background: rgba(255, 255, 255, 0.6); /* Tarja sutil branca */
+        display: inline;                     /* Faz o fundo envolver apenas o texto */
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-decoration-break: clone;         /* Garante que o fundo apareça em todas as linhas */
+        -webkit-box-decoration-break: clone;
     }
 }
 
