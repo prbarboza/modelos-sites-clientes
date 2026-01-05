@@ -2946,3 +2946,19 @@ ol {
         width: 100% !important;
     }
 }
+
+@media (max-width: 767px) {
+    /* Ajusta o tamanho dos itens principais (Início, Sobre, Páginas, etc) */
+    .slicknav_nav a, 
+    .slicknav_item {
+        font-size: 18px !important; /* Aumente ou diminua este valor como desejar */
+        font-weight: 600 !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Ajusta o tamanho apenas dos itens que estão dentro do submenu */
+    .slicknav_nav ul li a {
+        font-size: 16px !important; /* Geralmente submenus ficam melhores um pouco menores */
+        font-weight: 400 !important;
+    }
+}
