@@ -420,29 +420,57 @@ ol {
 }
 
 /*---------------------
-  Hero
+  Hero - Corrigido e Responsivo
 -----------------------*/
 
 .hero {
-	padding-top: 145px;
-	padding-bottom: 215px;
+    padding-top: 145px;
+    padding-bottom: 215px;
+    background-size: cover;
+    background-position: center right; /* Foca na moça no Desktop */
 }
 
 .hero__text span {
-	font-size: 15px;
-	font-weight: 500;
-	color: #13a2b7;
-	text-transform: uppercase;
-	display: block;
+    font-size: 18px;             /* Aumentado de 15px para 18px */
+    font-weight: 800;             /* Extra negrito para legibilidade */
+    color: #13a2b7;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 1px;          /* Melhora o visual em caixa alta */
+    /* Sombra bem leve para destacar do fundo branco/claro */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); 
 }
 
 .hero__text h2 {
-	font-size: 48px;
-	color: #111111;
-	font-weight: 700;
-	line-height: 60px;
-	margin-top: 10px;
-	margin-bottom: 35px;
+    font-size: 48px;
+    color: #111111;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+/* --- AJUSTES PARA CELULAR (MOBILE) --- */
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 100px;      /* Reduz espaço no mobile */
+        padding-bottom: 120px;
+        background-position: 70% center !important; /* Move a moça para o centro da tela do celular */
+    }
+
+    .hero__text span {
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.4); /* Fundo sutil para o texto "saltar" da imagem */
+        display: inline-block;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .hero__text h2 {
+        font-size: 32px;         /* Título menor para caber na tela do celular */
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
 }
 
 /*---------------------
