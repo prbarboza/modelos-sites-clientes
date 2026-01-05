@@ -264,7 +264,7 @@ ol {
 }
 
 .header__top {
-	background: #0c5d69;
+	background: #13a2b7;
 }
 
 .header__top__left {
@@ -1869,7 +1869,7 @@ ol {
 
 .doctor__item__text span {
 	color: #13a2b7;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 500;
 	text-transform: uppercase;
 	display: block;
