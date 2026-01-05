@@ -513,6 +513,7 @@ ol {
 }
 
 
+
 .consultation__form form input {
 	font-size: 15px;
 	color: #666666;
@@ -658,7 +659,7 @@ ol {
 
 @media (max-width: 768px) {
   .consultation__text__item .section-title h2 {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.3;
   }
 }
