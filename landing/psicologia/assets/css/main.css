@@ -907,12 +907,12 @@ section{
   }
 
   .card-slide h2 {
-    font-size: 22px !important; /* título menor no celular */
+    font-size: 24px !important; /* título menor no celular */
     margin-bottom: 12px !important;
   }
 
   .card-slide p {
-    font-size: 14px !important; /* texto menor */
+    font-size: 16px !important; /* texto menor */
     line-height: 1.5 !important;
   }
 
