@@ -112,22 +112,22 @@ section{
 	}	
 }
 
-/* Ajuste do menu quando expandido em mobile */
+/* Navbar em mobile */
 @media (max-width: 767px) {
-  .navbar-default .navbar-collapse {
-    background-color: #fff !important; /* fundo branco */
+  .navbar-default {
+    background-color: #fff; /* fundo branco para contraste */
   }
-  .navbar-default .navbar-collapse .navbar-nav>li>a {
-    color: #8e7cc3 !important; /* texto lilás */
+  .navbar-default .navbar-nav>li>a {
+    color: #8e7cc3; /* texto lilás */
     font-weight: 600;
   }
-  .navbar-default .navbar-collapse .navbar-nav>li>a:hover {
-    background-color: #f2f2f2 !important;
-    color: #6f5aa8 !important;
+  .navbar-default .navbar-nav>.active>a,
+  .navbar-default .navbar-nav>.active>a:focus,
+  .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #f2f2f2; /* leve cinza no hover */
+    color: #6f5aa8; /* lilás mais escuro */
   }
 }
-
-
 
 
 /**********************
@@ -159,53 +159,34 @@ section{
   text-transform: none;
   text-align: center;
   font-size: 48px; /* tamanho base desktop */
-}
-
-.header-title {
   display: inline-block;
   background-color: rgba(255,255,255,0.2); /* leve transparência */
   padding: 10px 20px;
   border-radius: 8px;
 }
 
-
 /* Desktop grande */
 @media (min-width: 1200px) {
   .header-title {
-    font-size: 56px; /* edite aqui */
+    font-size: 56px;
   }
 }
 
 /* Tablets */
 @media (max-width: 991px) {
   .header-title {
-    font-size: 32px; /* edite aqui */
+    font-size: 32px;
   }
 }
 
 /* Celulares */
 @media (max-width: 576px) {
   .header-title {
-    font-size: 20px; /* edite aqui */
+    font-size: 20px;
     line-height: 1.3;
   }
 }
 
-
-/* Tablets */
-@media (max-width: 991px) {
-  .intro h1 {
-    font-size: 60px;
-  }
-}
-
-/* Celulares */
-@media (max-width: 576px) {
-  .intro h1 {
-    font-size: 36px;
-    line-height: 1.3;
-  }
-}
 
 
 
