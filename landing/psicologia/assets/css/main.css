@@ -692,52 +692,6 @@ section{
 }
 
 
-/**********************
-		Contact
-**********************/
-.contact{
-	background-color: #F2EEED;
-	color: #969595;
-}
-.contact-logo{
-	margin-bottom: 30px;
-}
-.contact ul{
-	padding-left: 0;
-}
-.contact ul li{
-	list-style-type: none;
-}
-.contact ul li span{
-	padding-right: 10px;
-}
-.contact ul, .contact p{
-	line-height: 1.7;
-	font-family: 'Roboto';
-}
-.input-group-addon, .form-control{
-	background-color: #fff;
-	border-color: transparent;
-}
-.contact .input-group{
-	padding-bottom: 20px;
-}
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle{
-	border-radius: 0;
-}
-.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle){
-	border-radius: 0;
-}
-.contact button{
-	background-color: #435174;
-	border-radius: 0;
-	color: #fff;
-}
-.contact button{
-	padding: 8px;
-}
-
-
 
 
 
@@ -903,97 +857,6 @@ section{
     display: block;
 }
 
-/* =========================
-   CONTATO – Psicologia
-========================= */
-
-#contact {
-    background-color: #FAF8FC;
-    padding: 100px 0;
-}
-
-/* Título */
-#contact .title-box {
-    margin-bottom: 60px;
-}
-
-#contact .section-subtitle {
-    color: #BEAEE2;
-}
-
-#contact .section-title {
-    color: #000000;
-}
-
-/* Texto e informações */
-#contact p,
-#contact ul li {
-    color: #BEAEE2;
-    opacity: 0.95;
-    line-height: 1.7;
-}
-
-#contact ul {
-    padding: 0;
-    margin-top: 25px;
-}
-
-#contact ul li {
-    list-style: none;
-    margin-bottom: 12px;
-    font-size: 15px;
-}
-
-#contact ul li span {
-    margin-right: 8px;
-    color: #ffffff;
-}
-
-/* Logo */
-.contact-logo {
-    max-width: 160px;
-    margin-bottom: 20px;
-}
-
-/* =========================
-   FORMULÁRIO
-========================= */
-
-/* Estilo da Sessão de Contato */
-.contact {
-    padding: 80px 0;
-    background-color: #ffffff;
-    font-family: 'Lora', serif; /* Aplica a base para a seção toda */
-}
-
-.contact-text {
-    font-family: 'Lora', serif; /* Garante Lora no parágrafo de introdução */
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-/* Itens de Contato com ícones */
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.contact-item i {
-    font-size: 24px;
-    color: #BEAEE2;
-    margin-right: 15px;
-}
-
-.contact-item p {
-    font-family: 'Lora', serif; /* Aplica Lora nos textos ao lado dos ícones */
-    margin: 0;
-    font-size: 16px;
-    color: #444;
-}
-
 /* Estilo do Formulário */
 .custom-form .form-group {
     margin-bottom: 20px;
@@ -1013,40 +876,113 @@ section{
     border-bottom-color: #BEAEE2 !important;
 }
 
-/* Botão de Envio */
+
+/**********************
+   Contact Section
+**********************/
+#contact {
+  background-color: #FAF8FC; /* fundo suave */
+  padding: 80px 0;
+  font-family: 'Lora', serif;
+}
+
+/* Título */
+#contact .title-box {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#contact .section-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+#contact .section-title {
+  color: #222;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Layout dos cards */
+.contact-cards {
+  margin-top: 40px;
+}
+.contact-card {
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 16px #BEAEE2;
+}
+
+/* Card de informações */
+.info-card {
+  background: #BEAEE2; /* lilás forte */
+  color: #000000;
+  font-family: 'Lora', serif;
+}
+.info-card h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.info-card p,
+.info-card .contact-item p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.info-card .contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.info-card .contact-item i {
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Card do formulário */
+.form-card {
+  background: #fff;
+}
+.custom-input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: 'Lora', serif;
+}
+.custom-input:focus {
+  border-color: #BEAEE2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(190,174,226,0.5);
+}
+
+/* Botão */
 .btn-contact {
-    font-family: 'Lora', serif; /* Aplica Lora no texto do botão */
-    background-color: #979696 !important;
-    color: #fff !important;
-    padding: 15px 35px !important;
-    border-radius: 30px !important;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    border: none;
+  background: #BEAEE2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  transition: 0.3s;
+  font-family: 'Lora', serif;
 }
-
-/* Seletor ultra específico para garantir a fonte Lora no texto de acolhimento */
-section#contact .contact-info-block p.contact-text {
-    font-family: 'Lora', serif !important;
-    font-size: 16px !important; /* Aumentei um pouco para melhorar a leitura na fonte Lora */
-    line-height: 1.8 !important;
-    color: #666 !important;
-    margin-bottom: 30px !important;
-    font-style: normal !important;
-}
-
-/* Também garante que o nome "Cris Nuñez" acima dele use a mesma identidade */
-section#contact .contact-info-block h3 {
-    font-family: 'Lora', serif !important;
-    font-weight: 700 !important;
-}
-
 .btn-contact:hover {
-    background-color: #BEAEE2 !important;
-    transform: translateY(-2px);
+  background-color: #9c8bcf;
+  transform: translateY(-2px);
 }
+
+/* Responsivo */
+@media (max-width: 767px) {
+  .info-card, .form-card {
+    margin-bottom: 20px;
+  }
+  .contact-item {
+    justify-content: center;
+  }
+}
+
 
 .subscribe {
     background-color: #f4f1fa !important; /* Lilás bem clarinho para dar destaque suave */
@@ -1098,36 +1034,6 @@ section#contact .contact-info-block h3 {
     background-color: #979696 !important; /* Muda para o seu cinza no hover */
 }
 
-.contact-info-block {
-    padding-right: 60px; /* Cria o espaço entre o texto e o formulário */
-    border-right: 1px solid #f0f0f0; /* Opcional: uma linha bem fina para separar */
-}
-
-@media (max-width: 767px) {
-    /* Remove o recuo que empurra o formulário para fora */
-    .contact-info-block {
-        padding-right: 15px !important; 
-        padding-left: 15px !important;
-        text-align: center;
-    }
-
-    /* Garante que o formulário ocupe a largura correta */
-    #contact .col-sm-6, #contact .col-sm-5 {
-        width: 100% !important;
-        padding: 0 20px !important;
-    }
-}
-
-/* Melhora a legibilidade do parágrafo específico que você mencionou */
-.contact-text {
-    font-family: 'Lora', serif !important;
-    font-size: 17px !important;
-    line-height: 1.8 !important;
-    color: #777 !important;
-    margin-top: 10px;
-    text-align: justify; /* Deixa o bloco de texto mais elegante */
-}
-
 /* Trava de segurança para o scroll horizontal sem quebrar o desktop */
 html, body {
     max-width: 100% !important;
@@ -1159,3 +1065,14 @@ html, body {
         box-sizing: border-box;
     }
 }
+
+.title-box .section-title {
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+}
+.title-box .section-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+

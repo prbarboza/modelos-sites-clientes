@@ -707,69 +707,65 @@
 
         <!-- Contact -->
             <section id="contact" class="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="title-box">
-                    <p class="section-subtitle">Vamos conversar</p>
-                    <h2 class="section-title">Entre em contato</h2>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <p class="section-subtitle">Vamos conversar</p>
+          <h2 class="section-title">Entre em contato</h2>
         </div>
-
-        <div class="row">
-            <div class="col-sm-5">
-                <div class="contact-info-block">
-                    <h3 style="color: #BEAEE2; margin-bottom: 20px;">Cris Nuñez</h3>
-                    <p class="contact-text">
-                        Um espaço de escuta, acolhimento e cuidado emocional. 
-                        Se você sente que é o momento de olhar para si, estou aqui para te ouvir.
-                    </p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="ion-location"></i>
-                            <p>Atendimento Presencial e Online</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="ion-social-whatsapp"></i>
-                            <p>(11) 95555-5555</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="ion-email"></i>
-                            <p>contato@crisnunez.com.br</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-7">
-                <form id="contactForm" class="custom-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control custom-input" type="text" placeholder="Nome" name="name" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control custom-input" name="email" type="email" placeholder="E-mail" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control custom-input" rows="5" placeholder="Como posso te ajudar?" name="message"></textarea>
-                    </div>
-                    <button id="cfsubmit" type="submit" class="btn btn-contact">
-                        Enviar mensagem <i class="ion-paper-airplane"></i>
-                    </button>
-                </form>
-                <div id="contactFormResponse"></div>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="row contact-cards">
+      <!-- Card de informações -->
+      <div class="col-sm-5">
+        <div class="contact-card info-card">
+          <h3>Cris Nuñez</h3>
+          <p>
+            Um espaço de escuta, acolhimento e cuidado emocional.  
+            Se você sente que é o momento de olhar para si, estou aqui para te ouvir.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="ion-location"></i>
+              <p>Atendimento Presencial e Online</p>
+            </div>
+            <div class="contact-item">
+              <i class="ion-social-whatsapp"></i>
+              <p>(11) 95555-5555</p>
+            </div>
+            <div class="contact-item">
+              <i class="ion-email"></i>
+              <p>contato@crisnunez.com.br</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card do formulário -->
+      <div class="col-sm-7">
+        <div class="contact-card form-card">
+          <form id="contactForm" class="custom-form">
+            <div class="row">
+              <div class="col-md-6">
+                <input class="form-control custom-input" type="text" placeholder="Nome" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control custom-input" type="email" placeholder="E-mail" name="email" required>
+              </div>
+            </div>
+            <textarea class="form-control custom-input" rows="5" placeholder="Como posso te ajudar?" name="message"></textarea>
+            <button id="cfsubmit" type="submit" class="btn btn-contact">
+              Enviar mensagem <i class="ion-paper-airplane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-</section>
+
 
 
         <!-- Subscribe -->
