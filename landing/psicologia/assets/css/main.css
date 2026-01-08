@@ -747,7 +747,7 @@ section{
 
 /*Footer*/
 .footer{
-	background-color: #3A4A6A;
+	background-color: rgba(0,0,0,0.3);;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	color: #969595;
@@ -833,18 +833,20 @@ section{
     margin-right: 10px;
 }
 
-/* Container Principal */
 .rotating-card {
     position: relative;
     min-height: 420px; 
-    background: #3a4a6a !important; /* Força o AZUL em todos */
+    background: #1E2340; /* azul escuro translúcido */
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    padding: 40px 30px;
 }
+
+
 
 /* Estilo de cada Slide individual */
 .card-slide {
@@ -872,7 +874,7 @@ section{
 /* FORÇAR TEXTO BRANCO E TAMANHO MAIOR */
 .card-slide h2 {
     color: #ffffff !important; /* Branco puro */
-    font-size: 32px !important; /* Aumentado */
+    font-size: 30px !important; /* Aumentado */
     font-weight: bold !important;
     margin-bottom: 20px !important;
     text-transform: none !important;
@@ -891,6 +893,35 @@ section{
     margin-bottom: 15px !important;
     display: block;
 }
+
+/* AJUSTES PARA CELULAR */
+@media (max-width: 767px) {
+
+  .rotating-card {
+    min-height: 320px; /* reduz altura no mobile */
+    padding: 20px;
+  }
+
+  .card-slide {
+    padding: 20px;
+  }
+
+  .card-slide h2 {
+    font-size: 22px !important; /* título menor no celular */
+    margin-bottom: 12px !important;
+  }
+
+  .card-slide p {
+    font-size: 14px !important; /* texto menor */
+    line-height: 1.5 !important;
+  }
+
+  .slider-icon {
+    font-size: 36px !important; /* ícone menor */
+    margin-bottom: 10px !important;
+  }
+}
+
 
 /* Estilo do Formulário */
 .custom-form .form-group {
