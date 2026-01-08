@@ -439,6 +439,69 @@ section{
 	margin-bottom: -70px;
 }
 
+/**********************
+        Slider
+**********************/
+.slider-1 {
+  text-align: left;
+  background: linear-gradient(135deg, #232946 0%, #1a1f3b 100%);
+  color: #fff;
+  padding: 60px 0;
+}
+
+.slider-1 img {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px #8e7cc3;
+}
+
+.rotating-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-slide {
+  margin-bottom: 40px;
+}
+
+.slider-icon {
+  font-size: 64px;
+  color: #8e7cc3;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.card-slide h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.card-slide p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+  .slider-1 {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .slider-1 img {
+    margin-bottom: 20px;
+  }
+  .card-slide h2 {
+    font-size: 22px;
+  }
+  .card-slide p {
+    font-size: 16px;
+  }
+}
+
 
 /**********************
 		Team
