@@ -1220,13 +1220,29 @@ header img,
 }
 
 @media (max-width: 768px) {
+
+  /* Logo menor */
   header img,
   .navbar img,
   .navbar-brand img,
   .logo img,
   .img-responsive {
-    max-height: 56px !important;
+    max-height: 42px !important;
   }
+
+  /* Altura correta da barra */
+  header,
+  .navbar {
+    min-height: 64px;
+  }
+
+  /* Remove excesso de padding */
+  .navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
 }
+
 
 
