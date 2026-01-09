@@ -501,144 +501,146 @@ section{
 
 
 /**********************
-		Testimonial
+/**********************
+  TESTIMONIAL
 **********************/
 .testimonial {
-    background: #faf8fc;
-    padding: 100px 0;
+  background: #faf8fc;
+  padding: 100px 0;
 }
 
+/* Títulos */
 .section-title {
-    text-align: center;
-    font-size: 32px;
-    color: #030303;
-    margin-bottom: 10px;
+  text-align: center;
+  font-size: 32px;
+  color: #030303;
+  margin-bottom: 10px;
 }
 
 .section-subtitle {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px;
-    color: #8d82a6;
-    font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  color: #8d82a6;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Swiper base */
+.testimonial-swiper {
+  padding-bottom: 60px;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
 }
 
 /* Card */
 .testimonial-card {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(111, 90, 138, 0.08);
-    height: 100%;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(111, 90, 138, 0.08);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(111, 90, 138, 0.12);
 }
 
 /* Texto */
 .testimonial-card p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #5f5f5f;
-    position: relative;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5f5f5f;
+  position: relative;
+  padding-left: 20px;
+  flex-grow: 1;
 }
 
 .testimonial-card p::before {
-    content: "“";
-    font-size: 40px;
-    color: #d8cde6;
-    position: absolute;
-    left: -10px;
-    top: -15px;
+  content: "“";
+  font-size: 48px;
+  color: #d8cde6;
+  position: absolute;
+  left: -22px;
+  top: -28px;
 }
 
 /* Autor */
 .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
 }
 
 .testimonial-author img {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonial-author span {
-    font-size: 13px;
-    color: #9a8fb0;
+  font-size: 14px;
+  color: #9a8fb0;
+  line-height: 1.4;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 70px 0;
+  }
+
+  .testimonial-card {
+    padding: 28px 22px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+  }
+}
+
+/* === ALTURA IGUAL PARA TODOS OS DEPOIMENTOS === */
+
+/* Swiper força altura igual */
+.testimonial-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* Slide ocupa altura total */
+.testimonial-swiper .swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+/* Card ocupa toda a altura do slide */
+.testimonial-card {
+  height: 100%;
+  min-height: 320px; /* ajuste fino aqui */
 }
 
 @media (max-width: 768px) {
-    .testimonial {
-        padding: 70px 0;
-    }
-
-    .testimonial-card {
-        margin-bottom: 30px;
-    }
+  .testimonial-card {
+    min-height: 280px;
+  }
 }
 
-.section-subtitle {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 60px;
-    color: #8d82a6;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-
-/* === REFINO DEPOIMENTOS === */
-
-/* texto do depoimento */
-.testimonial-card p {
-    font-size: 18px;       /* maior */
-    line-height: 1.8;      /* mais respiro */
-    padding-left: 20px;    /* espaço interno */
-}
-
-/* aspas mais afastadas */
-.testimonial-card p::before {
-    left: -22px;           /* afasta da frase */
-    top: -28px;
-    font-size: 48px;       /* um pouco maior */
-}
-
-/* autor mais legível */
-.testimonial-author span {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.testimonial-card {
-    transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(111, 90, 138, 0.12);
-}
-
-/* === CARDS COM ALTURA IGUAL === */
-.testimonial-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonial .row {
-    display: flex;
-    align-items: stretch;
-}
-
-.testimonial-card p {
-    flex-grow: 1;
-}
-
-.testimonial-card {
-    min-height: 260px;
-}
 
 
 /**********************

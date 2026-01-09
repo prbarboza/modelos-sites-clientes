@@ -14,6 +14,8 @@
         <link href="assets/css/owl.carousel.css" rel="stylesheet">
         <link href="assets/css/owl.carousel.theme.min.css" rel="stylesheet">
         <link href="assets/css/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
         
 
         <!--[if lt IE 9]>
@@ -513,54 +515,86 @@
             
         <!-- Testimonial -->
             <section id="testimonial" class="testimonial">
-    <div class="container">
-        <div class="title-box">
-    <p class="section-subtitle">
+  <div class="container">
+
+    <div class="title-box">
+      <p class="section-subtitle">
         Relatos de quem encontrou um espaço de escuta, cuidado e transformação.
-    </p>
-    <h2 class="section-title">Depoimentos</h2>
-</div>
-
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <p>
-                        Me senti acolhida desde o primeiro encontro. Um espaço seguro para falar e me compreender.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="assets/images/testimonial-1.jpg" alt="">
-                        <span>Paciente • Atendimento Online</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <p>
-                        A terapia me ajudou a organizar meus sentimentos e a lidar melhor com minhas emoções.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="assets/images/testimonial-2.jpg" alt="">
-                        <span>Paciente • Psicoterapia Individual</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="testimonial-card">
-                    <p>
-                        Um processo cuidadoso, respeitoso e transformador. Sou muito grata.
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="assets/images/testimonial-3.jpg" alt="">
-                        <span>Paciente • Atendimento Presencial</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </p>
+      <h2 class="section-title">Depoimentos</h2>
     </div>
+
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>
+              Excelente acolhimento. Um espaço seguro para me entender melhor.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-1.jpg" alt="">
+              <span>Paciente • Atendimento Online</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>
+              A terapia me ajudou a lidar com as emoções de forma muito leve.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-2.jpg" alt="">
+              <span>Paciente • Psicoterapia Individual</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>
+              Processo transformador. Sou grata por todo cuidado e respeito.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-3.jpg" alt="">
+              <span>Paciente • Atendimento Presencial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>
+              Profissional ética e atenciosa. Evoluí muito nas nossas sessões.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-1.jpg" alt="">
+              <span>Paciente • Acompanhamento Contínuo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>
+              Encontrei o equilíbrio que precisava para o meu dia a dia. Nota 10.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/testimonial-2.jpg" alt="">
+              <span>Paciente • Qualidade de Vida</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
 </section>
+
 
 
         <!-- FAQ -->
@@ -797,6 +831,28 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper('.testimonial-swiper', {
+  loop: true,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    992: { slidesPerView: 3 }
+  }
+});
+</script>
+
         
 <script>
 document.addEventListener('DOMContentLoaded', function () {
