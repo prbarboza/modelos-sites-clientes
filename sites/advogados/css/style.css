@@ -4704,8 +4704,97 @@ h6 {
   color: #777777 !important;
 }
 
+/* --- SESSÃO SOBRE O ESCRITÓRIO (VÍDEO-SEC) --- */
 
+/* Título Principal ao lado da imagem */
+.video-right h1 {
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin-bottom: 25px !important;
+}
 
+/* Texto descritivo principal */
+.video-right p {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+    color: #555 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Área do autor (Dr. Albuquerque) */
+.author-lacture p {
+    font-size: 16px !important;
+    font-style: italic;
+    color: #666 !important;
+    border-left: 3px solid #f13d80; /* Detalhe lateral para destaque */
+    padding-left: 15px;
+    margin-bottom: 20px !important;
+}
+
+.a-desc h6 {
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    margin-bottom: 2px !important;
+}
+
+.a-desc p {
+    font-size: 14px !important;
+    color: #c59d5f !important; /* Cor dourada para a OAB */
+    margin-bottom: 0 !important;
+}
+
+/* --- AJUSTE DE TEXTOS: SERVIÇOS JURÍDICOS --- */
+
+/* 1. Título principal da sessão de serviços */
+.service-area .main_title h1, 
+.service-area-2 .service-2-left .get-know h1 {
+    font-size: 40px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+}
+
+/* 2. Subtítulo (o parágrafo logo abaixo do título principal) */
+.service-area .main_title p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #ffffff !important;
+}
+
+/* 3. Títulos dentro de cada card (Direito Civil, etc) */
+.single-service .service-details h5 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+    color: #ffffff !important;
+}
+
+/* 4. Descrição dentro de cada card */
+.single-service .service-details p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #ffffff !important;
+}
+
+/* 5. Ajuste para o nome do Advogado na área de serviço (se houver) */
+.service-area-2 .service-2-left .author-title .a-desc h6 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+/* --- AJUSTE RESPONSIVO (MOBILE) --- */
+@media (max-width: 991px) {
+    .service-area .main_title h1,
+    .service-area-2 .service-2-left .get-know h1 {
+        font-size: 30px !important;
+    }
+    
+    .single-service .service-details h5 {
+        font-size: 20px !important;
+    }
+}
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
