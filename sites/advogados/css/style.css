@@ -4691,24 +4691,20 @@ h6 {
   color: #777777 !important;
 }
 
-/* --- AJUSTE DA IMAGEM DA SESSÃO SOBRE NO MOBILE --- */
+/* --- AJUSTE DA IMAGEM DA SESSÃO SOBRE NO MOBILE (NOVA TENTATIVA) --- */
 
 @media (max-width: 991px) {
-  .about-area .col-lg-6 img {
-    width: 92% !important;
-    /* Não ocupa 100% da largura */
-    margin: 0 auto 30px auto;
-    /* Centraliza a imagem e dá espaço para os cards abaixo */
-    display: block;
-    border-radius: 15px;
-    /* Bordas arredondadas para um visual moderno */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    /* Sombra para destacar do fundo */
-  }
-
-  .about-area {
-    padding-top: 50px;
-    /* Dá um respiro no topo da sessão no mobile */
+  /* Alvo: Qualquer imagem dentro da coluna de conteúdo da About Area */
+  .about-area div[class*='col-'] img, 
+  .about-area .about-inner img,
+  .about-img img {
+    width: 90% !important;
+    max-width: 400px !important; /* Evita que fique gigante em tablets */
+    margin: 0 auto 40px auto !important;
+    display: block !important;
+    border-radius: 20px !important;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2) !important;
+    height: auto !important;
   }
 }
 
