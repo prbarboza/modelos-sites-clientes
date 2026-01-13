@@ -1927,7 +1927,7 @@ button:focus {
   margin-bottom: 26px;
 }
 
-/* --- SESSÃO DE COMENTÁRIOS / DEPOIMENTOS --- */
+/* --- SESSÃO DE COMENTÁRIOS / DEPOIMENTOS (VERSÃO FINAL) --- */
 
 .comments-area {
   background: #fafaff;
@@ -1938,39 +1938,44 @@ button:focus {
 
 /* Título "Depoimentos Relevantes" */
 .comments-area h4 {
-  font-size: 22px;
-  /* Aumentado */
-  color: #222;
-  margin-bottom: 35px;
-  font-weight: 600;
+  font-size: 24px !important;
+  /* Aumentado para destaque */
+  color: #222 !important;
+  margin-bottom: 30px !important;
+  font-weight: 700 !important;
 }
 
-/* Nome de quem comentou */
-.comments-area h5 {
-  font-size: 18px;
-  /* Aumentado */
-  margin-bottom: 5px;
+/* Nome de quem comentou (Ricardo, Marcos, Juliana, etc) */
+.comments-area h5,
+.comments-area h5 a {
+  font-size: 19px !important;
+  /* Nome bem visível */
+  margin-bottom: 5px !important;
+  font-weight: 600 !important;
+  color: #222 !important;
 }
 
-/* Profissão (data) */
+/* Profissão/Cargo */
 .comments-area .date {
-  font-size: 14px;
-  color: #c59d5f;
-  /* Cor dourada */
-  margin-bottom: 10px;
+  font-size: 15px !important;
+  color: #c59d5f !important;
+  /* Dourado */
+  margin-bottom: 12px !important;
+  font-weight: 500 !important;
 }
 
-/* O texto do depoimento em si */
+/* O TEXTO DO DEPOIMENTO EM SI */
 .comments-area .comment {
-  font-size: 14px;
-  /* Tamanho ideal para leitura */
-  line-height: 1.6;
-  color: #444;
-  font-style: italic;
+  font-size: 16px !important;
+  /* AGORA SIM: Tamanho grande para leitura fácil */
+  line-height: 1.7 !important;
+  color: #444 !important;
+  font-style: italic !important;
+  margin-top: 10px !important;
 }
 
 .comment-list {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .view_btn {
