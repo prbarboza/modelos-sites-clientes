@@ -4708,7 +4708,7 @@ h6 {
 
 /* Título Principal ao lado da imagem */
 .video-right h1 {
-    font-size: 42px !important;
+    font-size: 38px !important;
     font-weight: 700 !important;
     color: #222 !important;
     margin-bottom: 25px !important;
@@ -4749,7 +4749,7 @@ h6 {
 /* 1. Título principal da sessão de serviços */
 .service-area .main_title h1, 
 .service-area-2 .service-2-left .get-know h1 {
-    font-size: 40px !important;
+    font-size: 38px !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
     margin-bottom: 20px !important;
@@ -4793,6 +4793,121 @@ h6 {
     
     .single-service .service-details h5 {
         font-size: 20px !important;
+    }
+}
+
+/* --- SESSÃO EQUIPE DE ESPECIALISTAS --- */
+
+/* Título principal da sessão */
+.team-area .main_title h2 {
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Subtítulo da sessão */
+.team-area .main_title p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+}
+
+/* Nome do Advogado */
+.author_decs h5 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-top: 10px !important;
+    color: #222 !important;
+}
+
+/* Profissão / Cargo */
+.author_decs p.profession {
+    font-size: 14px !important; /* Aumentado de 14px para 15px */
+    letter-spacing: 1px !important; /* Espaçamento entre letras para elegância */
+    margin-top: 5px !important;
+}
+
+/* --- EFEITO EXTRA NAS FOTOS --- */
+.single_member .author:hover img {
+    transform: scale(1.08); /* Efeito de aproximação suave na foto */
+}
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .team-area .main_title h2 {
+        font-size: 30px !important;
+    }
+    
+    .author_decs h5 {
+        font-size: 20px !important;
+    }
+}
+
+/* --- SESSÃO ARTIGOS JURÍDICOS (BLOG) --- */
+
+/* Título e Subtítulo da Sessão */
+.blog_area .main_title h2 {
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin-bottom: 20px !important;
+}
+
+.blog_area .main_title p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+}
+
+/* Título do Artigo dentro do Card */
+.blog-details h5 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #222 !important;
+    margin: 15px 0 !important;
+    line-height: 1.4 !important;
+    transition: color 0.3s ease;
+}
+
+/* Descrição curta do Artigo */
+.blog-details p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #777 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Data e Autor (Meta dados) */
+.blog-meta span {
+    font-size: 13px !important;
+    color: #f13d80 !important; /* Cor principal do seu tema */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Efeito no Card do Blog ao passar o mouse */
+.single-blog {
+    background: #fff;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+}
+
+.single-blog:hover h5 {
+    color: #f13d80 !important; /* Título muda de cor no hover */
+}
+
+.card-link {
+    text-decoration: none !important; /* Remove sublinhado do link */
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 768px) {
+    .blog_area .main_title h2 {
+        font-size: 30px !important;
+    }
+    .blog-details h5 {
+        font-size: 18px !important;
     }
 }
 /*---------------------------------------------------- */
