@@ -218,12 +218,16 @@ button:focus {
 ============================================================================================ */
 /* Start Buttons Area css
 ============================================================================================ */
+/* --- BOTÃO INVERTIDO (GRADIENTE > BRANCO) --- */
+
 .primary-btn {
   position: relative;
   display: inline-block;
   padding: 0px 38px;
-  color: #222222;
-  background: #fff;
+  /* TROCA 1: O texto agora começa BRANCO */
+  color: #fff !important; 
+  /* TROCA 2: O fundo agora começa com o GRADIENTE */
+  background: linear-gradient(90deg, #f13d80 0%, #f48464 100%) !important;
   font-family: "Raleway", sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -232,13 +236,12 @@ button:focus {
   outline: none !important;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   z-index: 1;
+  border: 1px solid transparent;
 }
 
+/* O "after" agora será o fundo BRANCO que aparece no hover */
 .primary-btn:after {
   position: absolute;
   left: 0;
@@ -247,15 +250,21 @@ button:focus {
   width: 100%;
   border-radius: 5px;
   content: "";
+  /* TROCA 3: Cor de fundo branca para o hover */
+  background: #fff !important; 
   opacity: 0;
   visibility: hidden;
   z-index: -1;
+  transition: all 0.3s ease 0s;
 }
 
+/* HOVER: O texto fica ESCURO ou ROSA */
 .primary-btn:hover {
-  color: #fff;
+  color: #f13d80 !important; 
+  border: 1px solid #f13d80 !important;
 }
 
+/* HOVER: O fundo branco aparece por cima do gradiente */
 .primary-btn:hover:after {
   opacity: 1;
   visibility: visible;
@@ -4646,6 +4655,63 @@ h6 {
   transform: scale(1.02);
   transition: 0.3s;
 }
+
+/* --- INVERSÃO DOS CARDS DE SUCESSO --- */
+
+/* 1. Como o card aparece assim que a página abre (Colorido) */
+.about-area .about-inner .single-success {
+  background: linear-gradient(90deg, #f13d80 0%, #f48464 100%) !important;
+  transition: all 0.4s ease;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+/* 2. Ajuste das cores dos textos para aparecerem no fundo colorido */
+.about-area .about-inner .single-success h5,
+.about-area .about-inner .single-success p {
+  color: #ffffff !important;
+  transition: all 0.4s ease;
+}
+
+/* 3. EFEITO HOVER (Ao passar o mouse, ele fica neutro/claro) */
+.about-area .about-inner .single-success:hover {
+  background: #f9f9ff !important;
+  /* Cor de fundo clara */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+}
+
+/* 4. Ajuste das cores dos textos no Hover (para ficarem escuros) */
+.about-area .about-inner .single-success:hover h5 {
+  color: #222222 !important;
+}
+
+.about-area .about-inner .single-success:hover p {
+  color: #777777 !important;
+}
+
+/* --- AJUSTE DA IMAGEM DA SESSÃO SOBRE NO MOBILE --- */
+
+@media (max-width: 991px) {
+  .about-area .col-lg-6 img {
+    width: 92% !important;
+    /* Não ocupa 100% da largura */
+    margin: 0 auto 30px auto;
+    /* Centraliza a imagem e dá espaço para os cards abaixo */
+    display: block;
+    border-radius: 15px;
+    /* Bordas arredondadas para um visual moderno */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    /* Sombra para destacar do fundo */
+  }
+
+  .about-area {
+    padding-top: 50px;
+    /* Dá um respiro no topo da sessão no mobile */
+  }
+}
+
 
 /*---------------------------------------------------- */
 
