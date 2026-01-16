@@ -1,0 +1,131 @@
+============NOME DO SITE=============
+
+Registro = NORONHALOCAL.COM.BR
+
+=========BANNER PRINCIPAL===========
+
+/* Customização Noronha Local */
+
+<h1>Viva a essência de <span>Noronha Local</span></h1>
+<p>Trilhas, lanchas e aventuras inesquecíveis no paraíso.</p>
+
+
+=========CORES==========
+
+BARRA TOPO #4B9391
+AMARELO #FDE02F
+
+
+
+
+==========CODIGO PARA NÃO PISCAR=============
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #ffffff !important;
+    top: 0 !important;
+}
+
+/* Mantém o alinhamento correto dos itens na direita */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+.ftco-navbar-light {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ftco-navbar-light {
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+$font_1 :'Barlow Condensed', sans-serif;
+$font_2 :'Roboto', sans-serif;
+$font_3 :'Satisfy', cursive;
+
+$heading_color2: #0b1c39; // Um azul marinho profundo
+$white_color: #fff;
+$noronha_blue: #00A896; // Sugestão: adicione esta cor (Verde Água)
+
+<div class="hero__caption">
+    <h1>Explore o melhor de <span>Noronha Local</span></h1>
+    <p>Passeios de lancha, trilhas guiadas e bikes aquáticas no paraíso.</p>
+</div>
+sessão
+
+<section class="ftco-section services-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-guarantee"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Best Price Guarantee</h3>
+                <p>A small river named Duden flows by their place and supplies.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-like"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Travellers Love Us</h3>
+                <p>A small river named Duden flows by their place and supplies.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-detective"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Best Travel Agent</h3>
+                <p>A small river named Duden flows by their place and supplies.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block text-center">
+              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-support"></span></div></div>
+              <div class="media-body p-2 mt-2">
+                <h3 class="heading mb-3">Our Dedicated Support</h3>
+                <p>A small river named Duden flows by their place and supplies.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
+    
+	
+	/* Estilização da Sessão de Serviços (Vinda do Noronha Local) */
+.services-section {
+    padding: 70px 0;
+    background: #f8f9fa; /* bg-light */
+}
+
+.services .icon {
+    line-height: 1.3;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 0;
+}
+
+.services .icon span {
+    font-size: 60px;
+    color: #fde02f; /* Cor amarela do seu tema */
+}
+
+.services .media-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services .media-body p {
+    color: #666;
+}
