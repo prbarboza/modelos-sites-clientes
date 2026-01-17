@@ -14532,15 +14532,25 @@ ou, em último caso:
   font-size: 24px;
 }
 
-/* Ícone do Open Iconic no estado inicial */
+/* Estado inicial (navbar clara ou transparente) */
+.ftco-navbar-light:not(.scrolled) .navbar-toggler,
 .ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
-  color: #000; /* preto para aparecer em fundo claro */
+  color: #000 !important; /* preto para aparecer em fundo claro */
 }
 
+/* Estado rolado (navbar escura) */
+.ftco-navbar-light.scrolled .navbar-toggler,
+.ftco-navbar-light.scrolled .navbar-toggler .oi {
+  color: #fff !important; /* branco para aparecer em fundo escuro */
+}
 
-.ftco-navbar-light:not(.scrolled) .navbar-toggler {
-  color: #000; /* texto preto */
+/* Garante visibilidade */
+.ftco-navbar-light .navbar-toggler {
+  opacity: 1 !important;
 }
-.ftco-navbar-light.scrolled .navbar-toggler {
-  color: #fff; /* texto branco quando fundo escuro */
+
+/* Ajusta tamanho do ícone sem mexer no layout */
+.ftco-navbar-light .navbar-toggler .oi {
+  font-size: 1.2rem;
 }
+
