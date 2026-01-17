@@ -10684,12 +10684,6 @@ h5,
   font-size: 20px;
 }
 
-.hero-wrap {
-  width: 100%;
-  height: 670px;
-  position: relative;
-}
-
 
 .hero-wrap .overlay {
   position: absolute;
@@ -14475,27 +14469,6 @@ ou, em último caso:
 }
 
 /* =========================
-   HERO – MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .hero-wrap {
-    height: auto;     /* remove 670px */
-    min-height: 90vh; /* controla altura no mobile */
-  }
-
-  .hero-title {
-    font-size: 26px;  /* <<< AQUI você ajusta */
-    line-height: 1.15;
-  }
-
-  .hero-subtitle {
-    font-size: 14px;  /* <<< AQUI você ajusta */
-  }
-}
-
-/* =========================
    HERO – AJUSTES MOBILE
 ========================= */
 
@@ -14573,6 +14546,29 @@ body {
 }
 
 /* HERO – MOBILE (FTCO OVERRIDE) */
+@media (max-width: 768px) {
+  .hero-wrap {
+    min-height: 90vh !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+}
+
+/* HERO – FINAL */
+.hero-wrap {
+  background-image: url('../images/banner-home.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .hero-wrap {
     min-height: 90vh !important;
