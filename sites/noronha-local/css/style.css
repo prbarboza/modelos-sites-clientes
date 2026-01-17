@@ -6951,7 +6951,7 @@ a.bg-light:hover,
 a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
-  background-color: #dae0e5 !important;
+  background-color: #f90808 !important;
 }
 
 .bg-dark {
@@ -14522,39 +14522,3 @@ ou, em último caso:
   }
 }
 
-.navbar-brand {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-}
-
-
-
-.ftco-navbar-light, .ftco-navbar-light.scrolled {
-  background: #ffffff !important;
-}
-
-@media (max-width: 991.98px) {
-  .ftco-navbar-light {
-    background: #000000 !important;
-    position: relative;
-  }
-}
-
-.fa-bars {
-  color: #000;   /* preto para aparecer em fundo claro */
-  font-size: 24px;
-}
-
-.navbar-toggler-icon {
-  background-image: none; /* remove default */
-  color: #000;            /* força cor visível */
-  font-size: 24px;        /* aumenta tamanho */
-}
-
-.fa-bars {
-  color: #333;
-}
-
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
