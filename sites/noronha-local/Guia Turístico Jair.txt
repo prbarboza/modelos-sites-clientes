@@ -198,21 +198,38 @@ MUDA A COR DA BARRA DO TOPO NO DESKTOP
 
 CONTROLA A ALTURA DOS BANNERS
 
-.ftco-vh-100 {
-  min-height: 100vh;
+/* ===============================
+   HERO / BANNER – FINAL ÚNICO
+   =============================== */
+
+.hero-wrap {
+  /* IMAGEM */
+  background-image: url('../images/banner-home.jpg'); /* ajuste o caminho se necessário */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* ALTURA */
+  min-height: 95vh;          /* DESKTOP – AQUI você controla */
   height: auto;
+
+  /* LAYOUT */
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-.ftco-vh-75 {
-  min-height: 75vh;
-  height: auto;
+/* OVERLAY */
+.hero-wrap .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 1199.98px) {
-  .ftco-vh-100,
-  .ftco-vh-75 {
-    min-height: 85vh;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-wrap {
+    min-height: 90vh;        /* MOBILE – AQUI você controla */
   }
 }

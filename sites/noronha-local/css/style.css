@@ -14572,9 +14572,13 @@ body {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* MOBILE */
+/* HERO – MOBILE (FTCO OVERRIDE) */
 @media (max-width: 768px) {
   .hero-wrap {
-    min-height: 90vh;        /* MOBILE – AQUI você controla */
+    min-height: 90vh !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
   }
 }
