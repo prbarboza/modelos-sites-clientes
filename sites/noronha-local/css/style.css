@@ -14515,6 +14515,8 @@ ou, em último caso:
   }
 }
 
-.navbar-brand img {
-  display: block;
+.navbar-brand {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
+
