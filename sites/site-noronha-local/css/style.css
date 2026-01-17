@@ -14411,7 +14411,7 @@ ou, em último caso:
     visibility: visible;
     transform: none;
     box-shadow: none;
-    background: transparent;
+    background: #000000;
     padding-left: 15px;
   }
 
