@@ -14487,3 +14487,30 @@ ou, em último caso:
     font-size: 14px;  /* <<< AQUI você ajusta */
   }
 }
+
+/* =========================
+   HERO – AJUSTES MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* 1. "O MELHOR DE" */
+  .slider-text h1 {
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
+  }
+
+  /* 2. "Noronha Local" – Satisfy */
+  .slider-text h1 span {
+    font-size: 48px !important;   /* <<< aqui resolve o problema */
+    background-size: 100% 18% !important;
+    padding-bottom: 12px !important;
+    margin-top: 0 !important;
+  }
+
+  /* 3. Texto descritivo */
+  .slider-text p {
+    font-size: 15px !important;
+    margin-top: 16px !important;
+  }
+}
