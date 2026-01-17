@@ -14609,3 +14609,26 @@ body {
     background: #ffffff !important;     /* cor ao rolar no mobile */
   }
 }
+
+/* Espaçamento entre os cards */
+.nl-services .row {
+  gap: 30px;
+}
+
+/* Ajuste de largura para compensar o gap */
+.nl-services .col-md-3 {
+  flex: 0 0 calc(25% - 30px);
+  max-width: calc(25% - 30px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nl-services .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .nl-services .row {
+    gap: 20px;
+  }
+}
