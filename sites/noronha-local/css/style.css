@@ -14527,12 +14527,7 @@ ou, em último caso:
   padding-bottom: 0.6rem;
 }
 
-.ftco-navbar-light:not(.scrolled) {
-  background: transparent !important;
-  position: absolute;
-  top: 8px !important;
-  z-index: 3;
-}
+
 
 .ftco-navbar-light, .ftco-navbar-light.scrolled {
   background: #ffffff !important;
