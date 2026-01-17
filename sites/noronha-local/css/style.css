@@ -14469,9 +14469,12 @@ ou, em último caso:
   min-height: 85vh;
 }
 
-/* Mobile */
+/* ===== HERO BANNER – CONTROLE MOBILE ===== */
+
 @media (max-width: 768px) {
   .hero-wrap {
-    min-height: 55vh; /* <<< diminui só no mobile */
+    height: auto;     /* remove o 670px no mobile */
+    min-height: 50vh; /* controla a altura no mobile */
   }
 }
+
