@@ -13430,7 +13430,13 @@ textarea.form-control {
     transition: none !important;
 }
 
-
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
 
 /* 2. Mantém o menu na direita e com letras brancas */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
