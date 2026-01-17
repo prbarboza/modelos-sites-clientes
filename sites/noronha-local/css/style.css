@@ -14531,3 +14531,9 @@ ou, em último caso:
   color: #000;   /* preto para aparecer em fundo claro */
   font-size: 24px;
 }
+
+.navbar-toggler .fa-bars {
+  margin: 0 auto;       /* centraliza dentro do botão */
+  display: block;       /* força alinhamento */
+  font-size: 24px;      /* tamanho dos tracinhos */
+}
