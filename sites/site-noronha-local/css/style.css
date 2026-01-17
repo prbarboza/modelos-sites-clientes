@@ -14137,11 +14137,11 @@ ou, em último caso:
 .hero-cta {
   display: inline-block;
   margin-top: 24px;
-  padding: 14px 34px;
+  padding: 14px 28px;       /* padding mais equilibrado */
   background: #25d366;
   color: #fff;
   border: 1px solid #fff;
-  font-size: 16px;
+  font-size: 18px;          /* aumenta a fonte */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -14150,16 +14150,17 @@ ou, em último caso:
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: all 0.25s ease;
   text-align: center;
+  white-space: nowrap;      /* impede quebra de linha */
 }
 
-/* Ajuste para mobile */
+/* Ajuste no mobile */
 @media (max-width: 767.98px) {
   .hero-cta {
-    display: block;        /* ocupa só o espaço necessário */
-    margin: 20px auto;     /* centraliza horizontalmente */
-    padding: 12px 20px;    /* reduz largura */
-    font-size: 14px;       /* fonte menor */
-    max-width: 250px;      /* limita largura máxima */
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;     /* reduz largura */
+    font-size: 16px;        /* fonte proporcional */
+    max-width: 280px;       /* limita largura máxima */
   }
 }
 
