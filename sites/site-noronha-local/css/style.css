@@ -13490,11 +13490,32 @@ textarea.form-control {
   font-weight: 500;
 }
 
+/* Cor padrão */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  color: #FFFFFF !important; /* cor normal */
+}
+
 /* Hover e ativo */
 .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-  color: #0083B8 !important;
+  color: #0083B8 !important; /* cor ao passar o mouse ou ativo */
 }
+
+/* Estado NORMAL (barra transparente, fonte branca) */
+.ftco-navbar-light:not(.scrolled) .navbar-nav > .nav-item > .nav-link {
+  color: #ffffff !important; /* fonte branca */
+}
+
+/* Estado SCROLLED (barra branca, fonte preta) */
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+  color: #0083B8 !important; /* fonte preta */
+}
+
+/* Hover em qualquer estado */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  color: #0083B8 !important; /* azul no hover, por exemplo */
+}
+
 
 .navbar-brand img {
   height: 50px;       /* ideal para desktop */
@@ -14585,6 +14606,6 @@ body {
   }
 
   .ftco-navbar-light.scrolled {
-    background: #ff0000 !important;     /* cor ao rolar no mobile */
+    background: #ffffff !important;     /* cor ao rolar no mobile */
   }
 }

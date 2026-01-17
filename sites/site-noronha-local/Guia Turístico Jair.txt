@@ -107,34 +107,70 @@ ALTERAR A POSIÇÃO DA LOGO
 
 
 ==============ALTERAR BARRA MENU===================
-/* 1. Cor principal da barra (Substituindo o #000000) */
-.ftco-navbar-light, 
-.ftco-navbar-light.scrolled,
-.ftco_navbar {
-    background: #ffffff !important; /* Cor Azul Profundo */
-    top: 0 !important;
-    transition: none !important;
+/* HERO – MOBILE (FTCO OVERRIDE) */
+@media (max-width: 768px) {
+  .hero-wrap {
+    min-height: 90vh !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
 }
 
-.ftco-navbar-light {
-  transition: opacity 0.3s ease;
+/* HERO – FINAL */
+.hero-wrap {
+  background-image: url('../images/banner-home.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-/* 1. Cor principal da barra (Substituindo o #000000) */
-.ftco-navbar-light, 
-.ftco-navbar-light.scrolled,
-.ftco_navbar {
-    background: #ffffff !important; /* Cor Azul Profundo */
-    top: 0 !important;
-    transition: none !important;
+@media (max-width: 991.98px) {
+  .ftco-navbar-light:not(.scrolled) {
+    background: #000000 !important; /* cor no topo no mobile */
+  }
+
+  .ftco-navbar-light.scrolled {
+    background: #ffffff !important;     /* cor ao rolar no mobile */
+  }
 }
 
-/* 2. Estado NORMAL da navbar (antes do scroll) */
-.ftco-navbar-light:not(.scrolled) {
-    position: absolute;
-    top: 8px !important;
-    z-index: 999;
+=============ALTERA AS FONTES DO MENU=============
+
+/* Cor padrão */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  color: #000000 !important; /* cor normal */
 }
+
+/* Hover e ativo */
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  color: #0083B8 !important; /* cor ao passar o mouse ou ativo */
+}
+
+/* Estado NORMAL (barra transparente, fonte branca) */
+.ftco-navbar-light:not(.scrolled) .navbar-nav > .nav-item > .nav-link {
+  color: #ffffff !important; /* fonte branca */
+}
+
+/* Estado SCROLLED (barra branca, fonte preta) */
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link {
+  color: #000000 !important; /* fonte preta */
+}
+
+/* Hover em qualquer estado */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  color: #0083B8 !important; /* azul no hover, por exemplo */
+}
+
+
+=================================================================
 
 /* 2. Mantém o menu na direita e com letras brancas */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
