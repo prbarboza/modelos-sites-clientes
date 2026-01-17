@@ -14153,15 +14153,19 @@ ou, em último caso:
   white-space: nowrap;      /* impede quebra de linha */
 }
 
-/* Ajuste no mobile */
 @media (max-width: 767.98px) {
   .hero-cta {
     display: flex;
-    margin-top: 50px auto;
-    padding: 12px 24px;     /* reduz largura */
-    font-size: 16px;        /* fonte proporcional */
-    max-width: 280px;       /* limita largura máxima */
-    line-height: 1.2; /* centraliza melhor o texto */
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;   /* aumenta espaço acima do botão */
+    margin-left: auto;  /* centraliza horizontalmente */
+    margin-right: auto; /* centraliza horizontalmente */
+    padding: 12px 24px;
+    font-size: 16px;
+    max-width: 280px;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
@@ -14739,28 +14743,3 @@ body {
   .hero-wrap.hero-passeios p { font-size: 16px !important; }
 }
 
-/* ===== Overlay menu mobile ===== */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 998;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-/* Overlay ativo */
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Garante menu acima do overlay */
-.ftco-navbar-light {
-  position: relative;
-  z-index: 999;
-}
