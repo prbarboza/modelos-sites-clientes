@@ -14558,16 +14558,17 @@ body {
 
 /* HERO – FINAL */
 .hero-wrap {
-  background-image: url('../images/banner-home.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('../images/banner-home.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 
   min-height: 95vh;
   display: flex;
   align-items: center;
   position: relative;
 }
+
 
 @media (max-width: 768px) {
   .hero-wrap {
