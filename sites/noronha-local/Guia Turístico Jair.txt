@@ -74,6 +74,15 @@ CODIGO PARA ALTERAR OS EXTOS DO BANNER
 /* 2. O Texto "Noronha Local" (Proteção da Satisfy) */
 
 BRAND para altera o tamanho da logo
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+
 
 ALTERAR BARRA MENU
 /* 1. Cor principal da barra (Substituindo o #000000) */

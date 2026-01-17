@@ -13430,6 +13430,33 @@ textarea.form-control {
     transition: none !important;
 }
 
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+/* 3. Hamburger visível no estado NORMAL */
+.ftco-navbar-light:not(.scrolled) .navbar-toggler {
+    border-color: rgba(255,255,255,0.7);
+}
+
+.ftco-navbar-light:not(.scrolled) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* 4. Hamburger no estado SCROLLED */
+.ftco-navbar-light.scrolled .navbar-toggler {
+    border-color: rgba(0,0,0,0.4);
+}
+
+.ftco-navbar-light.scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
 /* 2. Mantém o menu na direita e com letras brancas */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     color: rgba(255,255,255,0.8) !important;
@@ -13508,7 +13535,7 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .navbar-brand img {
-    height: 45px;
+    height: 48px;
   }
 }
 
@@ -14527,4 +14554,13 @@ ou, em último caso:
 
 .ftco-navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* FORÇA HAMBURGER VISÍVEL SEM MEXER NA BARRA */
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.8) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
