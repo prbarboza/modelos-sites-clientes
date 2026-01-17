@@ -1,0 +1,253 @@
+============NOME DO SITE=============
+
+Registro = NORONHALOCAL.COM.BR
+
+=========BANNER PRINCIPAL===========
+
+/* Customização Noronha Local */
+
+<h1>Viva a essência de <span>Noronha Local</span></h1>
+<p>Trilhas, lanchas e aventuras inesquecíveis no paraíso.</p>
+
+
+=========CORES==========
+
+BARRA TOPO #4B9391
+AMARELO #FDE02F
+AZUL #0083B8
+
+
+
+
+==========CODIGO PARA NÃO PISCAR=============
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #ffffff !important;
+    top: 0 !important;
+}
+
+/* Mantém o alinhamento correto dos itens na direita */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+.ftco-navbar-light {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ftco-navbar-light {
+  transition: opacity 0.3s ease;
+}
+
+	
+	/* Estilização da Sessão de Serviços (Vinda do Noronha Local) */
+.services-section {
+    padding: 70px 0;
+    background: #f8f9fa; /* bg-light */
+}
+
+.services .icon {
+    line-height: 1.3;
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 0;
+}
+
+.services .icon span {
+    font-size: 60px;
+    color: #fde02f; /* Cor amarela do seu tema */
+}
+
+.services .media-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.services .media-body p {
+    color: #666;
+}
+
+CODIGO PARA ALTERAR OS EXTOS DO BANNER
+/* 2. O Texto "Noronha Local" (Proteção da Satisfy) */
+
+BRAND para altera o tamanho da logo
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+
+
+ALTERAR A POSIÇÃO DA LOGO
+
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+.navbar-brand img {
+  height: 50px;       /* ideal para desktop */
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+}
+
+
+==============ALTERAR BARRA MENU===================
+/* 1. Cor principal da barra (Substituindo o #000000) */
+.ftco-navbar-light, 
+.ftco-navbar-light.scrolled,
+.ftco_navbar {
+    background: #ffffff !important; /* Cor Azul Profundo */
+    top: 0 !important;
+    transition: none !important;
+}
+
+.ftco-navbar-light {
+  transition: opacity 0.3s ease;
+}
+
+/* 1. Cor principal da barra (Substituindo o #000000) */
+.ftco-navbar-light, 
+.ftco-navbar-light.scrolled,
+.ftco_navbar {
+    background: #ffffff !important; /* Cor Azul Profundo */
+    top: 0 !important;
+    transition: none !important;
+}
+
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+/* 2. Mantém o menu na direita e com letras brancas */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+/* 3. Cor amarela APENAS no texto do link (evita o bloco amarelo) */
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+    color: #FDE02F !important;
+    background: transparent !important; /* Garante que não crie bloco de cor */
+}
+
+/* 2. Ajuste do botão CTA para contrastar com o novo fundo */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link {
+    background: #0083B8 !important; /* Mantemos o amarelo ouro */
+    border: 1px solid #0083B8 !important;
+    color: #0a2b38 !important; /* Texto em azul escuro para ler melhor no amarelo */
+    font-weight: 700;
+}
+
+/* Hover real do botão CTA */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link:hover {
+    background: #0083B8 !important; /* Amarelo mais escuro */
+    border-color: #ffffff !important;
+    color: #0a2b38 !important;
+}
+
+
+/* Garante que o nome da marca (Noronha Local) seja visível e branco */
+.navbar-brand {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Força a cor branca mesmo quando o rato passa por cima (hover) */
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #FDE02F !important; /* Muda para amarelo no hover para dar um efeito legal */
+}
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #ffffff !important; /* Cor da barra Hover Topo */
+    top: 0 !important;
+}
+
+/* Mantém o alinhamento correto dos itens na direita */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+==========MUDA A COR DA BARRA DO TOPO NO DESKTOP================
+
+/* Estado NORMAL da navbar (topo da página) */
+.ftco-navbar-light:not(.scrolled) {
+  background: transparent !important;   /* transparente no topo */
+  position: absolute;
+  top: 0 !important;                     /* cola no topo */
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+/* Estado SCROLLED da navbar (após rolar) */
+.ftco-navbar-light.scrolled {
+  background: #ffffff !important;        /* fundo branco ao rolar */
+  transition: background 0.3s ease;
+}
+
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #000000 !important; /* Cor da barra Hover Topo */
+    top: 0 !important;
+}
+
+=============MUDAR A COR DA BARRA NO MOBILE================
+
+CONTROLA A ALTURA DOS BANNERS
+
+/* ===============================
+   HERO / BANNER – FINAL ÚNICO
+   =============================== */
+
+.hero-wrap {
+  /* IMAGEM */
+  background-image: url('../images/banner-home.jpg'); /* ajuste o caminho se necessário */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* ALTURA */
+  min-height: 95vh;          /* DESKTOP – AQUI você controla */
+  height: auto;
+
+  /* LAYOUT */
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* OVERLAY */
+.hero-wrap .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-wrap {
+    min-height: 90vh;        /* MOBILE – AQUI você controla */
+  }
+}
