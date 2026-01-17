@@ -1098,5 +1098,29 @@ function sendToWhatsAppBoat(button) {
 }
 </script>
 
+<script>
+document.addEventListener('click', function (event) {
+
+  const navbar = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+
+  if (!navbar || !toggler) return;
+
+  const isClickInsideMenu = navbar.contains(event.target);
+  const isClickOnToggler = toggler.contains(event.target);
+
+  // se menu estiver aberto e clicou fora
+  if (
+    navbar.classList.contains('show') &&
+    !isClickInsideMenu &&
+    !isClickOnToggler
+  ) {
+    toggler.click();
+  }
+
+});
+</script>
+
+
 
 </html>
