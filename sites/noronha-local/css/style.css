@@ -10509,7 +10509,7 @@ h5,
 
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
   border: none;
-  background: #fff;
+  background: red;
   -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
@@ -10626,7 +10626,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light.scrolled .navbar-nav {
-    background: red;
+    background: none;
     border-radius: 0px;
     padding-left: 0rem !important;
     padding-right: 0rem !important;
@@ -10635,7 +10635,7 @@ h5,
 
 @media (max-width: 767.98px) {
   .ftco-navbar-light.scrolled .navbar-nav {
-    background: red;
+    background: none;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
