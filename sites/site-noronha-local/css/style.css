@@ -13518,7 +13518,7 @@ textarea.form-control {
 
 
 .navbar-brand img {
-  height: 50px;       /* ideal para desktop */
+  height: 55px;       /* ideal para desktop */
   width: auto;
 }
 
@@ -14692,3 +14692,37 @@ body {
     white-space: nowrap;
   }
 }
+
+.hero-wrap.hero-passeios h1 {
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  line-height: 1.1 !important;
+  margin-bottom: 15px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.hero-wrap.hero-passeios h1 span {
+  font-family: 'Satisfy', cursive !important;
+  color: #FDE02F !important;
+  font-size: 100px !important;
+  display: inline-block !important;
+  margin-top: 10px !important;
+}
+
+.hero-wrap.hero-passeios p {
+  font-size: 22px !important;
+  color: #f8f9fa !important;
+  max-width: 400px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 30px !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5) !important;
+}
+
+@media (max-width: 767.98px) {
+  .hero-wrap.hero-passeios h1 { font-size: 18px !important; }
+  .hero-wrap.hero-passeios h1 span { font-size: 28px !important; }
+  .hero-wrap.hero-passeios p { font-size: 14px !important; }
+}
+
