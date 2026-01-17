@@ -14550,3 +14550,12 @@ ou, em último caso:
   font-size: 24px;
 }
 
+.navbar-toggler-icon {
+  background-image: none; /* remove default */
+  color: #000;            /* força cor visível */
+  font-size: 24px;        /* aumenta tamanho */
+}
+
+.fa-bars {
+  color: #333;
+}
