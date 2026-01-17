@@ -14505,7 +14505,7 @@ ou, em último caso:
 
 /* Estado SCROLLED (desktop e mobile) */
 .ftco-navbar-light.scrolled {
-  background: #000000!important;     /* cor ao rolar */
+  background: #ffffff !important;     /* cor ao rolar */
   top: 0 !important;
 }
 
@@ -14579,3 +14579,12 @@ body {
   position: relative;
 }
 
+@media (max-width: 991.98px) {
+  .ftco-navbar-light:not(.scrolled) {
+    background: #000000 !important; /* cor no topo no mobile */
+  }
+
+  .ftco-navbar-light.scrolled {
+    background: #ff0000 !important;     /* cor ao rolar no mobile */
+  }
+}
