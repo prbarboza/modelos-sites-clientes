@@ -11623,30 +11623,24 @@ textarea.form-control {
 }
 
 .ftco-vh-100 {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+}
+
+.ftco-vh-95 {
+  min-height: 75vh;
+  height: auto;
 }
 
 @media (max-width: 1199.98px) {
-  .ftco-vh-100 {
-    height: inherit;
-    padding-top: 5em;
-    padding-bottom: 5em;
-  }
-}
-
-.ftco-vh-75 {
-  height: 75vh;
-  min-height: 700px;
-}
-
-@media (max-width: 1199.98px) {
+  .ftco-vh-100,
   .ftco-vh-75 {
-    min-height: 700px;
-    height: inherit;
-    padding-top: 5em;
-    padding-bottom: 5em;
+    min-height: 85vh;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
+
 
 .ftco-tab-nav {
   padding: 0;
@@ -14489,7 +14483,7 @@ ou, em último caso:
 
   .hero-wrap {
     height: auto;     /* remove 670px */
-    min-height: 65vh; /* controla altura no mobile */
+    min-height: 90vh; /* controla altura no mobile */
   }
 
   .hero-title {
@@ -14543,3 +14537,9 @@ body {
   padding-top: 0 !important; /* garante que não há espaçamento */
 }
 
+.hero-wrap,
+.ftco-vh-100,
+.ftco-vh-75 {
+  display: flex;
+  align-items: center;
+}

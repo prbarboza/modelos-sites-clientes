@@ -196,3 +196,23 @@ MUDA A COR DA BARRA DO TOPO NO DESKTOP
     top: 0 !important;
 }
 
+CONTROLA A ALTURA DOS BANNERS
+
+.ftco-vh-100 {
+  min-height: 100vh;
+  height: auto;
+}
+
+.ftco-vh-75 {
+  min-height: 75vh;
+  height: auto;
+}
+
+@media (max-width: 1199.98px) {
+  .ftco-vh-100,
+  .ftco-vh-75 {
+    min-height: 85vh;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
