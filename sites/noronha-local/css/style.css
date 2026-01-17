@@ -14474,7 +14474,19 @@ ou, em último caso:
 @media (max-width: 768px) {
   .hero-wrap {
     height: auto;     /* remove o 670px no mobile */
-    min-height: 50vh; /* controla a altura no mobile */
+    min-height: 65vh; /* controla a altura no mobile */
+  }
+}
+
+/* ===== HERO TEXTO – MOBILE ===== */
+@media (max-width: 768px) {
+  .hero-wrap h1 {
+    font-size: 26px !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-wrap p {
+    font-size: 14px !important;
   }
 }
 
