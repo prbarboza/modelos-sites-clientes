@@ -106,7 +106,7 @@ ALTERAR A POSIÇÃO DA LOGO
 }
 
 
-ALTERAR BARRA MENU
+==============ALTERAR BARRA MENU===================
 /* 1. Cor principal da barra (Substituindo o #000000) */
 .ftco-navbar-light, 
 .ftco-navbar-light.scrolled,
@@ -188,13 +188,31 @@ ALTERAR BARRA MENU
     margin-left: auto !important;
 }
 
-MUDA A COR DA BARRA DO TOPO NO DESKTOP
+==========MUDA A COR DA BARRA DO TOPO NO DESKTOP================
+
+/* Estado NORMAL da navbar (topo da página) */
+.ftco-navbar-light:not(.scrolled) {
+  background: transparent !important;   /* transparente no topo */
+  position: absolute;
+  top: 0 !important;                     /* cola no topo */
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+/* Estado SCROLLED da navbar (após rolar) */
+.ftco-navbar-light.scrolled {
+  background: #ffffff !important;        /* fundo branco ao rolar */
+  transition: background 0.3s ease;
+}
+
 
 /* Resolve o problema do menu "sumir" ou piscar no topo */
 .ftco_navbar {
     background: #000000 !important; /* Cor da barra Hover Topo */
     top: 0 !important;
 }
+
+=============MUDAR A COR DA BARRA NO MOBILE================
 
 CONTROLA A ALTURA DOS BANNERS
 

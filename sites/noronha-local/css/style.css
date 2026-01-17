@@ -10472,13 +10472,13 @@ h5,
   z-index: 3;
 }
 
+/* Controle da cor da navbar no mobile */
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #000000 !important;
-    position: relative;
-    top: 0;
+    background: red !important; /* escolha a cor que quiser */
   }
 }
+
 
 .ftco-navbar-light .navbar-brand {
   color: #fff;
@@ -13416,21 +13416,21 @@ textarea.form-control {
     margin-top: 25px !important;
 }
 
-/* 1. Cor principal da barra (Substituindo o #000000) */
-.ftco-navbar-light, 
-.ftco-navbar-light.scrolled,
-.ftco_navbar {
-    background: #ffffff !important; /* Cor Azul Profundo */
-    top: 0 !important;
-    transition: none !important;
+/* Estado NORMAL da navbar (topo da página) */
+.ftco-navbar-light:not(.scrolled) {
+  background: transparent !important;   /* transparente no topo */
+  position: absolute;
+  top: 0 !important;                     /* cola no topo */
+  z-index: 999;
+  transition: background 0.3s ease;
 }
 
-/* 2. Estado NORMAL da navbar (antes do scroll) */
-.ftco-navbar-light:not(.scrolled) {
-    position: absolute;
-    top: 8px !important;
-    z-index: 999;
+/* Estado SCROLLED da navbar (após rolar) */
+.ftco-navbar-light.scrolled {
+  background: #ffffff !important;        /* fundo branco ao rolar */
+  transition: background 0.3s ease;
 }
+
 
 /* 2. Mantém o menu na direita e com letras brancas */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
