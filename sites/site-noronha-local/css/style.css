@@ -14149,19 +14149,20 @@ ou, em último caso:
   text-decoration: none;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: all 0.25s ease;
+  text-align: center;
 }
 
-/* Ajuste no mobile */
+/* Ajuste para mobile */
 @media (max-width: 767.98px) {
   .hero-cta {
-    display: block;       /* ocupa só o espaço necessário */
-    margin: 20px auto;    /* centraliza horizontalmente */
-    padding: 12px 20px;   /* reduz largura */
-    font-size: 14px;      /* fonte menor */
-    max-width: 250px;     /* limita largura máxima */
-    text-align: center;   /* centraliza texto */
+    display: block;        /* ocupa só o espaço necessário */
+    margin: 20px auto;     /* centraliza horizontalmente */
+    padding: 12px 20px;    /* reduz largura */
+    font-size: 14px;       /* fonte menor */
+    max-width: 250px;      /* limita largura máxima */
   }
 }
+
 
 
 .hero-cta:hover {
