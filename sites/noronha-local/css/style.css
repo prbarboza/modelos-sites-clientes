@@ -14532,25 +14532,18 @@ ou, em último caso:
   font-size: 24px;
 }
 
-/* Topo (sem .scrolled) — fundo claro/transparente */
-nav#ftco-navbar.navbar-dark.ftco-navbar-light:not(.scrolled) .navbar-toggler {
-  color: #000 !important;                         /* texto “Menu” preto */
-  border-color: rgba(0,0,0,.25) !important;       /* borda visível no topo */
+/* Ícone + texto visíveis no topo (navbar clara/transparente) */
+#ftco-navbar.ftco-navbar-light:not(.scrolled) .navbar-toggler {
+  color: #000 !important; /* texto preto */
 }
-nav#ftco-navbar.navbar-dark.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
-  color: #000 !important;                         /* ícone preto */
-}
-
-/* Rolado (.scrolled) — fundo escuro */
-nav#ftco-navbar.navbar-dark.ftco-navbar-light.scrolled .navbar-toggler {
-  color: #fff !important;                         /* texto branco */
-  border-color: rgba(255,255,255,.5) !important;  /* borda visível no escuro */
-}
-nav#ftco-navbar.navbar-dark.ftco-navbar-light.scrolled .navbar-toggler .oi {
-  color: #fff !important;                         /* ícone branco */
+#ftco-navbar.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
+  color: #000 !important; /* ícone preto */
 }
 
-/* Garantias sem alterar layout */
-nav#ftco-navbar .navbar-toggler { opacity: 1 !important; }
-nav#ftco-navbar .navbar-toggler .oi { font-size: 1.1rem; vertical-align: middle; }
-
+/* Ícone + texto visíveis quando rola (navbar escura) */
+#ftco-navbar.ftco-navbar-light.scrolled .navbar-toggler {
+  color: #fff !important; /* texto branco */
+}
+#ftco-navbar.ftco-navbar-light.scrolled .navbar-toggler .oi {
+  color: #fff !important; /* ícone branco */
+}
