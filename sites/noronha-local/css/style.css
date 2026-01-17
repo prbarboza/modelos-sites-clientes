@@ -14419,31 +14419,47 @@ ou, em último caso:
 
 }
 
-/* ===== HERO / BANNER ===== */
+/* =========================
+   HERO / BANNER – PADRÃO
+========================= */
 
-.hero-banner {
+.hero-wrap {
   position: relative;
+  width: 100%;
+  height: 670px; /* desktop padrão do tema */
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-banner .overlay {
+/* Overlay */
+.hero-wrap .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* escurece o banner */
+  background: rgba(0, 0, 0, 0.25);
 }
 
+/* Conteúdo */
+.hero-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Título */
 .hero-title {
   font-family: 'Poppins', Arial, sans-serif;
   font-weight: 800;
-  font-size: 60px;
+  font-size: 50px; /* desktop */
   line-height: 1.2;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.hero-title span {
-  color: #fb8c00; /* destaque */
+.hero-title span,
+.hero-highlight {
+  color: #fb8c00;
 }
 
+/* Subtítulo */
 .hero-subtitle {
   font-size: 18px;
   font-weight: 400;
@@ -14451,42 +14467,23 @@ ou, em último caso:
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-/* Mobile */
+/* =========================
+   HERO – MOBILE
+========================= */
+
 @media (max-width: 768px) {
+
+  .hero-wrap {
+    height: auto;     /* remove 670px */
+    min-height: 65vh; /* controla altura no mobile */
+  }
+
   .hero-title {
-    font-size: 20px;
+    font-size: 26px;  /* <<< AQUI você ajusta */
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 12px;
+    font-size: 14px;  /* <<< AQUI você ajusta */
   }
 }
-
-/* ===== HERO BANNER ===== */
-
-/* Desktop */
-.hero-wrap {
-  min-height: 85vh;
-}
-
-/* ===== HERO BANNER – CONTROLE MOBILE ===== */
-
-@media (max-width: 768px) {
-  .hero-wrap {
-    height: auto;     /* remove o 670px no mobile */
-    min-height: 65vh; /* controla a altura no mobile */
-  }
-}
-
-/* ===== HERO TEXTO – MOBILE ===== */
-@media (max-width: 768px) {
-  .hero-wrap h1 {
-    font-size: 26px !important;
-    line-height: 1.15 !important;
-  }
-
-  .hero-wrap p {
-    font-size: 14px !important;
-  }
-}
-
