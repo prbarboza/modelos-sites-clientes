@@ -10626,7 +10626,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light.scrolled .navbar-nav {
-    background: none;
+    background: red;
     border-radius: 0px;
     padding-left: 0rem !important;
     padding-right: 0rem !important;
@@ -10635,7 +10635,7 @@ h5,
 
 @media (max-width: 767.98px) {
   .ftco-navbar-light.scrolled .navbar-nav {
-    background: none;
+    background: red;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
