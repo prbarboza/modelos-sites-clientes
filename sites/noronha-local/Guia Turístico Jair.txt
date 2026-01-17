@@ -84,6 +84,28 @@ BRAND para altera o tamanho da logo
 
 
 
+ALTERAR A POSIÇÃO DA LOGO
+
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important;
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+.navbar-brand img {
+  height: 50px;       /* ideal para desktop */
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+}
+
+
 ALTERAR BARRA MENU
 /* 1. Cor principal da barra (Substituindo o #000000) */
 .ftco-navbar-light, 
