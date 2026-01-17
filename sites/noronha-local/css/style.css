@@ -14527,3 +14527,7 @@ ou, em último caso:
   padding-bottom: 0.6rem;
 }
 
+.fa-bars {
+  color: #000;   /* preto para aparecer em fundo claro */
+  font-size: 24px;
+}
