@@ -14418,3 +14418,60 @@ ou, em último caso:
   }
 
 }
+
+/* ===== HERO / BANNER ===== */
+
+.hero-banner {
+  position: relative;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* escurece o banner */
+}
+
+.hero-title {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  color: #fb8c00; /* destaque */
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ===== HERO BANNER ===== */
+
+/* Desktop */
+.hero-wrap {
+  min-height: 85vh;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-wrap {
+    min-height: 55vh; /* <<< diminui só no mobile */
+  }
+}
