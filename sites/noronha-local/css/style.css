@@ -14496,11 +14496,16 @@ ou, em último caso:
 }
 
 .ftco-navbar-light:not(.scrolled) {
-  background: transparent !important;
   position: absolute;
   top: 0 !important;   /* cola no topo */
-  z-index: 3;
+  left: 0;
+  right: 0;
 }
+
+#ftco-navbar {
+  margin-top: 0 !important;
+}
+
 
 .navbar {
   margin-top: 0 !important; /* remove qualquer margem extra */
