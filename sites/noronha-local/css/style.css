@@ -10484,16 +10484,24 @@ h5,
   color: #fff;
 }
 
-.ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
+/* NAV LINKS – ALTURA FIXA + CORES POR ESTADO */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   font-size: 14px;
-  padding-top: .9rem;
-  padding-bottom: .9rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  color: #fff;
+  padding: .9rem 20px;
   font-weight: 400;
   opacity: 1 !important;
 }
+
+/* Estado normal (sobre o banner) */
+.ftco-navbar-light:not(.scrolled) .nav-link {
+  color: #ffffff !important;
+}
+
+/* Estado com scroll */
+.ftco-navbar-light.scrolled .nav-link {
+  color: #000000 !important;
+}
+
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
   color: #fff;
@@ -10593,20 +10601,19 @@ h5,
   color: #f85959 !important;
 }
 
+/* CTA do menu – SEM alterar altura da navbar */
+.ftco-navbar-light .nav-item.cta>a,
 .ftco-navbar-light.scrolled .nav-item.cta>a {
   color: #fff !important;
   background: #f85959;
   border: none !important;
-  padding-top: 0.5rem !important;
-  padding-bottom: .5rem !important;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 6px !important;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
+
+  padding: 0.6rem 20px !important;
+  margin-top: 0 !important;     /* ← ESSENCIAL */
+
   border-radius: 30px;
 }
+
 
 .ftco-navbar-light.scrolled .nav-item.cta>a span {
   display: inline-block;
@@ -10645,11 +10652,11 @@ h5,
   letter-spacing: .1em;
 }
 
+/* NAVBAR SCROLLED – NÃO MUDA ALTURA */
 .ftco-navbar-light.scrolled .nav-link {
-  padding-top: 0.9rem !important;
-  padding-bottom: 0.9rem !important;
   color: #000000 !important;
 }
+
 
 .ftco-navbar-light.scrolled .nav-link.active {
   color: #f85959 !important;
@@ -13480,7 +13487,7 @@ textarea.form-control {
 
 /* Resolve o problema do menu "sumir" ou piscar no topo */
 .ftco_navbar {
-    background: #ffffff !important; /* Cor da barra Hover Topo */
+    background: #000000 !important; /* Cor da barra Hover Topo */
     top: 0 !important;
 }
 
@@ -13529,7 +13536,7 @@ textarea.form-control {
 }
 
 body {
-  padding-top: 90px; /* ajuste para a altura real da navbar */
+  padding-top: 0px; /* ajuste para a altura real da navbar */
 }
 
 html {
@@ -14522,7 +14529,4 @@ ou, em último caso:
   }
 }
 
-/* 4. Hamburger no estado SCROLLED */
-.ftco-navbar-light.scrolled .navbar-toggler {
-    border-color: rgba(0,0,0,0.4);
-}
+
