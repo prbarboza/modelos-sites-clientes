@@ -10463,14 +10463,7 @@ h5,
   color: #f85959 !important;
 }
 
-.ftco-navbar-light {
-  background: transparent !important;
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  z-index: 3;
-}
+
 
 /* Controle da cor da navbar no mobile */
 @media (max-width: 991.98px) {
@@ -14495,39 +14488,27 @@ ou, em último caso:
   }
 }
 
-/* -------------------- DESKTOP -------------------- */
-
-/* Estado NORMAL da navbar (topo da página) */
-.ftco-navbar-light:not(.scrolled) {
-  background: #000000 !important;   /* transparente no topo */
+/* Base da navbar */
+.ftco-navbar-light {
   position: absolute;
-  top: 0 !important;
-  z-index: 999;
+  left: 0;
+  right: 0;
+  z-index: 999; /* mais alto que 3 para garantir visibilidade */
   transition: background 0.3s ease;
 }
 
-/* Estado SCROLLED da navbar (após rolar) */
+/* Estado NORMAL (desktop e mobile) */
+.ftco-navbar-light:not(.scrolled) {
+  background: transparent !important; /* transparente no topo */
+  top: 0 !important;                  /* cola no topo */
+}
+
+/* Estado SCROLLED (desktop e mobile) */
 .ftco-navbar-light.scrolled {
-  background: #ffffff !important;       /* cor ao rolar (troque por sua cor) */
-  transition: background 0.3s ease;
+  background: #000000!important;     /* cor ao rolar */
+  top: 0 !important;
 }
 
-/* -------------------- MOBILE -------------------- */
-@media (max-width: 991.98px) {
-  /* Estado NORMAL no mobile */
-  #ftco-navbar.ftco-navbar-light:not(.scrolled) {
-    background: transparent !important; /* transparente no topo */
-    position: absolute;
-    top: 0;
-    z-index: 999;
-  }
-
-  /* Estado SCROLLED no mobile */
-  #ftco-navbar.ftco-navbar-light.scrolled {
-    background: #ffffff !important;     /* cor ao rolar (troque por sua cor) */
-    transition: background 0.3s ease;
-  }
-}
 
 
 
