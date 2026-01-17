@@ -14532,25 +14532,25 @@ ou, em último caso:
   font-size: 24px;
 }
 
-/* Estado inicial (navbar clara ou transparente) */
-.ftco-navbar-light:not(.scrolled) .navbar-toggler,
-.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
-  color: #000 !important; /* preto para aparecer em fundo claro */
+/* Topo (sem .scrolled) — fundo claro/transparente */
+nav#ftco-navbar.navbar-dark.ftco-navbar-light:not(.scrolled) .navbar-toggler {
+  color: #000 !important;                         /* texto “Menu” preto */
+  border-color: rgba(0,0,0,.25) !important;       /* borda visível no topo */
+}
+nav#ftco-navbar.navbar-dark.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
+  color: #000 !important;                         /* ícone preto */
 }
 
-/* Estado rolado (navbar escura) */
-.ftco-navbar-light.scrolled .navbar-toggler,
-.ftco-navbar-light.scrolled .navbar-toggler .oi {
-  color: #fff !important; /* branco para aparecer em fundo escuro */
+/* Rolado (.scrolled) — fundo escuro */
+nav#ftco-navbar.navbar-dark.ftco-navbar-light.scrolled .navbar-toggler {
+  color: #fff !important;                         /* texto branco */
+  border-color: rgba(255,255,255,.5) !important;  /* borda visível no escuro */
+}
+nav#ftco-navbar.navbar-dark.ftco-navbar-light.scrolled .navbar-toggler .oi {
+  color: #fff !important;                         /* ícone branco */
 }
 
-/* Garante visibilidade */
-.ftco-navbar-light .navbar-toggler {
-  opacity: 1 !important;
-}
-
-/* Ajusta tamanho do ícone sem mexer no layout */
-.ftco-navbar-light .navbar-toggler .oi {
-  font-size: 1.2rem;
-}
+/* Garantias sem alterar layout */
+nav#ftco-navbar .navbar-toggler { opacity: 1 !important; }
+nav#ftco-navbar .navbar-toggler .oi { font-size: 1.1rem; vertical-align: middle; }
 
