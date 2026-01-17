@@ -37,12 +37,25 @@ AOS.init({
      FULL HEIGHT (HERO)
   ============================ */
   var fullHeight = function () {
-    $('.js-fullheight').css('height', $(window).height());
-    $(window).on('resize', function () {
+
+  function setHeight() {
+    if (window.innerWidth > 768) {
       $('.js-fullheight').css('height', $(window).height());
-    });
-  };
-  fullHeight();
+    } else {
+      $('.js-fullheight').css('height', 'auto');
+    }
+  }
+
+  setHeight();
+
+  $(window).on('resize', function () {
+    setHeight();
+  });
+
+};
+
+fullHeight();
+
 
   /* ===========================
      LOADER
