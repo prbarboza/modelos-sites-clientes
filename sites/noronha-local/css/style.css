@@ -14529,4 +14529,49 @@ ou, em último caso:
   }
 }
 
+/* === RESET DEFINITIVO DA NAVBAR FTCO === */
+
+/* Navbar nunca ocupa espaço no fluxo */
+.ftco_navbar,
+.ftco-navbar-light,
+.ftco-navbar-light.scrolled,
+.ftco-navbar-light.awake,
+.ftco-navbar-light.sleep {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  margin: 0 !important;
+}
+
+/* Body nunca reserva espaço para navbar */
+body {
+  padding-top: 0 !important;
+}
+
+/* Banner nunca desce por causa da navbar */
+.hero-wrap,
+.ftco-section.hero-wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Altura fixa da navbar (não muda nunca) */
+.ftco-navbar-light,
+.ftco-navbar-light.scrolled {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/* Links não mudam altura */
+.ftco-navbar-light .nav-link,
+.ftco-navbar-light.scrolled .nav-link {
+  padding: .9rem 20px !important;
+}
+
+/* CTA não empurra navbar */
+.ftco-navbar-light .nav-item.cta > a,
+.ftco-navbar-light.scrolled .nav-item.cta > a {
+  margin-top: 0 !important;
+}
 

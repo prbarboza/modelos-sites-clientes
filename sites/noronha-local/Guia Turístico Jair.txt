@@ -115,3 +115,84 @@ ALTERAR BARRA MENU
     top: 0 !important;
     transition: none !important;
 }
+
+.ftco-navbar-light {
+  transition: opacity 0.3s ease;
+}
+
+/* 1. Cor principal da barra (Substituindo o #000000) */
+.ftco-navbar-light, 
+.ftco-navbar-light.scrolled,
+.ftco_navbar {
+    background: #ffffff !important; /* Cor Azul Profundo */
+    top: 0 !important;
+    transition: none !important;
+}
+
+/* 2. Estado NORMAL da navbar (antes do scroll) */
+.ftco-navbar-light:not(.scrolled) {
+    position: absolute;
+    top: 8px !important;
+    z-index: 999;
+}
+
+/* 2. Mantém o menu na direita e com letras brancas */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+/* 3. Cor amarela APENAS no texto do link (evita o bloco amarelo) */
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+    color: #FDE02F !important;
+    background: transparent !important; /* Garante que não crie bloco de cor */
+}
+
+/* 2. Ajuste do botão CTA para contrastar com o novo fundo */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link {
+    background: #0083B8 !important; /* Mantemos o amarelo ouro */
+    border: 1px solid #0083B8 !important;
+    color: #0a2b38 !important; /* Texto em azul escuro para ler melhor no amarelo */
+    font-weight: 700;
+}
+
+/* Hover real do botão CTA */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link:hover {
+    background: #0083B8 !important; /* Amarelo mais escuro */
+    border-color: #ffffff !important;
+    color: #0a2b38 !important;
+}
+
+
+/* Garante que o nome da marca (Noronha Local) seja visível e branco */
+.navbar-brand {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Força a cor branca mesmo quando o rato passa por cima (hover) */
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #FDE02F !important; /* Muda para amarelo no hover para dar um efeito legal */
+}
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #ffffff !important; /* Cor da barra Hover Topo */
+    top: 0 !important;
+}
+
+/* Mantém o alinhamento correto dos itens na direita */
+.navbar-nav {
+    margin-left: auto !important;
+}
+
+MUDA A COR DA BARRA DO TOPO NO DESKTOP
+
+/* Resolve o problema do menu "sumir" ou piscar no topo */
+.ftco_navbar {
+    background: #000000 !important; /* Cor da barra Hover Topo */
+    top: 0 !important;
+}
+
