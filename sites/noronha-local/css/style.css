@@ -14522,3 +14522,7 @@ ou, em último caso:
   }
 }
 
+/* 4. Hamburger no estado SCROLLED */
+.ftco-navbar-light.scrolled .navbar-toggler {
+    border-color: rgba(0,0,0,0.4);
+}
