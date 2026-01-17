@@ -14532,3 +14532,9 @@ ou, em último caso:
   font-size: 24px;
 }
 
+.ftco-navbar-light:not(.scrolled) .navbar-toggler {
+  color: #000; /* texto preto */
+}
+.ftco-navbar-light.scrolled .navbar-toggler {
+  color: #fff; /* texto branco quando fundo escuro */
+}
