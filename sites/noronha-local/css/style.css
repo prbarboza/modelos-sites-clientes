@@ -14514,3 +14514,7 @@ ou, em último caso:
     margin-top: 17px !important;
   }
 }
+
+.navbar-brand img {
+  display: block;
+}
