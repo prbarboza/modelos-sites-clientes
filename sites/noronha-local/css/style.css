@@ -13502,13 +13502,13 @@ textarea.form-control {
 }
 
 .navbar-brand img {
-  height: 55px;       /* ideal para desktop */
+  height: 50px;       /* ideal para desktop */
   width: auto;
 }
 
 @media (max-width: 768px) {
   .navbar-brand img {
-    height: 55px;
+    height: 45px;
   }
 }
 
@@ -14510,7 +14510,7 @@ ou, em último caso:
 
   /* 3. Texto descritivo */
   .slider-text p {
-    font-size: 15px !important;
-    margin-top: 16px !important;
+    font-size: 16px !important;
+    margin-top: 17px !important;
   }
 }

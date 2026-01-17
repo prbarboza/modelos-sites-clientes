@@ -14,6 +14,7 @@ Registro = NORONHALOCAL.COM.BR
 
 BARRA TOPO #4B9391
 AMARELO #FDE02F
+AZUL #0083B8
 
 
 
@@ -40,67 +41,6 @@ AMARELO #FDE02F
   transition: opacity 0.3s ease;
 }
 
-
-
-
-
-$font_1 :'Barlow Condensed', sans-serif;
-$font_2 :'Roboto', sans-serif;
-$font_3 :'Satisfy', cursive;
-
-$heading_color2: #0b1c39; // Um azul marinho profundo
-$white_color: #fff;
-$noronha_blue: #00A896; // Sugestão: adicione esta cor (Verde Água)
-
-<div class="hero__caption">
-    <h1>Explore o melhor de <span>Noronha Local</span></h1>
-    <p>Passeios de lancha, trilhas guiadas e bikes aquáticas no paraíso.</p>
-</div>
-sessão
-
-<section class="ftco-section services-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-guarantee"></span></div></div>
-              <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3">Best Price Guarantee</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-like"></span></div></div>
-              <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3">Travellers Love Us</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-detective"></span></div></div>
-              <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3">Best Travel Agent</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon"><span class="flaticon-support"></span></div></div>
-              <div class="media-body p-2 mt-2">
-                <h3 class="heading mb-3">Our Dedicated Support</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-    
 	
 	/* Estilização da Sessão de Serviços (Vinda do Noronha Local) */
 .services-section {
@@ -128,4 +68,19 @@ sessão
 
 .services .media-body p {
     color: #666;
+}
+
+CODIGO PARA ALTERAR OS EXTOS DO BANNER
+/* 2. O Texto "Noronha Local" (Proteção da Satisfy) */
+
+BRAND para altera o tamanho da logo
+
+ALTERAR BARRA MENU
+/* 1. Cor principal da barra (Substituindo o #000000) */
+.ftco-navbar-light, 
+.ftco-navbar-light.scrolled,
+.ftco_navbar {
+    background: #ffffff !important; /* Cor Azul Profundo */
+    top: 0 !important;
+    transition: none !important;
 }
