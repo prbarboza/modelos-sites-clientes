@@ -14532,18 +14532,19 @@ ou, em último caso:
   font-size: 24px;
 }
 
-/* Ícone + texto visíveis no topo (navbar clara/transparente) */
-#ftco-navbar.ftco-navbar-light:not(.scrolled) .navbar-toggler {
-  color: #000 !important; /* texto preto */
-}
-#ftco-navbar.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
-  color: #000 !important; /* ícone preto */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* Ícone + texto visíveis quando rola (navbar escura) */
-#ftco-navbar.ftco-navbar-light.scrolled .navbar-toggler {
-  color: #fff !important; /* texto branco */
+/* Ícone do Open Iconic no estado inicial */
+.ftco-navbar-light:not(.scrolled) .navbar-toggler .oi {
+  color: #000; /* preto para aparecer em fundo claro */
 }
-#ftco-navbar.ftco-navbar-light.scrolled .navbar-toggler .oi {
-  color: #fff !important; /* ícone branco */
+
+
+.ftco-navbar-light:not(.scrolled) .navbar-toggler {
+  color: #000; /* texto preto */
+}
+.ftco-navbar-light.scrolled .navbar-toggler {
+  color: #fff; /* texto branco quando fundo escuro */
 }
