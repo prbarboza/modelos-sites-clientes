@@ -14495,16 +14495,40 @@ ou, em último caso:
   }
 }
 
+/* -------------------- DESKTOP -------------------- */
+
+/* Estado NORMAL da navbar (topo da página) */
 .ftco-navbar-light:not(.scrolled) {
+  background: transparent !important;   /* transparente no topo */
   position: absolute;
-  top: 0 !important;   /* cola no topo */
-  left: 0;
-  right: 0;
+  top: 0 !important;
+  z-index: 999;
+  transition: background 0.3s ease;
 }
 
-#ftco-navbar {
-  margin-top: 0 !important;
+/* Estado SCROLLED da navbar (após rolar) */
+.ftco-navbar-light.scrolled {
+  background: #ffffff !important;       /* cor ao rolar (troque por sua cor) */
+  transition: background 0.3s ease;
 }
+
+/* -------------------- MOBILE -------------------- */
+@media (max-width: 991.98px) {
+  /* Estado NORMAL no mobile */
+  #ftco-navbar.ftco-navbar-light:not(.scrolled) {
+    background: transparent !important; /* transparente no topo */
+    position: absolute;
+    top: 0;
+    z-index: 999;
+  }
+
+  /* Estado SCROLLED no mobile */
+  #ftco-navbar.ftco-navbar-light.scrolled {
+    background: #ffffff !important;     /* cor ao rolar (troque por sua cor) */
+    transition: background 0.3s ease;
+  }
+}
+
 
 
 .navbar {
@@ -14574,13 +14598,3 @@ body {
   position: relative;
 }
 
-
-@media (max-width: 768px) {
-  .hero-wrap {
-    min-height: 90vh !important;
-    height: auto !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 0 !important;
-  }
-}
