@@ -14411,7 +14411,7 @@ ou, em último caso:
     visibility: visible;
     transform: none;
     box-shadow: none;
-    background: #000000;
+    background: transparent;
     padding-left: 15px;
   }
 
@@ -14499,7 +14499,7 @@ ou, em último caso:
 
 /* Estado NORMAL da navbar (topo da página) */
 .ftco-navbar-light:not(.scrolled) {
-  background: transparent !important;   /* transparente no topo */
+  background: #000000 !important;   /* transparente no topo */
   position: absolute;
   top: 0 !important;
   z-index: 999;
