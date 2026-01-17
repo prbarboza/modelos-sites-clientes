@@ -14138,7 +14138,6 @@ ou, em último caso:
   display: inline-block;
   margin-top: 24px;
   padding: 14px 34px;
-
   background: #25d366;
   color: #fff;
   border: 1px solid #fff;
@@ -14146,13 +14145,24 @@ ou, em último caso:
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-
   border-radius: 40px;
   text-decoration: none;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: all 0.25s ease;
 }
+
+/* Ajuste no mobile */
+@media (max-width: 767.98px) {
+  .hero-cta {
+    display: block;       /* ocupa só o espaço necessário */
+    margin: 20px auto;    /* centraliza horizontalmente */
+    padding: 12px 20px;   /* reduz largura */
+    font-size: 14px;      /* fonte menor */
+    max-width: 250px;     /* limita largura máxima */
+    text-align: center;   /* centraliza texto */
+  }
+}
+
 
 .hero-cta:hover {
   background: #1EBE5D;
@@ -14722,7 +14732,7 @@ body {
 
 @media (max-width: 767.98px) {
   .hero-wrap.hero-passeios h1 { font-size: 18px !important; }
-  .hero-wrap.hero-passeios h1 span { font-size: 28px !important; }
-  .hero-wrap.hero-passeios p { font-size: 14px !important; }
+  .hero-wrap.hero-passeios h1 span { font-size: 36px !important; }
+  .hero-wrap.hero-passeios p { font-size: 16px !important; }
 }
 
