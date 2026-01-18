@@ -14169,29 +14169,12 @@ ou, em último caso:
   }
 }
 
-@media (max-width: 767.98px) {
-  .navbar-collapse .navbar-nav {
-    display: flex;
-    flex-direction: column;   /* itens em coluna */
-    height: 100%;             /* ocupa toda a altura */
-  }
-
-  @media (max-width: 767.98px) {
-  .navbar-collapse .nav-item.cta {
-    margin-top: 60px !important;  /* aumenta o espaço acima */
-    display: block;
-    text-align: center;
-  }
-}
-
 
   .navbar-collapse .nav-item.cta .btn {
     width: 100%;              /* botão ocupa toda a largura no mobile */
     max-width: 280px;         /* limite opcional */
     margin: 0 auto;           /* centraliza */
   }
-}
-
 
 
 .hero-cta:hover {
@@ -14793,3 +14776,12 @@ body {
   .hero-wrap.hero-passeios p { font-size: 18px !important; }
 }
 
+/* ===== Descer botão WhatsApp no menu mobile ===== */
+@media (max-width: 991px) {
+
+  .ftco-navbar-light .navbar-nav .nav-item.cta {
+    margin-top: 35px;   /* desce o botão */
+    margin-bottom: 10px;
+  }
+
+}
