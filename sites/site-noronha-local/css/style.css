@@ -14968,11 +14968,16 @@ body {
 }
 
 /* ===============================
-   CARDS – IMAGEM (PASSEIOS BARCO)
+   CORREÇÃO DEFINITIVA – IMAGEM DOS CARDS
+   PASSEIOS BARCO
 =============================== */
+
 .destination-card img {
   width: 100%;
-  height: 220px !important;          /* altura correta do card */
-  object-fit: cover;     /* mantém proporção */
+  height: 220px !important;   /* força a altura correta */
+  max-height: 220px !important;
+  min-height: 220px !important;
+  object-fit: cover !important;
   display: block;
 }
+
