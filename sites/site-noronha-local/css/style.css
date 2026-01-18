@@ -14868,20 +14868,13 @@ body {
 @media (max-width: 991px) {
 
   .destination-slider,
-  .destination-slider .owl-stage,
-  .destination-slider .owl-item,
-
   .carousel-testimony,
-  .carousel-testimony .owl-stage,
-  .carousel-testimony .owl-item,
-
-  .boat-slider,
-  .boat-slider .owl-stage,
-  .boat-slider .owl-item {
-    touch-action: pan-y !important;
+  .boat-slider {
+    touch-action: pan-y;
   }
 
 }
+
 
 /* ===== LOGO DO RODAPÉ NO MOBILE ===== */
 @media (max-width: 767px) {
