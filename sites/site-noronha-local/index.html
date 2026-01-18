@@ -1076,9 +1076,8 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
-      </body>
 
-        <script>
+  <script>
 function sendToWhatsAppBoat(button) {
 
   const card = button.closest('.boat-card-fixed');
@@ -1101,7 +1100,7 @@ function sendToWhatsAppBoat(button) {
 <script>
 $(function () {
 
-  $(document).on('click', function (e) {
+  $(document).on('click touchstart', function (e) {
 
     const $navbar = $('#ftco-navbar');
     const $menu = $navbar.find('.navbar-collapse');
@@ -1117,16 +1116,18 @@ $(function () {
       return;
     }
 
+    // fecha o menu
     $menu.removeClass('show');
-    $toggler.addClass('collapsed').attr('aria-expanded', 'false');
+    $toggler
+      .addClass('collapsed')
+      .attr('aria-expanded', 'false');
+
     $('body').removeClass('menu-show');
   });
 
 });
 </script>
 
-
-
-
-
+      </body>
+        
 </html>
