@@ -11910,6 +11910,7 @@ textarea.form-control {
   margin-bottom: 10px;
 }
 
+
 .heading-section h2 {
   font-size: 30px;
   font-weight: 300;
@@ -11921,7 +11922,7 @@ textarea.form-control {
 
 @media (max-width: 767.98px) {
   .heading-section h2 {
-    font-size: 28px;
+    font-size: 26px !important;
   }
 }
 
@@ -14641,7 +14642,7 @@ body {
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light:not(.scrolled) {
-    background: #000000 !important; /* cor no topo no mobile */
+    background: #0C2B36 !important; /* cor no topo no mobile */
   }
 
   .ftco-navbar-light.scrolled {
