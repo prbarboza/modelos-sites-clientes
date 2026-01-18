@@ -77,34 +77,41 @@ fullHeight();
   /* ===========================
      CAROUSELS
   ============================ */
-  var carousel = function () {
+  $('.destination-slider').owlCarousel({
+  autoplay: true,
+  loop: true,
+  margin: 20,
+  nav: true,
+  dots: true,
+  smartSpeed: 600,
+  mouseDrag: true,
+  touchDrag: true,
+  pullDrag: true,
+  navText: [
+    '<span class="ion-ios-arrow-back"></span>',
+    '<span class="ion-ios-arrow-forward"></span>'
+  ],
+  responsive: {
+    0: { items: 1 },
+    576: { items: 2 },
+    992: { items: 3 },
+    1200: { items: 4 }
+  }
+});
 
-    $('.destination-slider').owlCarousel({
-      autoplay: true,
-      loop: true,
-      margin: 20,
-      nav: true,
-      dots: true,
-      smartSpeed: 600,
-      navText: [
-        '<span class="ion-ios-arrow-back"></span>',
-        '<span class="ion-ios-arrow-forward"></span>'
-      ],
-      responsive: {
-        0: { items: 1 },
-        576: { items: 2 },
-        992: { items: 3 },
-        1200: { items: 4 }
-      }
-    });
-
-    $('.carousel-testimony').owlCarousel({
-      autoplay: true,
-      loop: true,
-      items: 1,
-      nav: true,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">']
-    });
+$('.carousel-testimony').owlCarousel({
+  autoplay: true,
+  loop: true,
+  items: 1,
+  nav: true,
+  mouseDrag: true,
+  touchDrag: true,
+  pullDrag: true,
+  navText: [
+    '<span class="ion-ios-arrow-back">',
+    '<span class="ion-ios-arrow-forward">'
+  ]
+});
 
     $('.single-slider').owlCarousel({
       animateOut: 'fadeOut',
