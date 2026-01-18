@@ -14848,3 +14848,20 @@ body {
   }
 
 }
+
+/* ===== CORREÇÃO DE SCROLL EM CARDS (FTCO) ===== */
+@media (max-width: 991px) {
+
+  /* Cards de Passeios */
+  #passeios .destination,
+  #passeios .destination * {
+    touch-action: pan-y;
+  }
+
+  /* Cards de Depoimentos / Sobre nós */
+  #sobre-nos .testimony-wrap,
+  #sobre-nos .testimony-wrap * {
+    touch-action: pan-y;
+  }
+
+}
