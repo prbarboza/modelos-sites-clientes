@@ -1101,20 +1101,15 @@ function sendToWhatsAppBoat(button) {
 <script>
 $(function () {
 
-  // FECHAR MENU MOBILE AO CLICAR FORA (SEM BLOQUEAR SCROLL)
   $(document).on('click', function (e) {
 
     const $navbar = $('#ftco-navbar');
     const $menu = $navbar.find('.navbar-collapse');
     const $toggler = $navbar.find('.navbar-toggler');
 
-    // somente mobile
     if (window.innerWidth > 991) return;
-
-    // menu fechado? não faz nada
     if (!$menu.hasClass('show')) return;
 
-    // clicou dentro do menu ou no botão? ignora
     if (
       $(e.target).closest('.navbar-collapse').length ||
       $(e.target).closest('.navbar-toggler').length
@@ -1122,17 +1117,14 @@ $(function () {
       return;
     }
 
-    // FECHA MENU
     $menu.removeClass('show');
-    $toggler
-      .addClass('collapsed')
-      .attr('aria-expanded', 'false');
-
+    $toggler.addClass('collapsed').attr('aria-expanded', 'false');
     $('body').removeClass('menu-show');
   });
 
 });
 </script>
+
 
 
 

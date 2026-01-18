@@ -10425,13 +10425,13 @@ body {
   color: #4d4d4d;
 }
 
-/*body.menu-show {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
+@media (max-width: 991px) {
+  body.menu-show {
+    overflow: hidden;
+    touch-action: pan-y;
+  }
 }
-  /* Links */
+
 
 a {
   -webkit-transition: .3s all ease;
@@ -14814,31 +14814,6 @@ body {
   /* Sobe o texto */
   .hero-wrap p {
     margin-top: -20px;
-  }
-
-}
-
-/* ===== CORREÇÃO GLOBAL DE SCROLL MOBILE (FTCO) ===== */
-@media (max-width: 991px) {
-
-  /* Libera gesto de rolagem vertical */
-  body,
-  body * {
-    touch-action: pan-y;
-  }
-
-  /* Mantém o comportamento correto do menu mobile */
-  body.menu-show {
-    overflow: hidden;
-    touch-action: pan-y;
-  }
-
-  /* Overlays nunca devem capturar toque */
-  .overlay,
-  .img-overlay,
-  .bg-overlay,
-  .hero-wrap .overlay {
-    pointer-events: none !important;
   }
 
 }
