@@ -14945,3 +14945,34 @@ body {
   cursor: pointer;
 }
 
+/* ===============================
+   TÍTULO DA SEÇÃO – PASSEIOS BARCO
+=============================== */
+
+.ftco-section .subheading {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0083B8;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ftco-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e2340;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   CARDS – IMAGEM (PASSEIOS BARCO)
+=============================== */
+.destination-card img {
+  width: 100%;
+  height: 220px;          /* altura correta do card */
+  object-fit: cover;     /* mantém proporção */
+  display: block;
+}
