@@ -1,5 +1,5 @@
 /*!
-* Bootstrap v4.1.0 (https://getbootstrap.com/)
+* Bootstrap v4.1.0 (https://getbootstrap.com/)owl-carousel [class*="col-"].
 * Copyright 2011-2018 The Bootstrap Authors
 * Copyright 2011-2018 Twitter, Inc.
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -15097,11 +15097,6 @@ body {
   .boat-img {
     height: 240px;
   }
-}
-
-
-.owl-carousel [class*="col-"].d-flex {
-  display: block !important;
 }
 
 

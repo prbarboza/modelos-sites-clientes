@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -118,14 +120,17 @@
     </div>
 
     <!-- CARROSSEL -->
-    <div class="boat-slider owl-carousel">
+    <div class="swiper boat-swiper">
 
-      <!-- LANCHA JÔ LL -->
-      <div class="boat-card item" data-boat="Lancha Jô LL">
-        <div class="hotel-single p-4 bg-white rounded shadow-sm">
-          <div class="boat-image-wrapper">
-            <div class="boat-img">
-  <img src="images/passeios/barcos/jo-lancha-privativo.jpg" alt="Lancha Jô LL Privativo em Fernando de Noronha" loading="lazy">
+  <div class="swiper-wrapper">
+
+    <!-- SLIDE 1 LANCHA DO JO -->
+    <div class="swiper-slide">
+      <div class="boat-card-fixed" data-passeio="Lancha Jô LL (Privativo)">
+        <div class="boat-img">
+          <img src="images/passeios/barcos/jo-lancha-privativo.jpg"
+               alt="Lancha Jô LL Privativo em Fernando de Noronha"
+               loading="lazy">
         </div>
           </div>
           <h3 class="mb-2">Lancha Jô LL</h3>
@@ -169,13 +174,15 @@
       </div>
 
       <!-- CATAMARÃ DAVI II -->
-      <div class="boat-card item" data-boat="Catamarã Davi II">
-        <div class="hotel-single p-4 bg-white rounded shadow-sm">
-          <div class="boat-image-wrapper">
-            <div class="boat-img">
-      <img src="images/passeios/barcos/davi-catamara-privativo.jpg" alt="Catamarã Davi II Privativo em Fernando de Noronha" loading="lazy">
+      <div class="swiper-slide">
+      <div class="boat-card-fixed" data-passeio="Catamarã Davi II">
+        <div class="boat-img">
+          <img src="images/passeios/barcos/davi-catamara-privativo.jpg"
+               alt="Catamarã Davi II Privativo em Fernando de Noronha"
+               loading="lazy">
         </div>
-          </div>
+      </div>
+    </div>
           <h3 class="mb-2">Catamarã Davi II</h3>
           <p class="text-muted mb-3">Passeio Privativo • Mar de Dentro</p>
           <ul class="list-unstyled mb-4">
@@ -219,11 +226,12 @@
       </div>
 
       <!-- ESTRELA LUNAR -->
-      <div class="boat-card item" data-boat="Lancha XYZ">
-        <div class="hotel-single p-4 bg-white rounded shadow-sm">
-          <div class="boat-image-wrapper">
-            <div class="boat-img">
-      <img src="images/passeios/barcos/estrela-lunar-catamara.jpg" alt="Catamarã Estrela Lunar Entardecer em Fernando de Noronha" loading="lazy">
+      <div class="swiper-slide">
+      <div class="boat-card-fixed" data-passeio="Estrela Lunar (Entardecer)">
+        <div class="boat-img">
+          <img src="images/passeios/barcos/estrela-lunar-catamara.jpg"
+               alt="Catamarã Estrela Lunar Entardecer"
+               loading="lazy">
         </div>
           </div>
           <h3 class="mb-2">Estrela Lunar – Entardecer VIP</h3>
@@ -392,6 +400,13 @@ function sendToWhatsAppBoat(button) {
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.boat-swiper', { /* config */ });
+});
+</script>
 
 
     <button id="backToTop" aria-label="Voltar ao topo">↑</button>

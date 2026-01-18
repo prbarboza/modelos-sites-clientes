@@ -3,7 +3,7 @@
   "use strict";
 
   /* ===========================
-     AOS (seguro)
+     AOS
   ============================ */
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -14,8 +14,7 @@
 
   /* ===========================
      FULL HEIGHT (HERO)
-     HOME SIM / PASSEIOS NÃO
-     DESKTOP APENAS
+     apenas desktop
   ============================ */
   function fullHeight() {
     function setHeight() {
@@ -24,7 +23,7 @@
 
       $('.js-fullheight').each(function () {
 
-        // ignora banner de passeios
+        // ignora hero de páginas internas
         if ($(this).hasClass('hero-passeios') || $(this).find('.hero-passeios').length) {
           return;
         }
@@ -51,7 +50,7 @@
   });
 
   /* ===========================
-     STELLAR (opcional / seguro)
+     STELLAR
   ============================ */
   if ($.fn.stellar) {
     $(window).stellar({
@@ -62,7 +61,7 @@
   }
 
   /* ===========================
-     SCROLLAX (seguro)
+     SCROLLAX
   ============================ */
   if ($.Scrollax) {
     $.Scrollax();
@@ -75,91 +74,90 @@
 
     if (!$.fn.owlCarousel) return;
 
-    /* Destinos */
+    /* DESTINATION SLIDER – HOME */
     $('.destination-slider').owlCarousel({
-  loop: true,
-  margin: 20,
-  nav: true,
-  smartSpeed: 600,
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: true,
+      smartSpeed: 600,
 
-  mouseDrag: true,
-  touchDrag: true,
-  pullDrag: true,
-
-  navText: [
-    '<span class="ion-ios-arrow-back"></span>',
-    '<span class="ion-ios-arrow-forward"></span>'
-  ],
-
-  responsive: {
-    0: {
-      items: 1,
-      autoplay: false,
-      dots: false
-    },
-    576: {
-      items: 2,
-      autoplay: false,
-      dots: false
-    },
-    992: {
-      items: 3,
-      autoplay: true,
-      dots: true
-    },
-    1200: {
-      items: 4,
-      autoplay: true,
-      dots: true
-    }
-  }
-});
-
-
-    /* ===========================
-       BOAT SLIDER (CORRIGIDO)
-       SEM autoHeight
-       SEM touch-action
-    ============================ */
-    var boatSlider = $('.boat-slider').owlCarousel({
-      items: 1,
-      loop: false,
-      autoplay: false,
-      dots: false,
-      nav: false,
-      smartSpeed: 500,
-      autoHeight: false,
       mouseDrag: true,
       touchDrag: true,
-      pullDrag: true
-    });
+      pullDrag: true,
 
-    var totalBoats = $('.boat-slider .boat-card').length;
+      navText: [
+        '<span class="ion-ios-arrow-back"></span>',
+        '<span class="ion-ios-arrow-forward"></span>'
+      ],
 
-    function updateBoatCounter(index) {
-      $('#boat-counter, #boat-counter-bottom')
-        .text('Barco ' + (index + 1) + ' de ' + totalBoats);
-    }
-
-    boatSlider.on('initialized.owl.carousel changed.owl.carousel', function (e) {
-      if (e.item) {
-        updateBoatCounter(e.item.index);
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 4 }
       }
     });
 
-    $('.boat-prev').on('click', function () {
-      boatSlider.trigger('prev.owl.carousel');
+    /* TESTIMONY */
+    $('.carousel-testimony').owlCarousel({
+      loop: true,
+      items: 1,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      smartSpeed: 600,
+      navText: [
+        '<span class="ion-ios-arrow-back"></span>',
+        '<span class="ion-ios-arrow-forward"></span>'
+      ]
     });
 
-    $('.boat-next').on('click', function () {
-      boatSlider.trigger('next.owl.carousel');
-    });
+    /* BOAT SLIDER – PASSEIOS */
+    if ($('.boat-slider').length) {
 
+      var boatSlider = $('.boat-slider').owlCarousel({
+        items: 1,
+        loop: false,
+        autoplay: false,
+        nav: false,
+        dots: false,
+        smartSpeed: 500,
+        autoHeight: false,
+
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true
+      });
+
+      var totalBoats = $('.boat-slider .boat-card').length;
+
+      function updateBoatCounter(index) {
+        $('#boat-counter, #boat-counter-bottom')
+          .text('Barco ' + (index + 1) + ' de ' + totalBoats);
+      }
+
+      boatSlider.on('initialized.owl.carousel changed.owl.carousel', function (e) {
+        if (e.item) {
+          updateBoatCounter(e.item.index);
+        }
+      });
+
+      $('.boat-prev').on('click', function () {
+        boatSlider.trigger('prev.owl.carousel');
+      });
+
+      $('.boat-next').on('click', function () {
+        boatSlider.trigger('next.owl.carousel');
+      });
+
+    }
   }
+
   initCarousels();
 
   /* ===========================
-     ONE PAGE SCROLL (âncoras)
+     ONE PAGE SCROLL
   ============================ */
   $("#ftco-nav a[href^='#']").on('click', function (e) {
     var target = $(this.hash);
