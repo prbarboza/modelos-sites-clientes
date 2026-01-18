@@ -14176,10 +14176,14 @@ ou, em último caso:
     height: 100%;             /* ocupa toda a altura */
   }
 
+  @media (max-width: 767.98px) {
   .navbar-collapse .nav-item.cta {
-    margin-top: auto;         /* empurra o botão para o final da lista */
-    text-align: center;       /* centraliza o botão */
+    margin-top: 60px !important;  /* aumenta o espaço acima */
+    display: block;
+    text-align: center;
   }
+}
+
 
   .navbar-collapse .nav-item.cta .btn {
     width: 100%;              /* botão ocupa toda a largura no mobile */
