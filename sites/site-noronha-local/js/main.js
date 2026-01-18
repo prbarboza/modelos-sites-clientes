@@ -77,51 +77,44 @@
 
     /* Destinos */
     $('.destination-slider').owlCarousel({
-      autoplay: true,
-      loop: true,
-      margin: 20,
-      nav: true,
-      dots: true,
-      smartSpeed: 600,
-      mouseDrag: true,
-      touchDrag: true,
-      pullDrag: true,
-      navText: [
-        '<span class="ion-ios-arrow-back"></span>',
-        '<span class="ion-ios-arrow-forward"></span>'
-      ],
-      responsive: {
-        0: { items: 1 },
-        576: { items: 2 },
-        992: { items: 3 },
-        1200: { items: 4 }
-      }
-    });
+  loop: true,
+  margin: 20,
+  nav: true,
+  smartSpeed: 600,
 
-    /* Depoimentos */
-    $('.carousel-testimony').owlCarousel({
-      autoplay: true,
-      loop: true,
-      items: 1,
-      nav: true,
-      mouseDrag: true,
-      touchDrag: true,
-      pullDrag: true,
-      autoHeight: false,
-      navText: [
-        '<span class="ion-ios-arrow-back"></span>',
-        '<span class="ion-ios-arrow-forward"></span>'
-      ]
-    });
+  mouseDrag: true,
+  touchDrag: true,
+  pullDrag: true,
 
-    /* Slider simples */
-    $('.single-slider').owlCarousel({
-      autoplay: true,
-      loop: true,
+  navText: [
+    '<span class="ion-ios-arrow-back"></span>',
+    '<span class="ion-ios-arrow-forward"></span>'
+  ],
+
+  responsive: {
+    0: {
       items: 1,
-      nav: true,
+      autoplay: false,
+      dots: false
+    },
+    576: {
+      items: 2,
+      autoplay: false,
+      dots: false
+    },
+    992: {
+      items: 3,
+      autoplay: true,
       dots: true
-    });
+    },
+    1200: {
+      items: 4,
+      autoplay: true,
+      dots: true
+    }
+  }
+});
+
 
     /* ===========================
        BOAT SLIDER (CORRIGIDO)
