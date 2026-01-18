@@ -14606,7 +14606,7 @@ body {
 
 /* HERO – FINAL */
 .hero-wrap {
-  background-image: url('../images/banner-home.jpg') !important;
+  background-image: url('../images/home/banner-home.jpg') !important;
   background-position: center center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -14616,6 +14616,21 @@ body {
   align-items: center;
   position: relative;
 }
+
+.hero-wrap.hero-passeios {
+  background-image: url('../images/passeios/banner-home-passeios.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+  height: 600px !important;      /* altura fixa só para passeios */
+  min-height: 600px !important;  /* neutraliza min-height global */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light:not(.scrolled) {
@@ -14710,6 +14725,18 @@ body {
   }
 }
 
+.hero-wrap.hero-passeios {
+  height: 600px;             /* altura fixa só para passeios */
+  min-height: 600px;         /* neutraliza min-height global */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 .hero-wrap.hero-passeios h1 {
   font-size: 30px !important;
   font-weight: 600 !important;
@@ -14722,13 +14749,13 @@ body {
 .hero-wrap.hero-passeios h1 span {
   font-family: 'Satisfy', cursive !important;
   color: #FDE02F !important;
-  font-size: 100px !important;
+  font-size: 60px !important;
   display: inline-block !important;
   margin-top: 10px !important;
 }
 
 .hero-wrap.hero-passeios p {
-  font-size: 22px !important;
+  font-size: 18px !important;
   color: #f8f9fa !important;
   max-width: 400px !important;
   line-height: 1.4 !important;
@@ -14738,8 +14765,8 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  .hero-wrap.hero-passeios h1 { font-size: 18px !important; }
-  .hero-wrap.hero-passeios h1 span { font-size: 36px !important; }
-  .hero-wrap.hero-passeios p { font-size: 16px !important; }
+  .hero-wrap.hero-passeios h1 { font-size: 20px !important; }
+  .hero-wrap.hero-passeios h1 span { font-size: 40px !important; }  /* Fonte cursiva no mobile */
+  .hero-wrap.hero-passeios p { font-size: 18px !important; }
 }
 

@@ -1099,24 +1099,33 @@ function sendToWhatsAppBoat(button) {
 </script>
 
 <script>
-document.addEventListener('click', function (event) {
+$(function () {
 
-  const navbar = document.querySelector('.navbar-collapse');
-  const toggler = document.querySelector('.navbar-toggler');
+  $(document).on('click touchstart', function (e) {
 
-  if (!navbar || !toggler) return;
+    const $navbar = $('#ftco-navbar');
+    const $menu = $navbar.find('.navbar-collapse');
+    const $toggler = $navbar.find('.navbar-toggler');
 
-  const isClickInsideMenu = navbar.contains(event.target);
-  const isClickOnToggler = toggler.contains(event.target);
+    // só no mobile
+    if (window.innerWidth > 991) return;
 
-  // se menu estiver aberto e clicou fora
-  if (
-    navbar.classList.contains('show') &&
-    !isClickInsideMenu &&
-    !isClickOnToggler
-  ) {
-    toggler.click();
-  }
+    // se menu não está aberto, ignora
+    if (!$menu.hasClass('show')) return;
+
+    // se clicou dentro do menu ou no botão, ignora
+    if (
+      $(e.target).closest('.navbar-collapse').length ||
+      $(e.target).closest('.navbar-toggler').length
+    ) {
+      return;
+    }
+
+    // FECHA FORÇADO (FTCO)
+    $menu.removeClass('show');
+    $toggler.addClass('collapsed').attr('aria-expanded', 'false');
+    $('body').removeClass('menu-show');
+  });
 
 });
 </script>
