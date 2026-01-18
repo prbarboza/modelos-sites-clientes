@@ -36,8 +36,7 @@
   <body>
     
 	<!-- Nav Inicio -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light sleep" id="ftco-navbar">
-
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
 
   <div class="container">
 
@@ -45,34 +44,56 @@
       <img src="images/logo.png" alt="Noronha Local" class="logo-custom">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
-  <i class="fa-solid fa-bars"></i>
-</button>
-
+    <!-- Botão mobile padrão -->
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#ftco-nav"
+            aria-controls="ftco-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
-  <a href="index.html" class="nav-link">Home</a></li>
-
-
-        <li class="nav-item"><a href="index.html#sobre-nos" class="nav-link">A Nossa Essência</a></li>
-
-        <li class="nav-item dropdown">
-          <a href="index.html#passeios" class="nav-link dropdown-toggle">Nossos Passeios</a>
-          <ul class="dropdown-menu">
-            <li><a href="passeios-barcos.html" class="dropdown-item">Passeios de Barco</a></li>
-            <li><a href="#" class="dropdown-item">Trilhas Guiadas</a></li>
-            <li><a href="#" class="dropdown-item">Mergulhos</a></li>
-          </ul>
+          <a href="index.html" class="nav-link">Home</a>
         </li>
 
-        <li class="nav-item"><a href="index.html#blog" class="nav-link">Voz da Ilha</a></li>
+        <li class="nav-item">
+          <a href="index.html#sobre-nos" class="nav-link">A Nossa Essência</a>
+        </li>
 
-        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+        <!-- DROPDOWN -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle"
+             role="button"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            Nossos Passeios
+          </a>
+          <div class="dropdown-menu">
+            <a href="passeios-barcos.html" class="dropdown-item">Passeios de Barco</a>
+            <a href="#" class="dropdown-item">Trilhas Guiadas</a>
+            <a href="#" class="dropdown-item">Mergulhos</a>
+          </div>
+        </li>
 
-        <li class="nav-item cta"><a href="https://wa.me/558196514045" target="_blank" class="nav-link"><span><i class="icon-whatsapp"></i> Fale com um Local</span></a></li>
+        <li class="nav-item">
+          <a href="index.html#blog" class="nav-link">Voz da Ilha</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contato</a>
+        </li>
+
+        <li class="nav-item cta">
+          <a href="https://wa.me/558196514045" target="_blank" class="nav-link">
+            <span><i class="icon-whatsapp"></i> Fale com um Local</span>
+          </a>
+        </li>
 
       </ul>
     </div>
@@ -81,7 +102,9 @@
 </nav>
 <!-- END nav -->
 
-    
+
+   <!-- Hero Section -->
+
     <div class="hero-wrap">
 
   <div class="overlay"></div>
@@ -113,6 +136,9 @@
 
 </div>
 
+<!-- Fim Hero Section -->
+
+<!-- Serviços Destaques -->
 
     <section class="ftco-section services-section nl-services">
   <div class="container">
@@ -166,21 +192,27 @@
         </div>
       </div>
 
-      <!-- Atendimento Local -->
-<div class="col-md-3 d-flex align-self-stretch ftco-animate">
-  <div class="media block-6 services d-block text-center">
-    <div class="d-flex justify-content-center">
-      <div class="icon">
-        <i class="fa-solid fa-headset"></i>
+            <!-- Atendimento Local -->
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center">
+            <div class="icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+          </div>
+          <div class="media-body p-2 mt-2">
+            <h3 class="heading mb-3">Atendimento Local</h3>
+            <p>Equipe de moradores apaixonados, pronta para personalizar sua experiência.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="media-body p-2 mt-2">
-      <h3 class="heading mb-3">Atendimento Local</h3>
-      <p>Equipe de moradores apaixonados, pronta para personalizar sua experiência.</p>
-    </div>
-  </div>
-</div>
+
+    </div> 
+  </div> 
 </section>
+
+<!-- Fim Serviços Destaques -->
+ 
     
   <!------ Carrousel 1 Passeios ----->
   <section class="ftco-section ftco-destination" id="passeios">
