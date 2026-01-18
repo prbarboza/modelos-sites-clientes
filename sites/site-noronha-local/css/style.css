@@ -10425,12 +10425,13 @@ body {
   color: #4d4d4d;
 }
 
-body.menu-show {
+/*body.menu-show {
   overflow: hidden;
   position: fixed;
   height: 100%;
   width: 100%;
 }
+  /* Links */
 
 a {
   -webkit-transition: .3s all ease;
@@ -14782,6 +14783,23 @@ body {
   .ftco-navbar-light .navbar-nav .nav-item.cta {
     margin-top: 35px;   /* desce o botão */
     margin-bottom: 10px;
+  }
+
+}
+
+body.menu-show {
+  overflow: hidden;       /* trava o scroll */
+  touch-action: none;     /* bloqueia gestos de arrastar no mobile */
+}
+
+@media (max-width: 767px) {
+
+  .hero-wrap p {
+    margin-bottom: 30px;
+  }
+
+  .hero-wrap .hero-cta {
+    margin-top: 10px;
   }
 
 }
