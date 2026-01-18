@@ -1101,19 +1101,20 @@ function sendToWhatsAppBoat(button) {
 <script>
 $(function () {
 
-  $(document).on('click touchstart', function (e) {
+  // FECHAR MENU MOBILE AO CLICAR FORA (SEM BLOQUEAR SCROLL)
+  $(document).on('click', function (e) {
 
     const $navbar = $('#ftco-navbar');
     const $menu = $navbar.find('.navbar-collapse');
     const $toggler = $navbar.find('.navbar-toggler');
 
-    // só no mobile
+    // somente mobile
     if (window.innerWidth > 991) return;
 
-    // se menu não está aberto, ignora
+    // menu fechado? não faz nada
     if (!$menu.hasClass('show')) return;
 
-    // se clicou dentro do menu ou no botão, ignora
+    // clicou dentro do menu ou no botão? ignora
     if (
       $(e.target).closest('.navbar-collapse').length ||
       $(e.target).closest('.navbar-toggler').length
@@ -1121,14 +1122,18 @@ $(function () {
       return;
     }
 
-    // FECHA FORÇADO (FTCO)
+    // FECHA MENU
     $menu.removeClass('show');
-    $toggler.addClass('collapsed').attr('aria-expanded', 'false');
+    $toggler
+      .addClass('collapsed')
+      .attr('aria-expanded', 'false');
+
     $('body').removeClass('menu-show');
   });
 
 });
 </script>
+
 
 
 

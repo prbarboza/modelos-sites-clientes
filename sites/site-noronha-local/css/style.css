@@ -14842,3 +14842,9 @@ body {
   }
 
 }
+
+@media (max-width: 767.98px) {
+  .subheading {
+    font-size: 34px !important;   /* aumenta só no mobile */
+  }
+}
