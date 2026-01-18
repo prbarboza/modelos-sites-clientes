@@ -14848,3 +14848,28 @@ body {
     font-size: 34px !important;   /* aumenta só no mobile */
   }
 }
+
+/* ===== LIBERA SCROLL SOBRE IMAGENS (FTCO) ===== */
+@media (max-width: 991px) {
+
+  img,
+  .img,
+  .image,
+  .bg-image,
+  .block-20,
+  .blog-img,
+  .hero-wrap,
+  .hero-wrap * {
+    pointer-events: none;
+  }
+
+  /* Reativa clique apenas onde precisa */
+  a,
+  button,
+  .hero-cta,
+  .navbar,
+  .navbar * {
+    pointer-events: auto;
+  }
+
+}
