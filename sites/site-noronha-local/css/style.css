@@ -14787,10 +14787,16 @@ body {
 
 }
 
-body.menu-show {
-  overflow: hidden;       /* trava o scroll */
-  touch-action: none;     /* bloqueia gestos de arrastar no mobile */
+/* Corrige scroll no mobile sem quebrar o menu */
+@media (max-width: 991px) {
+
+  body.menu-show {
+    overflow: hidden;      /* mantém o menu travado */
+    touch-action: pan-y;   /* permite rolagem vertical */
+  }
+
 }
+
 
 @media (max-width: 767px) {
 
