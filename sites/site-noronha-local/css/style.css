@@ -14837,3 +14837,20 @@ body {
 
 }
 
+/* ===== LOGO DO RODAPÉ NO MOBILE ===== */
+@media (max-width: 767px) {
+
+  .ftco-footer .footer-logo-wrapper {
+    text-align: center;        /* centraliza */
+    margin-bottom: 20px;       /* espaço abaixo */
+  }
+
+  .ftco-footer .footer-logo {
+    max-width: 140px;          /* diminui o tamanho */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;            /* garante centralização */
+    display: inline-block;
+  }
+
+}
