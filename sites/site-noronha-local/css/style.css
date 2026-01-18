@@ -14158,7 +14158,7 @@ ou, em último caso:
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;   /* aumenta espaço acima do botão */
+    margin-top: 80px !important;;   /* aumenta espaço acima do botão */
     margin-left: auto;  /* centraliza horizontalmente */
     margin-right: auto; /* centraliza horizontalmente */
     padding: 12px 24px;
