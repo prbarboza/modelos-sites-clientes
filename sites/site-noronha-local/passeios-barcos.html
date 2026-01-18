@@ -26,39 +26,67 @@
   </head>
   <body>
     
-  <!-- Nav Inicio -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <!----- Inicio Nav ------>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+
+
   <div class="container">
 
     <a class="navbar-brand" href="index.html">
       <img src="images/logo.png" alt="Noronha Local" class="logo-custom">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="oi oi-menu"></span> Menu
+    <!-- Botão mobile padrão -->
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#ftco-nav"
+            aria-controls="ftco-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-
-        <li class="nav-item"><a href="index.html#sobre-nos" class="nav-link">A Nossa Essência</a></li>
-
-        <li class="nav-item dropdown">
-          <a href="index.html#passeios" class="nav-link dropdown-toggle">Nossos Passeios</a>
-          <ul class="dropdown-menu">
-            <li><a href="passeios-barcos.html" class="dropdown-item">Passeios de Barco</a></li>
-            <li><a href="#" class="dropdown-item">Trilhas Guiadas</a></li>
-            <li><a href="#" class="dropdown-item">Mergulhos</a></li>
-          </ul>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
         </li>
 
-        <li class="nav-item"><a href="index.html#blog" class="nav-link">Voz da Ilha</a></li>
+        <li class="nav-item">
+          <a href="index.html#sobre-nos" class="nav-link">A Nossa Essência</a>
+        </li>
 
-        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+        <!-- DROPDOWN -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle"
+             role="button"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            Nossos Passeios
+          </a>
+          <div class="dropdown-menu">
+            <a href="passeios-barcos.html" class="dropdown-item">Passeios de Barco</a>
+            <a href="#" class="dropdown-item">Trilhas Guiadas</a>
+            <a href="#" class="dropdown-item">Mergulhos</a>
+          </div>
+        </li>
 
-        <li class="nav-item cta"><a href="https://wa.me/558196514045" target="_blank" class="nav-link"><span><i class="icon-whatsapp"></i> Fale com um Local</span></a></li>
+        <li class="nav-item">
+          <a href="index.html#blog" class="nav-link">Voz da Ilha</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">Contato</a>
+        </li>
+
+        <li class="nav-item cta">
+          <a href="https://wa.me/558196514045" target="_blank" class="nav-link">
+            <span><i class="icon-whatsapp"></i> Fale com um Local</span>
+          </a>
+        </li>
 
       </ul>
     </div>
@@ -66,6 +94,7 @@
   </div>
 </nav>
 <!-- END nav -->
+
     
     <div class="hero-wrap hero-passeios" 
      style="background-image: url('images/passeios/banner-home-passeios1.webp');">
