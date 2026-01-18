@@ -13,46 +13,45 @@
   }
 
   /* ===========================
-   FULL HEIGHT (HERO) – FINAL
-   HOME SIM / PASSEIOS NÃO
-=========================== */
-function fullHeight() {
-  function setHeight() {
+     FULL HEIGHT (HERO)
+     HOME SIM / PASSEIOS NÃO
+     DESKTOP APENAS
+  ============================ */
+  function fullHeight() {
+    function setHeight() {
 
-    if (window.innerWidth <= 768) return;
+      if (window.innerWidth <= 768) return;
 
-    $('.js-fullheight').each(function () {
+      $('.js-fullheight').each(function () {
 
-      // IGNORA QUALQUER HERO QUE TENHA .hero-passeios DENTRO OU NELE
-      if ($(this).hasClass('hero-passeios') || $(this).find('.hero-passeios').length) {
-        return;
-      }
+        // ignora banner de passeios
+        if ($(this).hasClass('hero-passeios') || $(this).find('.hero-passeios').length) {
+          return;
+        }
 
-      $(this).css('height', $(window).height());
-    });
+        $(this).css('height', $(window).height());
+      });
+    }
+
+    setHeight();
+    $(window).on('resize', setHeight);
   }
-
-  setHeight();
-  $(window).on('resize', setHeight);
-}
-
-fullHeight();
-
+  fullHeight();
 
   /* ===========================
-     LOADER (CRÍTICO)
+     LOADER
   ============================ */
-  function removeLoader() {
-    if ($('#ftco-loader').length > 0) {
-      $('#ftco-loader').removeClass('show').fadeOut('slow', function () {
+  $(window).on('load', function () {
+    var loader = $('#ftco-loader');
+    if (loader.length) {
+      loader.removeClass('show').fadeOut('slow', function () {
         $(this).remove();
       });
     }
-  }
-  $(window).on('load', removeLoader);
+  });
 
   /* ===========================
-     STELLAR (seguro)
+     STELLAR (opcional / seguro)
   ============================ */
   if ($.fn.stellar) {
     $(window).stellar({
@@ -70,135 +69,135 @@ fullHeight();
   }
 
   /* ===========================
-     CAROUSELS (OWL)
+     OWL CAROUSELS
   ============================ */
   function initCarousels() {
 
-    if ($.fn.owlCarousel) {
+    if (!$.fn.owlCarousel) return;
 
-      $('.destination-slider').owlCarousel({
-        autoplay: true,
-        loop: true,
-        margin: 20,
-        nav: true,
-        dots: true,
-        smartSpeed: 600,
-        mouseDrag: true,
-        touchDrag: true,
-        pullDrag: true,
-        navText: [
-          '<span class="ion-ios-arrow-back"></span>',
-          '<span class="ion-ios-arrow-forward"></span>'
-        ],
-        responsive: {
-          0: { items: 1 },
-          576: { items: 2 },
-          992: { items: 3 },
-          1200: { items: 4 }
-        }
-      });
-
-      $('.carousel-testimony').owlCarousel({
-        autoplay: true,
-        loop: true,
-        items: 1,
-        nav: true,
-        mouseDrag: true,
-        touchDrag: true,
-        pullDrag: true,
-        navText: [
-          '<span class="ion-ios-arrow-back">',
-          '<span class="ion-ios-arrow-forward">'
-        ]
-      });
-
-      $('.single-slider').owlCarousel({
-        autoplay: true,
-        loop: true,
-        items: 1,
-        nav: true,
-        dots: true
-      });
-
-      var boatSlider = $('.boat-slider').owlCarousel({
-        items: 1,
-        loop: false,
-        autoplay: false,
-        dots: false,
-        nav: false,
-        smartSpeed: 500,
-        mouseDrag: true,
-        touchDrag: true
-      });
-
-      var totalBoats = $('.boat-slider .boat-card').length;
-
-      function updateBoatCounter(index) {
-        var current = index + 1;
-        $('#boat-counter, #boat-counter-bottom')
-          .text('Barco ' + current + ' de ' + totalBoats);
+    /* Destinos */
+    $('.destination-slider').owlCarousel({
+      autoplay: true,
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: true,
+      smartSpeed: 600,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      navText: [
+        '<span class="ion-ios-arrow-back"></span>',
+        '<span class="ion-ios-arrow-forward"></span>'
+      ],
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        992: { items: 3 },
+        1200: { items: 4 }
       }
+    });
 
-      boatSlider.on('initialized.owl.carousel changed.owl.carousel', function (e) {
-        updateBoatCounter(e.item.index);
-      });
+    /* Depoimentos */
+    $('.carousel-testimony').owlCarousel({
+      autoplay: true,
+      loop: true,
+      items: 1,
+      nav: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      autoHeight: false,
+      navText: [
+        '<span class="ion-ios-arrow-back"></span>',
+        '<span class="ion-ios-arrow-forward"></span>'
+      ]
+    });
 
-      $('.boat-prev').on('click', function () {
-        boatSlider.trigger('prev.owl.carousel');
-      });
+    /* Slider simples */
+    $('.single-slider').owlCarousel({
+      autoplay: true,
+      loop: true,
+      items: 1,
+      nav: true,
+      dots: true
+    });
 
-      $('.boat-next').on('click', function () {
-        boatSlider.trigger('next.owl.carousel');
-      });
+    /* ===========================
+       BOAT SLIDER (CORRIGIDO)
+       SEM autoHeight
+       SEM touch-action
+    ============================ */
+    var boatSlider = $('.boat-slider').owlCarousel({
+      items: 1,
+      loop: false,
+      autoplay: false,
+      dots: false,
+      nav: false,
+      smartSpeed: 500,
+      autoHeight: false,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true
+    });
 
+    var totalBoats = $('.boat-slider .boat-card').length;
+
+    function updateBoatCounter(index) {
+      $('#boat-counter, #boat-counter-bottom')
+        .text('Barco ' + (index + 1) + ' de ' + totalBoats);
     }
+
+    boatSlider.on('initialized.owl.carousel changed.owl.carousel', function (e) {
+      if (e.item) {
+        updateBoatCounter(e.item.index);
+      }
+    });
+
+    $('.boat-prev').on('click', function () {
+      boatSlider.trigger('prev.owl.carousel');
+    });
+
+    $('.boat-next').on('click', function () {
+      boatSlider.trigger('next.owl.carousel');
+    });
+
   }
   initCarousels();
 
- /* ===========================
-   ONE PAGE SCROLL (âncoras) – SIMPLES
-=========================== */
-$("#ftco-nav a[href^='#']").on('click', function (e) {
-  var target = $(this.hash);
-
-  if (target.length) {
-    e.preventDefault();
-
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, 700);
-  }
-});
-
-/* ===========================
-   BOTÃO VOLTAR AO TOPO – SIMPLES
-=========================== */
-$(function () {
-
-  var $btn = $('#backToTop');
-
-  if (!$btn.length) {
-    console.warn('Botão #backToTop não encontrado');
-    return;
-  }
-
-  // Mostrar / esconder
-  $(window).on('scroll', function () {
-    if ($(window).scrollTop() > 300) {
-      $btn.fadeIn();
-    } else {
-      $btn.fadeOut();
+  /* ===========================
+     ONE PAGE SCROLL (âncoras)
+  ============================ */
+  $("#ftco-nav a[href^='#']").on('click', function (e) {
+    var target = $(this.hash);
+    if (target.length) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 700);
     }
   });
 
-  // Voltar ao topo
-  $btn.on('click', function () {
-    $('html, body').stop().animate({ scrollTop: 0 }, 600);
+  /* ===========================
+     BOTÃO VOLTAR AO TOPO
+  ============================ */
+  $(function () {
+
+    var $btn = $('#backToTop');
+    if (!$btn.length) return;
+
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() > 300) {
+        $btn.fadeIn();
+      } else {
+        $btn.fadeOut();
+      }
+    });
+
+    $btn.on('click', function () {
+      $('html, body').stop().animate({ scrollTop: 0 }, 600);
+    });
+
   });
-
-});
-
-
-  
 
 })(jQuery);

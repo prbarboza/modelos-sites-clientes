@@ -14864,18 +14864,6 @@ body {
 }
 
 
-/* PERMITE ROLAR A PÁGINA SOBRE OS SLIDERS NO MOBILE */
-@media (max-width: 991px) {
-
-  .destination-slider,
-  .carousel-testimony,
-  .boat-slider {
-    touch-action: pan-y;
-  }
-
-}
-
-
 /* ===== LOGO DO RODAPÉ NO MOBILE ===== */
 @media (max-width: 767px) {
 
