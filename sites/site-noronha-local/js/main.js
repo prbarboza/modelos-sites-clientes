@@ -279,13 +279,6 @@ $('.boat-next').off('click').on('click', function() {
   boatSlider.on('changed.owl.carousel', function (e) {
     updateBoatCounter(e.item.index);
   });
-
-  const navbarToggler = document.querySelector('.navbar-toggler');
-const body = document.body;
-
-navbarToggler.addEventListener('click', () => {
-  body.classList.toggle('menu-show');
-});
-
+  
 
 })(jQuery);
