@@ -15,7 +15,7 @@ Registro = NORONHALOCAL.COM.BR
 BARRA TOPO #4B9391
 AMARELO #FDE02F
 AZUL #0083B8
-
+Azul petroleo #0C2B36
 
 
 
@@ -321,5 +321,10 @@ CONTROLA A ALTURA DOS BANNERS
   }
 
 }
+
+@media (max-width: 991.98px) {
+  .ftco-navbar-light:not(.scrolled) {
+    background: #000000 !important; /* cor no topo no mobile */
+  }
 
 ==================================================================================
