@@ -14794,10 +14794,19 @@ body.menu-show {
 
 @media (max-width: 767px) {
 
-  .hero-wrap .hero-cta {
-    display: inline-block;
-    margin-top: 35px;
+  .hero-wrap .slider-text {
+    align-items: flex-start !important;
+    padding-top: 120px;
   }
 
 }
+
+@media (max-width: 767px) {
+
+  .hero-wrap .hero-cta {
+    transform: translateY(30px);
+  }
+
+}
+
 
