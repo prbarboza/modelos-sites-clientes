@@ -14994,31 +14994,29 @@ body {
 }
 
 /* ===============================
-   BOAT CARDS – MOBILE
+   BOAT CARD – MOBILE (IMAGEM INTEIRA / MINIATURA)
 =============================== */
 @media (max-width: 767.98px) {
 
-  /* Card inteiro */
-  .boat-card .hotel-single {
-    border-radius: 12px;
-    overflow: hidden;
+  /* Remove qualquer layout forçado */
+  .boat-image-wrapper {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
-    .boat-image-wrapper {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #000; /* fundo neutro para barras */
-  }
-
+  /* A IMAGEM MANDA NO TAMANHO */
   .boat-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;   /* MOSTRA A IMAGEM TODA */
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: initial !important;
+    transform: none !important;
     display: block;
   }
 
 }
+
 
 
