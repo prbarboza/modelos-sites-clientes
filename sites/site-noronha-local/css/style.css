@@ -14993,6 +14993,11 @@ body {
   margin-bottom: 20px;
 }
 
+.card img {
+  max-height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
 
 
 

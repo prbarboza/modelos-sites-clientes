@@ -112,33 +112,24 @@ fullHeight();
         ]
       });
 
+      $('.single-slider').owlCarousel({
+        autoplay: true,
+        loop: true,
+        items: 1,
+        nav: true,
+        dots: true
+      });
+
       var boatSlider = $('.boat-slider').owlCarousel({
-  items: 1,
-  loop: false,
-  autoplay: false,
-  dots: false,
-  nav: false,
-  smartSpeed: 500,
-
-  autoHeight: false,   // 🔴 ISSO É O QUE RESOLVE
-  autoWidth: false,
-
-  mouseDrag: true,
-  touchDrag: true,
-  pullDrag: true,
-
-  responsive: {
-    0: {
-      items: 1,
-      autoHeight: false
-    },
-    768: {
-      items: 1,
-      autoHeight: false
-    }
-  }
-});
-
+        items: 1,
+        loop: false,
+        autoplay: false,
+        dots: false,
+        nav: false,
+        smartSpeed: 500,
+        mouseDrag: true,
+        touchDrag: true
+      });
 
       var totalBoats = $('.boat-slider .boat-card').length;
 
