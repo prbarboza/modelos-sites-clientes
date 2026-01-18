@@ -13,20 +13,31 @@
   }
 
   /* ===========================
-     FULL HEIGHT (HERO)
-  ============================ */
-  function fullHeight() {
-    function setHeight() {
-      if (window.innerWidth > 768) {
-        $('.js-fullheight').css('height', $(window).height());
-      } else {
-        $('.js-fullheight').css('height', 'auto');
+   FULL HEIGHT (HERO) – FINAL
+   HOME SIM / PASSEIOS NÃO
+=========================== */
+function fullHeight() {
+  function setHeight() {
+
+    if (window.innerWidth <= 768) return;
+
+    $('.js-fullheight').each(function () {
+
+      // IGNORA QUALQUER HERO QUE TENHA .hero-passeios DENTRO OU NELE
+      if ($(this).hasClass('hero-passeios') || $(this).find('.hero-passeios').length) {
+        return;
       }
-    }
-    setHeight();
-    $(window).on('resize', setHeight);
+
+      $(this).css('height', $(window).height());
+    });
   }
-  fullHeight();
+
+  setHeight();
+  $(window).on('resize', setHeight);
+}
+
+fullHeight();
+
 
   /* ===========================
      LOADER (CRÍTICO)
@@ -144,37 +155,50 @@
   }
   initCarousels();
 
-  /* ===========================
-     ONE PAGE SCROLL (âncoras)
-  ============================ */
-  $("#ftco-nav a[href^='#']").on('click', function (e) {
-    var target = $(this.hash);
-    if (target.length) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 700);
+ /* ===========================
+   ONE PAGE SCROLL (âncoras) – SIMPLES
+=========================== */
+$("#ftco-nav a[href^='#']").on('click', function (e) {
+  var target = $(this.hash);
+
+  if (target.length) {
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 700);
+  }
+});
+
+/* ===========================
+   BOTÃO VOLTAR AO TOPO – SIMPLES
+=========================== */
+$(function () {
+
+  var $btn = $('#backToTop');
+
+  if (!$btn.length) {
+    console.warn('Botão #backToTop não encontrado');
+    return;
+  }
+
+  // Mostrar / esconder
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 300) {
+      $btn.fadeIn();
+    } else {
+      $btn.fadeOut();
     }
   });
 
-  /* ===========================
-     POPUPS (seguro)
-  ============================ */
-  if ($.fn.magnificPopup) {
-    $('.image-popup').magnificPopup({
-      type: 'image',
-      gallery: { enabled: true }
-    });
-  }
+  // Voltar ao topo
+  $btn.on('click', function () {
+    $('html, body').stop().animate({ scrollTop: 0 }, 600);
+  });
 
-  /* ===========================
-     DATEPICKER (seguro)
-  ============================ */
-  if ($.fn.datepicker) {
-    $('#checkin_date, #checkout_date').datepicker({
-      format: 'm/d/yyyy',
-      autoclose: true
-    });
-  }
+});
+
+
+  
 
 })(jQuery);

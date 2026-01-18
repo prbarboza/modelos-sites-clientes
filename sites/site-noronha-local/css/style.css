@@ -10672,26 +10672,6 @@ h5,
 }
 
 
-.hero-wrap .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: '';
-  opacity: 0;
-  background: #2ebdc4;
-  background: -moz-linear-gradient(-45deg, #2ebdc4 0%, #68e5b2 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #2ebdc4), color-stop(100%, #68e5b2));
-  background: -webkit-linear-gradient(-45deg, #2ebdc4 0%, #68e5b2 100%);
-  background: -o-linear-gradient(-45deg, #2ebdc4 0%, #68e5b2 100%);
-  background: -ms-linear-gradient(-45deg, #2ebdc4 0%, #68e5b2 100%);
-  background: -webkit-linear-gradient(315deg, #2ebdc4 0%, #68e5b2 100%);
-  background: -o-linear-gradient(315deg, #2ebdc4 0%, #68e5b2 100%);
-  background: linear-gradient(135deg, #2ebdc4 0%, #68e5b2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ebdc4', endColorstr='#68e5b2', GradientType=1);
-}
-
 .slider-text {
   color: #fff;
 }
@@ -13360,48 +13340,54 @@ textarea.form-control {
 }
 
 /* 1. O Texto "O MELHOR DE" (Reto e Elegante) */
-.slider-text h1 {
-    font-family: 'Barlow Condensed', sans-serif !important;
-    font-size: 30px !important;
-    font-weight: 700 !important;
-    color: #fff !important;
-    text-transform: uppercase !important;
-    letter-spacing: 4px !important; /* Espaçado para o texto reto */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5) !important; 
-    margin-bottom: 0 !important;
+/* ===============================
+   HERO HOME – TEXTO PRINCIPAL
+   (ex-slider, agora hero fixo)
+=============================== */
+
+/* 1. "O MELHOR DE" */
+.hero-wrap .slider-text h1 {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.35 !important; /* CONTROLA O ESPAÇO ENTRE AS LINHAS */
 }
 
-/* 2. O Texto "Noronha Local" (Proteção da Satisfy) */
-.slider-text h1 span {
-    font-family: 'Satisfy', cursive !important;
-    color: #fde02f !important;
-    font-size: 110px !important;
-    display: block !important;
-    
-    /* SEGURANÇA PARA NÃO QUEBRAR A FONTE CURSIVA: */
-    text-transform: none !important;  /* NUNCA use uppercase aqui */
-    letter-spacing: 0 !important;      /* NUNCA use espaçamento aqui, ou as letras descolam */
-    font-weight: 400 !important;      /* Fontes cursivas não aceitam bem 'bold' */
-    
-    margin-top: -5px !important;
-    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3) !important;
+/* 2. "Noronha Local" */
+.hero-wrap:not(.hero-passeios) .slider-text h1 span {
+  font-family: 'Satisfy', cursive !important;
+  color: #fde02f !important;
+  font-size: 100px !important;
+  display: block !important;
 
-    /* Seu shape original */
-    background-image: url('../images/hero-_ineShape.png') !important;
-    background-repeat: no-repeat !important;
-    background-position: bottom center !important;
-    background-size: 100% 25% !important;
-    padding-bottom: 20px;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 400 !important;
+
+  margin-top: 0 !important;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3) !important;
+
+  background-image: url('../images/hero-_ineShape1.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom center !important;
+  background-size: 100% 25% !important;
+  padding-bottom: 20px;
 }
 
-/* 3. O Texto dos Passeios (Mais legível) */
-.slider-text p {
-    font-size: 24px !important;
-    color: #ffffff !important;
-    font-weight: 100 !important;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important; /* Sombra forte para ler no claro */
-    margin-top: 25px !important;
+/* 3. Texto descritivo */
+.hero-wrap .slider-text p {
+  font-size: 24px !important;
+  color: #ffffff !important;
+  font-weight: 300 !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important;
+  margin-top: 25px !important;
 }
+
 
 /* Estado NORMAL da navbar (topo da página) */
 .ftco-navbar-light:not(.scrolled) {
@@ -13507,7 +13493,7 @@ textarea.form-control {
 
 /* Hover em qualquer estado */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-  color: #0083B8 !important; /* azul no hover, por exemplo */
+  color: #FDE02F !important; /* azul no hover, por exemplo */
 }
 
 
@@ -14463,12 +14449,6 @@ ou, em último caso:
   background-position: center;
 }
 
-/* Overlay */
-.hero-wrap .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-}
 
 /* Conteúdo */
 .hero-content {
@@ -14586,12 +14566,13 @@ body {
   width: 100%;
 }
 
-/* OVERLAY */
+/* OVERLAY – BANNER HOME */
 .hero-wrap .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.35);
 }
+
 
 /* HERO – MOBILE (FTCO OVERRIDE) */
 @media (max-width: 768px) {
@@ -14726,8 +14707,8 @@ body {
 }
 
 .hero-wrap.hero-passeios {
-  height: 600px;             /* altura fixa só para passeios */
-  min-height: 600px;         /* neutraliza min-height global */
+  height: 700px !important;             /* altura fixa só para passeios */
+  min-height: 700px !important;         /* neutraliza min-height global */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -14735,10 +14716,8 @@ body {
   justify-content: center;
 }
 
-
-
 .hero-wrap.hero-passeios h1 {
-  font-size: 30px !important;
+  font-size: px !important;
   font-weight: 600 !important;
   color: #ffffff !important;
   line-height: 1.1 !important;
@@ -14749,10 +14728,40 @@ body {
 .hero-wrap.hero-passeios h1 span {
   font-family: 'Satisfy', cursive !important;
   color: #FDE02F !important;
-  font-size: 60px !important;
+  font-size: 55px !important;
   display: inline-block !important;
   margin-top: 10px !important;
 }
+
+/* ===============================
+   OVERRIDE – HERO PASSEIOS
+=============================== */
+
+.hero-wrap.hero-passeios .slider-text h1 {
+  font-size: 24px !important;
+  font-weight: 600;
+  line-height: 1.45 !important;
+  text-transform: none;
+}
+
+.hero-wrap.hero-passeios .slider-text h1 span {
+  font-size: 60px;
+}
+
+/* ===============================
+   OVERRIDE – HERO HOME
+=============================== */
+
+.hero-wrap:not(.hero-passeios) .slider-text h1 {
+  font-size: 30px !important;
+  text-transform: uppercase;
+}
+
+.hero-wrap:not(.hero-passeios) .slider-text h1 span {
+  font-size: 100px;
+}
+
+
 
 .hero-wrap.hero-passeios p {
   font-size: 18px !important;
@@ -14763,6 +14772,17 @@ body {
   font-family: 'Poppins', sans-serif !important;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5) !important;
 }
+
+/* SHAPE – BANNER PASSEIOS */
+.hero-wrap.hero-passeios .slider-text h1 span {
+  background-image: url('../images/hero-_ineShape1.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom center !important;
+  background-size: 140% 35% !important; /* MAIOR E VISÍVEL */
+  padding-bottom: 22px !important;
+  text-transform: none !important;
+}
+
 
 @media (max-width: 767.98px) {
   .hero-wrap.hero-passeios h1 { font-size: 20px !important; }
@@ -14871,3 +14891,61 @@ body {
   visibility: visible !important;
   transform: none !important;
 }
+
+
+/* FTCO navbar básica */
+.ftco_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* Fundo transparente no topo */
+.ftco_navbar:not(.scrolled) {
+  background: transparent;
+}
+
+/* Fundo branco ao rolar */
+.ftco_navbar.scrolled {
+  background: #fff;
+}
+
+/* Botão voltar ao topo */
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #00c26e;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  }
+
+#backToTop:hover {
+  transform: translateY(-3px);
+  background: #00a85f;
+}
+
+/* AJUSTE DEFINITIVO – ESPAÇO ENTRE AS DUAS LINHAS DO H1 */
+.hero-wrap h1 {
+  line-height: 1.35; /* aumenta o espaço entre "O melhor de" e "Noronha Local" */
+}
+
+.navbar .dropdown-toggle {
+  cursor: pointer;
+}
+
+
+
+
+s
