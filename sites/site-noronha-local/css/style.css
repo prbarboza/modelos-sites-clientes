@@ -14993,42 +14993,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ===============================
-   OWL + BOAT CARD – MOBILE FIX
-   IMAGEM COMO MINIATURA
-=============================== */
-@media (max-width: 767.98px) {
 
-  /* QUEBRA O FLEX DO OWL NO MOBILE */
-  .boat-slider .owl-stage {
-    display: block !important;
-  }
-
-  .boat-slider .owl-item {
-    height: auto !important;
-  }
-
-  /* CARD */
-  .boat-card {
-    height: auto !important;
-  }
-
-  /* WRAPPER DA IMAGEM */
-  .boat-image-wrapper {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  /* IMAGEM – COMPORTAMENTO NATURAL */
-  .boat-image-wrapper img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: unset !important;
-    display: block;
-  }
-
-}
 
 
 
