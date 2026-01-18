@@ -14976,20 +14976,36 @@ body {
 }
 
 /* ===========================
-   MOBILE – TITULOS PASSEIOS
+   MOBILE – TÍTULOS PASSEIOS
+   FORÇA AJUSTE
 =========================== */
 @media (max-width: 767px) {
 
-  /* Subheading (Passeios de Barco) */
-  .ftco-section .subheading {
-    font-size: 18px;
-    line-height: 1.2;
+  /* Subheading */
+  .ftco-destination .subheading {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
   }
 
   /* Título principal */
-  .ftco-section h2 {
-    font-size: 20px;
+  .ftco-destination h2 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+
+}
+
+
+/* ===========================
+   MOBILE – TITULO DO BARCO
+=========================== */
+@media (max-width: 767px) {
+
+  .boat-card h3,
+  .boat-card-fixed h3 {
+    font-size: 18px;
     line-height: 1.3;
+    font-weight: 400; /* normal (padrão) */
   }
 
 }
