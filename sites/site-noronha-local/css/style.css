@@ -14158,7 +14158,7 @@ ou, em último caso:
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px !important;;   /* aumenta espaço acima do botão */
+    margin-top: 50px;   /* aumenta espaço acima do botão */
     margin-left: auto;  /* centraliza horizontalmente */
     margin-right: auto; /* centraliza horizontalmente */
     padding: 12px 24px;
@@ -14166,6 +14166,25 @@ ou, em último caso:
     max-width: 280px;
     line-height: 1.2;
     text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-collapse .navbar-nav {
+    display: flex;
+    flex-direction: column;   /* itens em coluna */
+    height: 100%;             /* ocupa toda a altura */
+  }
+
+  .navbar-collapse .nav-item.cta {
+    margin-top: auto;         /* empurra o botão para o final da lista */
+    text-align: center;       /* centraliza o botão */
+  }
+
+  .navbar-collapse .nav-item.cta .btn {
+    width: 100%;              /* botão ocupa toda a largura no mobile */
+    max-width: 280px;         /* limite opcional */
+    margin: 0 auto;           /* centraliza */
   }
 }
 
