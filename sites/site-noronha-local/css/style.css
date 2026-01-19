@@ -15183,3 +15183,24 @@ body {
   display: block;
 }
 
+/* ===============================
+   MOBILE – IMAGEM DO CARD BARCO
+   CORRIGE IMAGEM ENCOLHIDA
+================================ */
+@media (max-width: 767px) {
+
+  .boat-card-fixed {
+    padding: 20px;
+  }
+
+  .boat-card-fixed .boat-img {
+    margin: -20px -20px 16px -20px; /* 🔑 imagem ocupa largura total */
+  }
+
+  .boat-card-fixed .boat-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
