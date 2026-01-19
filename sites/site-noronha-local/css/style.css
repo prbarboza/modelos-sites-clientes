@@ -15206,3 +15206,21 @@ body {
 
 }
 
+/* ===============================
+   MOBILE – BORDA ARREDONDADA
+   IMAGEM DO CARD BARCO
+================================ */
+@media (max-width: 767px) {
+
+  /* Card continua arredondado */
+  .boat-card-fixed {
+    border-radius: 18px;
+    overflow: hidden; /* 🔑 ESSENCIAL */
+  }
+
+  /* Imagem respeita o recorte */
+  .boat-card-fixed .boat-img {
+    overflow: hidden;
+  }
+
+}
