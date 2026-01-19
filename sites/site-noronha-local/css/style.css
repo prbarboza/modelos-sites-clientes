@@ -15184,43 +15184,33 @@ body {
 }
 
 /* ===============================
-   FIX DEFINITIVO – MOBILE
-   IMAGEM DO CARD BARCO
+   FIX DEFINITIVO – MOBILE & DESKTOP
+   IMAGEM DO CARD BARCO ARREDONDADA
 ================================ */
-@media (max-width: 767px) {
 
+/* Aplica em todas as telas para manter o padrão */
+.boat-img {
+    width: 100% !important;
+    border-radius: 20px !important; /* Ajuste o tamanho do arredondamento aqui */
+    overflow: hidden !important;    /* Isso corta a imagem nos cantos */
+    display: block !important;
+}
+
+.boat-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 20px !important; /* Garante que a imagem também arredonde */
+    object-fit: cover !important;
+}
+
+/* Ajuste específico para Mobile se necessário */
+@media (max-width: 767px) {
   .boat-img {
     height: auto !important;
     max-height: none !important;
     min-height: 0 !important;
-    overflow: visible !important;
+    /* overflow: visible removido daqui para não quebrar o arredondamento */
   }
-
-  .boat-img img {
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: unset !important;
-    display: block !important;
-  }
-
 }
 
-/* ===============================
-   MOBILE – BORDA ARREDONDADA
-   IMAGEM DO CARD BARCO
-================================ */
-@media (max-width: 767px) {
-
-  /* Card continua arredondado */
-  .boat-card-fixed {
-    border-radius: 18px;
-    overflow: hidden; /* 🔑 ESSENCIAL */
-  }
-
-  /* Imagem respeita o recorte */
-  .boat-card-fixed .boat-img {
-    overflow: hidden;
-  }
-
-}
