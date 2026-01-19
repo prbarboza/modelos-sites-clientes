@@ -15184,23 +15184,25 @@ body {
 }
 
 /* ===============================
-   MOBILE – IMAGEM DO CARD BARCO
-   CORRIGE IMAGEM ENCOLHIDA
+   FIX DEFINITIVO – MOBILE
+   IMAGEM DO CARD BARCO
 ================================ */
 @media (max-width: 767px) {
 
-  .boat-card-fixed {
-    padding: 20px;
+  .boat-img {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   }
 
-  .boat-card-fixed .boat-img {
-    margin: -20px -20px 16px -20px; /* 🔑 imagem ocupa largura total */
-  }
-
-  .boat-card-fixed .boat-img img {
-    width: 100%;
-    height: auto;
-    display: block;
+  .boat-img img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: unset !important;
+    display: block !important;
   }
 
 }
+
