@@ -15184,6 +15184,73 @@ body {
 }
 
 /* ===============================
+   FIX DEFINITIVO – MOBILE & DESKTOP
+   IMAGEM DO CARD BARCO ARREDONDADA
+================================ */
+
+/* Aplica em todas as telas para manter o padrão */
+.boat-img {
+    width: 100% !important;
+    border-radius: 20px !important; /* Ajuste o tamanho do arredondamento aqui */
+    overflow: hidden !important;    /* Isso corta a imagem nos cantos */
+    display: block !important;
+}
+
+.boat-img img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border-radius: 20px !important; /* Garante que a imagem também arredonde */
+    object-fit: cover !important;
+}
+
+/* Ajuste específico para Mobile se necessário */
+@media (max-width: 767px) {
+  .boat-img {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    /* overflow: visible removido daqui para não quebrar o arredondamento */
+  }
+}
+
+/* PERMITE ROLAR A PÁGINA SOBRE OS SLIDERS NO MOBILE */
+@media (max-width: 991px) {
+
+  .destination-slider,
+  .destination-slider .owl-stage,
+  .destination-slider .owl-item,
+
+  .carousel-testimony,
+  .carousel-testimony .owl-stage,
+  .carousel-testimony .owl-item,
+
+  .boat-slider,
+  .boat-slider .owl-stage,
+  .boat-slider .owl-item {
+    touch-action: pan-y !important;
+  }
+
+}
+
+ALINHA O EXTO DO BOTÃO DO BLOG
+
+.noronha-blog-card .tag {
+    display: inline-flex;       /* Usa flexbox para alinhamento total */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    text-align: center;         /* Garante o alinhamento do texto */
+    
+    /* Ajustes extras para o visual do botão */
+    padding: 5px 15px;          /* Espaço interno (ajuste conforme necessário) */
+    min-width: 100px;           /* Opcional: define uma largura mínima para o botão */
+    border-radius: 50px;        /* Deixa as pontas do botão redondas */
+    line-height: 1;             /* Remove espaços extras de linha que jogam o texto para baixo */
+}
+
+
+IMPORTANTE
+/* ===============================
    CARDS DE BARCO - QUADRADOS E MAIORES
 ================================ */
 
@@ -15217,4 +15284,3 @@ body {
         margin-right: 0 !important;
     }
 }
-

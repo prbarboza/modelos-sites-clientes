@@ -328,3 +328,55 @@ CONTROLA A ALTURA DOS BANNERS
   }
 
 ==================================================================================
+
+ALINHA O EXTO DO BOTÃO DO BLOG
+
+.noronha-blog-card .tag {
+    display: inline-flex;       /* Usa flexbox para alinhamento total */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    text-align: center;         /* Garante o alinhamento do texto */
+    
+    /* Ajustes extras para o visual do botão */
+    padding: 5px 15px;          /* Espaço interno (ajuste conforme necessário) */
+    min-width: 100px;           /* Opcional: define uma largura mínima para o botão */
+    border-radius: 50px;        /* Deixa as pontas do botão redondas */
+    line-height: 1;             /* Remove espaços extras de linha que jogam o texto para baixo */
+}
+
+
+IMPORTANTE
+/* ===============================
+   CARDS DE BARCO - QUADRADOS E MAIORES
+================================ */
+
+/* 1. Container da imagem: Força o formato quadrado */
+.boat-img {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important; /* Faz ser sempre um quadrado perfeito */
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    margin-bottom: 15px !important; /* Espaço para o título abaixo */
+    padding: 0 !important; /* Remove recuos que deixam a imagem pequena */
+}
+
+/* 2. A imagem dentro do container */
+.boat-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Preenche o quadrado sem distorcer */
+    display: block !important;
+}
+
+/* 3. Se o card tiver um padding que limita a imagem, nós o removemos */
+.boat-card-fixed {
+    padding: 10px !important; /* Ajuste conforme necessário para o card todo */
+}
+
+/* Ajuste Mobile */
+@media (max-width: 767px) {
+    .boat-img {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
