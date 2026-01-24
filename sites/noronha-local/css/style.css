@@ -16862,6 +16862,7 @@ display: none !important;
     position: relative;
     overflow: hidden;
   }
+}
 
   /* ===============================
    EFEITO TRIPADVISOR – HOVER
@@ -16906,6 +16907,127 @@ display: none !important;
   }
 }
 
+/* ===============================
+   SETAS CARROSSEL – ESTILO TRIPADVISOR
+================================ */
 
+/* container das setas */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* não bloqueia swipe */
+}
+
+/* botões */
+.owl-nav button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover (desktop) */
+@media (hover: hover) {
+  .owl-nav button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+}
+
+/* ícone */
+.owl-nav button span {
+  font-size: 26px;
+  line-height: 1;
+  color: #000;
+}
+
+/* posições */
+.owl-nav .owl-prev {
+  margin-left: -12px;
+}
+
+.owl-nav .owl-next {
+  margin-right: -12px;
+}
+
+/* desativada */
+.owl-nav button.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===============================
+   SETAS ESTILO TRIPADVISOR
+================================ */
+
+.interesses-carousel,
+.carrossel-geral {
+  position: relative;
+}
+
+/* container das setas */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+/* botão */
+.owl-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  pointer-events: auto;
+  border: none;
+  position: relative;
+}
+
+/* seta (desenhada em CSS – igual TripAdvisor) */
+.owl-nav button::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.owl-nav .owl-prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* esconder quando não ativa */
+.owl-nav button.disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* === INTERESSES – alinhamento correto TripAdvisor === */
+.interesses-carousel {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 3px;
+}
 
 

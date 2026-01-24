@@ -331,19 +331,17 @@ $('.cta-slider').owlCarousel({
 $(document).ready(function () {
   $('.carrossel-geral').owlCarousel({
     loop: false,
-    margin: 12,
     dots: false,
-    nav: false,
+    nav: true,
+    navText: ['', ''], // setas só no CSS
     responsive: {
       0: {
-        items: 1,
-        autoWidth: true, // Mantém o tamanho real
-        stagePadding: 0   // 🔥 OBRIGATÓRIO
+        items: 1.15,
+        margin: 12,
+        nav: true
       },
       1000: {
         items: 4,
-        autoWidth: false, // Garante que o desktop continue calculando 4 itens
-        stagePadding: 0,
         margin: 20,
         nav: true
       }
@@ -351,25 +349,34 @@ $(document).ready(function () {
   });
 });
 
+
+
+/*==================================
+=======INTERESSES CARROSSEL==========
+=================================*/
+
 $('.interesses-carousel').owlCarousel({
   loop: false,
-  margin: 12,
-  nav: false,
   dots: false,
+  nav: true,
+  navText: ['', ''],
   responsive: {
     0: {
-      items: 1,
-      autoWidth: true, // Isso trava os 265px do seu CSS
-      stagePadding: 0   // 🔥 OBRIGATÓRIO
+      items: 1.15,
+      margin: 12,
+      nav: true
     },
     768: {
       items: 4,
-      stagePadding: 0,
       margin: 20,
-      nav: true
+      nav: false
     }
   }
 });
+
+
+
+
 
 
 
