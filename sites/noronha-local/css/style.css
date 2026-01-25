@@ -10470,7 +10470,7 @@ h5,
 
 
 .ftco-navbar-light .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 
 /* NAV LINKS – ALTURA FIXA + CORES POR ESTADO */
@@ -10493,12 +10493,12 @@ h5,
 
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-  color: #fff;
+  color: #000;
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
   border: none;
-  background: #ffffff;
+  background: #000;
   -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
@@ -10675,12 +10675,12 @@ h5,
 
 
 .slider-text {
-  color: #fff;
+  color: #000;
 }
 
 .slider-text h1 {
   font-size: 60px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
   font-weight: 200;
 }
@@ -13379,13 +13379,13 @@ textarea.form-control {
 
 /* 2. Mantém o menu na direita e com letras brancas */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    color: rgba(255,255,255,0.8) !important;
+    color: #000 !important;
 }
 
 /* 3. Cor amarela APENAS no texto do link (evita o bloco amarelo) */
 .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: #FDE02F !important;
+    color: #000 !important;
     background: transparent !important; /* Garante que não crie bloco de cor */
 }
 
@@ -13415,7 +13415,7 @@ textarea.form-control {
 
 /* Força a cor branca mesmo quando o rato passa por cima (hover) */
 .navbar-brand:hover, .navbar-brand:focus {
-    color: #FDE02F !important; /* Muda para amarelo no hover para dar um efeito legal */
+    color: #000 !important; /* Muda para amarelo no hover para dar um efeito legal */
 }
 
 /* Resolve o problema do menu "sumir" ou piscar no topo */
@@ -13436,7 +13436,7 @@ textarea.form-control {
 
 /* === APENAS VISUAL DO TEXTO DO MENU === */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-  color: #0083B8 !important;      /* Branco mais forte */
+  color: #000 !important;      /* Branco mais forte */
   font-weight: 00;               /* Texto mais encorpado */
   letter-spacing: 0.4px;          /* Melhor leitura */
   font-weight: 500;
@@ -13444,7 +13444,7 @@ textarea.form-control {
 
 /* Cor padrão */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-  color: #FFFFFF !important; /* cor normal */
+  color: #000 !important; /* cor normal */
 }
 
 /* Hover e ativo */
@@ -13455,7 +13455,7 @@ textarea.form-control {
 
 /* Estado NORMAL (barra transparente, fonte branca) */
 .ftco-navbar-light:not(.scrolled) .navbar-nav > .nav-item > .nav-link {
-  color: #ffffff !important; /* fonte branca */
+  color: #fff !important; /* fonte branca */
 }
 
 /* Estado SCROLLED (barra branca, fonte preta) */
@@ -13465,7 +13465,7 @@ textarea.form-control {
 
 /* Hover em qualquer estado */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-  color: #FDE02F !important; /* azul no hover, por exemplo */
+  color: #000!important; /* azul no hover, por exemplo */
 }
 
 
@@ -14459,7 +14459,7 @@ ou, em último caso:
   font-weight: 800;
   font-size: 50px; /* desktop */
   line-height: 1.2;
-  color: #ffffff;
+  color: #000;
   margin-bottom: 20px;
 }
 
@@ -14472,7 +14472,7 @@ ou, em último caso:
 .hero-subtitle {
   font-size: 18px;
   font-weight: 400;
-  color: #ffffff;
+  color: #000;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
@@ -14514,13 +14514,13 @@ ou, em último caso:
 
 /* Estado NORMAL (desktop e mobile) */
 .ftco-navbar-light:not(.scrolled) {
-  background: transparent !important; /* transparente no topo */
+  background: #9FBCC7!important; /* transparente no topo */
   top: 0 !important;                  /* cola no topo */
 }
 
 /* Estado SCROLLED (desktop e mobile) */
 .ftco-navbar-light.scrolled {
-  background: #ffffff !important;     /* cor ao rolar */
+  background: #000 !important;     /* cor ao rolar */
   top: 0 !important;
 }
 
@@ -14611,7 +14611,7 @@ body {
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light:not(.scrolled) {
-    background: #0C2B36 !important; /* cor no topo no mobile */
+    background: #9FBCC7 !important; /* cor no topo no mobile */
   }
 
   .ftco-navbar-light.scrolled {
@@ -16236,4 +16236,104 @@ display: none !important;
     flex-wrap: wrap;
     gap: 10px;
     font-size: 13px !important;
+}
+
+/* ===============================
+   HERO – ESTILO TRIPADVISOR
+================================ */
+
+.ta-hero {
+  padding: 40px 0;
+}
+
+.ta-hero-box {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: #00aa6c;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+/* imagens */
+.ta-hero-images {
+  position: relative;
+}
+
+.ta-hero-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.ta-hero-images img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* conteúdo */
+.ta-hero-content {
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ta-hero-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.ta-hero-content p {
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.ta-hero-btn {
+  align-self: flex-start;
+  background: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .ta-hero-box {
+    grid-template-columns: 1fr;
+  }
+
+  .ta-hero-images {
+    height: 260px;
+  }
+
+  .ta-hero-content {
+    padding: 32px;
+  }
+
+  .ta-hero-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* REMOVE QUALQUER HOVER DO HERO */
+.ta-hero-images img,
+.ta-hero-images img:hover {
+  pointer-events: none;
+  transform: none !important;
+  filter: none !important;
+  opacity: inherit;
+}
+
+/* Ajuste por causa do header fixo */
+.ta-hero {
+  margin-top: 96px; /* altura do menu */
 }

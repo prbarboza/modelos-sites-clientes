@@ -106,39 +106,40 @@
 
 
    <!-- Hero Section -->
-
-    <div class="hero-wrap">
-
-  <div class="overlay"></div>
-
+<section class="ta-hero">
   <div class="container">
-    <div class="row no-gutters slider-text align-items-center justify-content-start">
-      <div class="col-md-9">
+    <div class="ta-hero-box">
 
-        <h1 class="mb-4">
-          O melhor de <br>
-          <span>Noronha Local</span>
+      <!-- IMAGENS -->
+      <div class="ta-hero-images">
+        <img src="images/home/cta-banner/barco1-1600x900.jpg" class="active">
+        <img src="images/home/cta-banner/mergulho-1900x600.jpg">
+        <img src="images/home/cta-banner/trilha-1900x600.jpg">
+        <img src="images/home/cta-banner/comida-1600x900.jpg">
+        <img src="images/home/cta-banner/plana-sub-1600x900.jpg">
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="ta-hero-content">
+        <h1>
+          Encontre experiências inesquecíveis
         </h1>
 
         <p>
-          Passeios de lancha, trilhas guiadas e mergulhos no paraíso.
+          Passeios, trilhas e mergulhos em Fernando de Noronha com quem conhece o destino de verdade.
         </p>
 
-        <a
-          href="https://wa.me/558196514045?text=%2ANovo%20Contato%20-%20Noronha%20Local%2A%0A%0AOl%C3%A1!%20Gostaria%20de%20reservar%20um%20passeio%20em%20Fernando%20de%20Noronha.%20Pode%20me%20ajudar%3F"
-          target="_blank"
-          class="hero-cta"
-        >
-          Reserve com antecedência
+        <a href="#" class="ta-hero-btn">
+          Ver experiências
         </a>
-
       </div>
+
     </div>
   </div>
-
-</div>
+</section>
 
 <!-- Fim Hero Section -->
+
 
 <!-- Serviços Destaques -->
 
@@ -1157,10 +1158,22 @@ function sendToWhatsAppBoat(button) {
 }
 </script>
 
+<script>
+  const taImages = document.querySelectorAll('.ta-hero-images img');
+  let index = 0;
+
+  setInterval(() => {
+    taImages[index].classList.remove('active');
+    index = (index + 1) % taImages.length;
+    taImages[index].classList.add('active');
+  }, 1500);
+</script>
+
 
 
 
 <button id="backToTop" aria-label="Voltar ao topo">↑</button>
+
 
 
 
