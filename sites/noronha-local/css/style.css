@@ -5,6 +5,7 @@
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */
 :root {
+  --banner-blue-strong: #0089c7; /* azul mais intenso */
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -11067,7 +11068,8 @@ h5,
 }
 
 .destination .text h3 {
-  font-size: 18px;
+  font-size: 20px !important;
+  font-weight: 300 !important;
 }
 
 .destination .text h3 a {
@@ -11080,7 +11082,7 @@ h5,
 
 .destination .text .rate i {
   font-size: 10px;
-  color: #f85959;
+  color: #0066FF;
 }
 
 .destination .text .rate span {
@@ -11099,7 +11101,7 @@ h5,
 
 .destination .text .two .price {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 12px;
   color: #2f89fc;
 }
 
@@ -11122,7 +11124,7 @@ h5,
 }
 
 .destination .text .bottom-area span {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
@@ -11858,6 +11860,7 @@ textarea.form-control {
 .heading-section h2 {
   font-size: 28px;
   font-weight: 300;
+  color: #000;
 }
 
 .heading-section h2 strong {
@@ -13305,7 +13308,7 @@ textarea.form-control {
 
 /* 2. "Noronha Local" */
 .hero-wrap:not(.hero-passeios) .slider-text h1 span {
-  font-family: 'Satisfy', cursive !important;
+  font-family: 'Poppins', sans-serif;
   color: #fde02f !important;
   font-size: 100px !important;
   display: block !important;
@@ -13391,7 +13394,7 @@ textarea.form-control {
 
 /* 2. Ajuste do botão CTA para contrastar com o novo fundo */
 .ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link {
-    background: #0083B8 !important; /* Mantemos o amarelo ouro */
+    background: #0066FF !important; /* Mantemos o amarelo ouro */
     border: 1px solid #0083B8 !important;
     color: #0a2b38 !important; /* Texto em azul escuro para ler melhor no amarelo */
     font-weight: 700;
@@ -13399,9 +13402,9 @@ textarea.form-control {
 
 /* Hover real do botão CTA */
 .ftco-navbar-light .navbar-nav > .nav-item.cta > .nav-link:hover {
-    background: #0083B8 !important; /* Amarelo mais escuro */
+    background: #0044CC !important; /* Amarelo mais escuro */
     border-color: #ffffff !important;
-    color: #0a2b38 !important;
+    color: #0044CC !important;
 }
 
 
@@ -13558,7 +13561,7 @@ html {
 
 .nl-services .services.d-block {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   padding: 14px 14px;
   transition: transform .2s ease, box-shadow .2s ease;
@@ -13665,7 +13668,7 @@ html {
 }
 
 .trilha-title {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 44px;
   margin-top: 10px;
   color: #0a2b38;
@@ -13697,7 +13700,7 @@ html {
   background: #f8f9fa;
   padding: 22px;
   border-left: 5px solid #FDE02F;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 15px;
 }
 
@@ -13722,20 +13725,30 @@ html {
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* Container da imagem com bordas arredondadas e trava de transbordo */
+/* === CORRETO | Card com imagem de fundo === */
 .destination-img {
-    display: block;
-    overflow: hidden; /* Garante que a imagem não saia do card no zoom */
-    border-radius: 15px; /* Ajuste conforme o seu design */
-    position: relative;
-    z-index: 1;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 12px !important;
+  overflow: hidden; /* ESSENCIAL */
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 
 /* A imagem em si */
 .destination-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; /* Transição suave */
     will-change: transform; /* Avisa o navegador para usar aceleração de hardware */
 }
@@ -13841,7 +13854,7 @@ html {
 /* Limita texto secundário */
 .destination .listing {
   font-size: 13px;
-  opacity: 0.8;
+  color: #000
 }
 
 /* DESTINATION mais largo para comportar 4 cards */
@@ -14826,7 +14839,7 @@ body {
 
 @media (max-width: 767.98px) {
   .subheading {
-    font-size: 32px !important;   /* aumenta só no mobile */
+    font-size: 26px !important;   /* aumenta só no mobile */
   }
 }
 
@@ -14936,7 +14949,7 @@ body {
 .ftco-section h2 {
   font-size: 30px;
   font-weight: 700;
-  color: #1e2340;
+  color: #000000;
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -14949,7 +14962,7 @@ body {
 
   /* Subheading */
   .ftco-destination .subheading {
-    font-size: 28px !important;
+    font-size: 18px !important;
     line-height: 1.2 !important;
   }
 
@@ -15148,18 +15161,6 @@ body {
     flex-direction: column;
 }
 
-.destination-img {
-    width: 100%;
-    height: 260px; 
-    overflow: hidden;
-    display: block;
-}
-
-.destination-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* 4. TÍTULOS GERAIS */
 .ftco-section h2 {
@@ -15283,7 +15284,7 @@ body {
   width: 100%;
   height: 160px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 12px;
   background: #f0f0f0;
 }
@@ -15331,21 +15332,21 @@ body {
 
 /* O texto cursivo (subtítulo) */
 .carrossel-premium__subheading {
-    font-family: 'Satisfy', cursive !important;
-    font-size: 28px !important;
-    color: #0083b8 !important;
-    display: block !important;
-    text-transform: none !important;
-    /* AUMENTE ESTE VALOR PARA DAR MAIS ESPAÇO */
-    margin-bottom: 15px !important;
-    font-weight: 600 !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0083b8;
+  margin-bottom: 12px;
 }
+
 
 /* O título principal */
 .carrossel-premium__title {
     font-size: 28px !important; /* Voltei para 32px para manter o padrão desktop */
     font-weight: 700 !important;
-    color: #1e2340 !important;
+    color: #000000 !important;
     line-height: 1.2 !important;
     margin-bottom: 20px !important; /* Distância para a linha amarela */
 }
@@ -15360,9 +15361,9 @@ body {
 
 @media (max-width: 767px) {
   .carrossel-premium__subheading {
-  font-size: 28px !important;
+  font-size: 18px !important;
   line-height: 1.2 !important;
-  font-family: 'Satisfy', cursive !important; /* Para garantir a fonte cursiva */
+  font-family: 'Poppins', sans-serif;
   display: block !important;
   color: #0083b8 !important; /* Cor azul padronizada */
     }
@@ -15763,7 +15764,7 @@ display: none !important;
 .trilha-card__body h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #1E2340; /* azul escuro elegante */
+  color: #000000; /* azul escuro elegante */
   margin: 6px 0 8px;
   line-height: 1.2;
 }
@@ -15934,9 +15935,9 @@ display: none !important;
 
 /* O texto cursivo azul (ex: Explore o Paraíso) */
 .subheading {
-    font-family: 'Satisfy', cursive !important;
-    font-size: 28px !important; /* */
-    font-weight: 700 !important; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px !important; /* */
+    font-weight: 600 !important; 
     color: #0083b8 !important;  /* */
     display: block !important;
     text-transform: none !important;
@@ -15945,9 +15946,9 @@ display: none !important;
 
 /* O título principal (ex: Escolha sua embarcação) */
 .heading-section h2 {
-    font-size: 28px !important; /* */
-    font-weight: 700 !important; /* */
-    color: #1e2340 !important;
+    font-size: 26px !important; /* */
+    font-weight: 600 !important; /* */
+    color: #000000 !important;
     text-transform: none !important;
     margin-bottom: 10px !important;
 }
@@ -15987,7 +15988,7 @@ display: none !important;
 
 #boat-counter {
     font-weight: 600 !important;
-    color: #1e2340 !important;
+    color: #000000 !important;
     font-size: 14px !important;
 }
 
@@ -16166,7 +16167,7 @@ display: none !important;
     height: 45px;
     border-radius: 50%;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
-    color: #1e2340 !important; /* Cor escura para o ícone */
+    color: #000000 !important; /* Cor escura para o ícone */
     margin: 0 -20px; /* Faz a seta ficar um pouco para fora do card */
     transition: 0.3s;
 }
@@ -16246,16 +16247,20 @@ display: none !important;
 .ta-hero-box {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  background: #0083B8 !important;
-  border-radius: 12px;
+  background: #0066FF !important; /* azul mais intenso */
+  border-radius: 8px;
   overflow: hidden;
   min-height: 420px;
+  color: #fff; /* garante contraste */
 }
+
 
 /* imagens */
 .ta-hero-images {
   position: relative;
-}
+  background-size: cover;
+  background-position: center;
+  }
 
 .ta-hero-images img {
   position: absolute;
@@ -16312,7 +16317,7 @@ display: none !important;
 
   .ta-hero-box {
     grid-template-columns: 1fr;
-    border-radius: 12px;
+    border-radius: 8px;
   }
 
   .ta-hero-images {
@@ -16344,7 +16349,7 @@ display: none !important;
   }
 
   .ta-image-card {
-    border-radius: 12px;
+    border-radius: 8px;
   }
 }
 
@@ -16398,7 +16403,7 @@ display: none !important;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   background: #00aa6c;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   min-height: 380px;
 }
@@ -16448,7 +16453,7 @@ display: none !important;
 
 .sidebar-box {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 24px;
   box-shadow: 0 8px 24px rgba(0,0,0,.06);
   margin-bottom: 24px;
@@ -16501,7 +16506,7 @@ display: none !important;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .ta-gallery-main {
@@ -16810,7 +16815,7 @@ display: none !important;
   /* DROPDOWN DENTRO DO MENU */
   .navbar-nav .dropdown-menu {
     background: #f9f9f9;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 8px 16px;
     padding: 8px 0;
     box-shadow: none;
@@ -16859,4 +16864,59 @@ display: none !important;
   }
 }
 
+/* === ALTERAÇÃO | border-radius 12px nos cards de destino === */
+.destination {
+  border-radius: 8px;
+  overflow: hidden; /* ESSENCIAL para recortar a imagem */
+}
 
+/* === ALTERAÇÃO | estrelas azuis === */
+.destination .rate i {
+  color: #0066FF;
+}
+
+/* === ALTERAÇÃO | botão verde === */
+.btn-verde {
+  background: #28a745;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn-verde:hover {
+  background: #218838;
+  color: #fff;
+}
+
+/* === ALTERAÇÃO | menos espaço entre os cards === */
+#experiencias .row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+#experiencias .col-sm,
+#experiencias .col-md-6,
+#experiencias .col-lg {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* === AJUSTE | títulos dos cards em uma linha === */
+.destination .text h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 992px) {
+  .ta-hero .container {
+    max-width: 1350px; /* ou 1240px */
+  }
+}
+
+@media (min-width: 1400px) {
+  .ta-hero .container {
+    max-width: 1350px;
+  }
+}
