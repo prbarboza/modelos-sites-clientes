@@ -16324,24 +16324,18 @@ display: none !important;
     height: 260px;
   }
 
-  .ta-hero-content {
-    padding: 32px;
-    text-align: center !important;
-
+   .ta-hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center !important;
+    align-items: center;
+    text-align: center;
   }
 
-  .ta-hero-content h1 {
-    font-size: 36px;
-    text-align: center !important;
-  }
-
+  .ta-hero-content h1,
   .ta-hero-content p {
-    font-size: 16px;
-    margin-top: 24px;
-    margin-bottom: 28px;
+    max-width: 280px;   /* 🔥 ESSENCIAL */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ta-hero-btn {
