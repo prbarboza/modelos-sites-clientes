@@ -16472,10 +16472,7 @@ display: none !important;
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .ta-hero-box {
-    grid-template-columns: 1fr;
-  }
-
+ 
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -16483,15 +16480,6 @@ display: none !important;
   .service-sidebar {
     position: static;
   }
-}
-
-.ta-hero-images {
-  position: relative;
-  min-height: 380px; /* garante altura real */
-}
-
-.ta-hero-box {
-  min-height: 380px;
 }
 
 .service-page {
@@ -16714,31 +16702,38 @@ display: none !important;
 }
 
 /* ===============================
-   HERO HOME – AJUSTE MOBILE
+   HERO HOME – MOBILE (FINAL)
 ================================ */
 @media (max-width: 768px) {
 
-  /* deixa o hero ocupar a tela inteira */
-  .ta-hero > .container {
-    padding-left: 0;
-    padding-right: 0;
+  .ta-hero-box {
+    grid-template-columns: 1fr;
   }
 
-  /* controla o respiro interno (não encosta nos cantos) */
+  .ta-hero-images {
+    height: 260px;
+  }
+
   .ta-hero-content {
-    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
+
+    padding: 32px 20px; /* 🔥 ISSO impede colar nas laterais */
   }
 
-  /* garante alinhamento do texto */
   .ta-hero-content h1,
   .ta-hero-content p {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* posição do botão */
   .ta-hero-btn {
-    margin-top: 8px;
+    margin-top: -5px !important;
   }
 
 }
