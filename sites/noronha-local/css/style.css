@@ -16345,7 +16345,7 @@ display: none !important;
   }
 
   .ta-hero-btn {
-    margin-top: 20px !important;
+    margin-top: 5px !important;
   }
 
   .ta-image-card {
@@ -16711,4 +16711,18 @@ display: none !important;
   font-size: 15px;
   line-height: 1.4;
   color: #666;
+}
+
+@media (max-width: 768px) {
+
+  .ta-hero > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ta-hero-content {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
 }
