@@ -139,6 +139,53 @@
     <!-- COLUNA PRINCIPAL -->
     <div class="service-main">
 
+    <!-- MINI NAVEGAÇÃO DE PASSEIOS (MOBILE) -->
+<div class="mobile-passeios-nav">
+
+  <!-- SETA ESQUERDA -->
+  <button class="mp-arrow mp-left" type="button" aria-label="Anterior">
+    &#8249;
+  </button>
+
+  <!-- TRACK -->
+  <div class="mobile-passeios-track">
+
+    <a href="baia-do-sancho.html" class="mobile-passeio-card active">
+      <img src="images/home/sancho-carrossel1.jpg" alt="Baía do Sancho">
+      <span>Sancho</span>
+    </a>
+
+    <a href="trilha-tour.html" class="mobile-passeio-card">
+      <img src="images/home/trilha-carrossel1.jpg" alt="Trilha Tour">
+      <span>Trilha</span>
+    </a>
+
+    <a href="mergulho.html" class="mobile-passeio-card">
+      <img src="images/home/mergulho-diurno-carrossel1.jpg" alt="Mergulho">
+      <span>Mergulho</span>
+    </a>
+
+    <a href="entardecer-vip.html" class="mobile-passeio-card">
+      <img src="images/passeios/entardecer-vip-1.jpg" alt="Entardecer VIP">
+      <span>Entardecer</span>
+    </a>
+
+    <a href="plana-sub.html" class="mobile-passeio-card">
+      <img src="images/home/plana-sub-carrossel1.jpg" alt="Plana Sub">
+      <span>Plana Sub</span>
+    </a>
+
+  </div>
+
+  <!-- SETA DIREITA -->
+  <button class="mp-arrow mp-right" type="button" aria-label="Próximo">
+    &#8250;
+  </button>
+
+</div>
+
+
+
       <!-- VISÃO GERAL -->
 <section id="visao-geral" class="service-section">
   <span class="service-eyebrow">Experiência em Fernando de Noronha</span>
@@ -366,6 +413,58 @@
   });
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".mobile-passeios-track");
+  const btnLeft = document.querySelector(".mp-left");
+  const btnRight = document.querySelector(".mp-right");
+
+  if (!track || !btnLeft || !btnRight) {
+    console.warn("Setas ou trilho não encontrados");
+    return;
+  }
+
+  function scrollAmount() {
+    const card = track.querySelector(".mobile-passeio-card");
+    if (!card) return 300;
+
+    const gap = parseInt(getComputedStyle(track).gap) || 12;
+    return card.offsetWidth + gap;
+  }
+
+  btnRight.addEventListener("click", function () {
+    track.scrollBy({
+      left: scrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  btnLeft.addEventListener("click", function () {
+    track.scrollBy({
+      left: -scrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".mp-arrow").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      console.log("CLIQUE NA SETA:", btn.className);
+      const track = document.querySelector(".mobile-passeios-track");
+      if (!track) return;
+      track.scrollLeft += btn.classList.contains("mp-right") ? 300 : -300;
+    }, true); // <-- CAPTURE (importante)
+  });
+});
+
+</script>
 
 </body>
 </html>

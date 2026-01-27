@@ -16389,7 +16389,7 @@ display: none !important;
 ============================== */
 
 .service-page h1 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 8px;
 }
 
@@ -16986,10 +16986,11 @@ html, body {
 }
 
 /* ativo */
-.mobile-passeio-card.active img {
-  outline: 2px solid #0083B8;
-  outline-offset: 2px;
+.mobile-passeio-card.active {
+  box-shadow: 0 0 0 2px #0083B8;
+  border-radius: 10px;
 }
+
 
 /* ===============================
    SETAS (BOTÃO LIMPO E CORRETO)
@@ -16997,6 +16998,10 @@ html, body {
 
 .mp-arrow {
   all: unset; /* 🔥 remove foco, outline, bootstrap, browser */
+  pointer-events: auto;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -17042,12 +17047,6 @@ html, body {
    DESKTOP
 ================================ */
 
-@media (min-width: 992px) {
-  .mobile-passeios-nav {
-    display: none;
-  }
-}
-
 @media (max-width: 767px) {
   .mobile-passeios-nav {
     position: relative;
@@ -17061,7 +17060,8 @@ html, body {
     padding-left: 15px;
     padding-right: 15px;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible; /* 🔑 ISSO RESOLVE */
   }
 }
 
@@ -17078,19 +17078,6 @@ html, body {
   scroll-padding-right: 4px;
 }
 
-.mobile-passeios-nav {
-  display: flex;
-  justify-content: center;
-}
-
-.mobile-passeios-track {
-  max-width: 100%;
-}
-
-.mobile-passeios-track {
-  padding-left: calc((100% - ((100% - 24px) / 3 * 3 + 24px)) / 2);
-}
-
 @media (max-width: 767px) {
   .mobile-passeio-card {
     margin: 0;
@@ -17102,8 +17089,181 @@ html, body {
 }
 
 @media (max-width: 767px) {
-  .service-body {
-    padding-top: 24px; /* 👈 DESCE TUDO que vem depois */
+  .service-hero {
+    margin-bottom: 4px; /* 👈 empurra tudo abaixo */
   }
 }
 
+@media (max-width: 767px) {
+  .service-hero {
+    min-height: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+/* remove qualquer contorno / destaque ativo */
+.mobile-passeio-card.active,
+.mobile-passeio-card.active img {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================
+   DESKTOP — 4 CARDS CENTRALIZADOS
+============================ */
+
+@media (min-width: 992px) {
+
+  .mobile-passeios-nav {
+    overflow: visible;
+  }
+
+  .mobile-passeios-track {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: visible;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* efeito visual que você queria */
+  .mobile-passeio-card {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-passeio-card:hover,
+  .mobile-passeio-card.active {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* remove setas */
+  .mp-arrow {
+    display: none;
+  }
+
+  /* transforma em grid */
+  .mobile-passeios-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  /* garante que cards não usem flex */
+  .mobile-passeio-card {
+    flex: none;
+  }
+
+  /* mostra só os 4 primeiros */
+  .mobile-passeio-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* remove setas */
+  .mp-arrow {
+    display: none;
+  }
+
+  /* transforma em grid */
+  .mobile-passeios-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  /* cards não usam flex */
+  .mobile-passeio-card {
+    flex: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-passeio-card:hover,
+  .mobile-passeio-card.active {
+    opacity: 1;
+  }
+
+  /* mostra só os 4 primeiros */
+  .mobile-passeio-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .mobile-passeios-nav {
+    display: block !important;
+  }
+
+   
+
+  .mobile-passeio-card {
+    flex: none;
+  }
+}
+ 
+@media (min-width: 992px) {
+  .mobile-passeios-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .mp-arrow {
+    display: flex !important;
+  }
+
+  .mobile-passeio-card {
+    flex: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-passeio-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+/* DESKTOP – centralizar cards na largura total */
+@media (min-width: 992px) {
+
+   .mobile-passeios-track {
+    max-width: 900px;     /* controla largura visual */
+    margin: 0 auto;       /* centraliza */
+  }
+}
+
+@media (min-width: 992px) {
+
+  .mobile-passeios-nav {
+    position: relative;
+    width: 100%;
+    padding: 0 44px;
+    overflow: hidden;
+  }
+
+  .mobile-passeios-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .mobile-passeio-card {
+    flex: 0 0 calc((100% - 60px) / 4); /* 4 visíveis */
+  }
+
+  .mp-arrow {
+    display: flex; /* 🔑 setas APARECEM no desktop */
+  }
+}

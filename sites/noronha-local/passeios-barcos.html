@@ -413,21 +413,58 @@
   });
 </script>
 
-<script>
-document.querySelectorAll('.mp-arrow').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const track = btn.parentElement.querySelector('.mobile-passeios-track');
-    const card = track.querySelector('.mobile-passeio-card');
-    const scroll = card.offsetWidth + 12;
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".mobile-passeios-track");
+  const btnLeft = document.querySelector(".mp-left");
+  const btnRight = document.querySelector(".mp-right");
+
+  if (!track || !btnLeft || !btnRight) {
+    console.warn("Setas ou trilho não encontrados");
+    return;
+  }
+
+  function scrollAmount() {
+    const card = track.querySelector(".mobile-passeio-card");
+    if (!card) return 300;
+
+    const gap = parseInt(getComputedStyle(track).gap) || 12;
+    return card.offsetWidth + gap;
+  }
+
+  btnRight.addEventListener("click", function () {
     track.scrollBy({
-      left: btn.classList.contains('mp-right') ? scroll : -scroll,
-      behavior: 'smooth'
+      left: scrollAmount(),
+      behavior: "smooth"
     });
   });
+
+  btnLeft.addEventListener("click", function () {
+    track.scrollBy({
+      left: -scrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
 });
+
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".mp-arrow").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      console.log("CLIQUE NA SETA:", btn.className);
+      const track = document.querySelector(".mobile-passeios-track");
+      if (!track) return;
+      track.scrollLeft += btn.classList.contains("mp-right") ? 300 : -300;
+    }, true); // <-- CAPTURE (importante)
+  });
+});
+
+</script>
 
 </body>
 </html>
