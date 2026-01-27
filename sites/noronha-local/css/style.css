@@ -17453,5 +17453,20 @@ html, body {
   border-radius: 8px !important;
 }
 
+@media (max-width: 991.98px) {
+    /* 1. Adiciona a transição suave no painel do menu */
+    #ftco-nav.collapse {
+        transition: all 0.4s ease-in-out !important;
+        /* Garante que o menu comece fora da tela ou invisível para o efeito funcionar */
+        visibility: hidden;
+        display: block !important;
+        transform: translateX(-100%); 
+    }
 
+    /* 2. Quando o menu estiver aberto (.show), ele volta para a posição original */
+    #ftco-nav.collapse.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
 
