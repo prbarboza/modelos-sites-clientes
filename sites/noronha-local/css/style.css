@@ -16251,7 +16251,7 @@ display: none !important;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   background: #0066FF !important; /* azul mais intenso */
-  border-radius: 8px;
+  border-radius: 8px !important;
   overflow: hidden;
   min-height: 420px;
   color: #fff; /* garante contraste */
@@ -16263,6 +16263,7 @@ display: none !important;
   position: relative;
   background-size: cover;
   background-position: center;
+  border-radius: 8px;
   }
 
 .ta-hero-images img {
@@ -16273,6 +16274,7 @@ display: none !important;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  border-radius: 8px;
 }
 
 .ta-hero-images img.active {
@@ -16777,6 +16779,7 @@ display: none !important;
     min-height: 200px !important;
     max-height: 200px !important;
     overflow: hidden;
+    border-radius: inherit;
   }
 
   /* IMAGEM DENTRO DA CAIXA */
@@ -17437,5 +17440,18 @@ html, body {
   }
 
 }
+
+/* ============================
+   FIX BORDA DO BANNER (HERO)
+============================ */
+.ta-hero-box {
+  border-radius: 8px !important;
+  overflow: hidden; /* corta tudo dentro */
+}
+
+.ta-hero-images {
+  border-radius: 8px !important;
+}
+
 
 
