@@ -17222,7 +17222,7 @@ html, body {
         width: 100% !important;
     }
     #ftco-nav .nav-link {
-        padding: 8px 16px !important;
+        padding: 10px 16px !important;
         color: #333 !important;
         font-size: 15px !important;
         text-align: left !important;
@@ -17303,7 +17303,7 @@ html, body {
         position: fixed !important;
         top: 0 !important;
         right: 0 !important;
-        width: 340px !important;
+        width: 300px !important;
         height: 100vh !important;
         background: #ffffff !important;
         z-index: 999999 !important;
@@ -17366,3 +17366,45 @@ html, body {
     }
 }
 
+@media (max-width: 991.98px) {
+    /* Alvo: O link dentro do item CTA */
+    #ftco-nav .nav-item.cta .nav-link {
+        /* Diminui a largura mexendo no segundo valor (8px) */
+        padding: 10px 20px !important; 
+
+        /* Mude o código hexadecimal (#) para a cor que desejar */
+        background: #007bff !important; /* Cor do fundo (Azul atual) */
+        border: 1px solid #007bff !important; /* Cor da borda */
+        
+        /* Força o botão a não ocupar a largura total do menu se você quiser ele centralizado */
+        display: table !important; 
+        width: auto !important;
+        margin: 5px 25px !important; /* Margem lateral para ele não encostar nas bordas */
+
+        /* 2. O 'auto' nas laterais faz a mágica de centralizar */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        /* 3. Margem superior e inferior para não colar nos outros itens */
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+        
+        /* Ajuste do texto */
+        font-size: 14px !important;
+        border-radius: 30px !important; /* Mantém ele arredondado */
+        text-align: center !important;
+    }
+
+    /* Ajuste do ícone do WhatsApp dentro dele */
+    #ftco-nav .nav-item.cta .nav-link span i {
+        font-size: 18px !important;
+        margin-right: 5px !important;
+        color: #ffffff !important; /* Cor do texto e ícone (Branco atual) */
+    }
+
+        #ftco-nav .nav-item.cta .nav-link:hover {
+        background: #0056b3 !important; /* Cor que aparece ao clicar/passar o mouse */
+        border-color: #004085 !important;
+        color: #fff !important;
+}
+    }
