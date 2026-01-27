@@ -17251,8 +17251,8 @@ html, body {
     .dropdown-item {
         padding: 12px 40px !important; /* Recuo para parecer sub-item */
         font-size: 14px !important;
-        color: #5d5a5a !important;
-        border-bottom: 1px solid #dfd9d9!important;
+        color: #666 !important;
+        border-bottom: 1px solid #f8f8f8!important;
     }
 
     /* Botão fechar (X) */
