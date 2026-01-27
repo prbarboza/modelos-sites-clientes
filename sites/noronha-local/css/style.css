@@ -17251,8 +17251,8 @@ html, body {
     .dropdown-item {
         padding: 12px 40px !important; /* Recuo para parecer sub-item */
         font-size: 14px !important;
-        color: #666 !important;
-        border-bottom: 1px solid #f0f0f0 !important;
+        color: #5d5a5a !important;
+        border-bottom: 1px solid #dfd9d9!important;
     }
 
     /* Botão fechar (X) */
@@ -17262,6 +17262,7 @@ html, body {
         position: fixed !important;
         right: 15px; top: 22px;
         border: none !important;
+        color: #000 !important;
     }
 }
 
@@ -17367,44 +17368,44 @@ html, body {
 }
 
 @media (max-width: 991.98px) {
-    /* Alvo: O link dentro do item CTA */
+    /* 1. O BOTÃO (Link) - Aqui controlamos a caixa azul */
     #ftco-nav .nav-item.cta .nav-link {
-        /* Diminui a largura mexendo no segundo valor (8px) */
         padding: 10px 20px !important; 
-
-        /* Mude o código hexadecimal (#) para a cor que desejar */
-        background: #007bff !important; /* Cor do fundo (Azul atual) */
-        border: 1px solid #007bff !important; /* Cor da borda */
+        background: #007bff !important; 
+        border: 1px solid #007bff !important; 
         
-        /* Força o botão a não ocupar a largura total do menu se você quiser ele centralizado */
-        display: table !important; 
+        display: table !important; /* Melhor para centralizar com margin auto */
         width: auto !important;
-        margin: 5px 25px !important; /* Margem lateral para ele não encostar nas bordas */
-
-        /* 2. O 'auto' nas laterais faz a mágica de centralizar */
+        
+        /* Centralização e posição do botão no menu */
         margin-left: auto !important;
         margin-right: auto !important;
-        
-        /* 3. Margem superior e inferior para não colar nos outros itens */
-        margin-top: 15px !important;
+        margin-top: 15px !important; 
         margin-bottom: 15px !important;
         
-        /* Ajuste do texto */
         font-size: 14px !important;
-        border-radius: 30px !important; /* Mantém ele arredondado */
+        border-radius: 30px !important; 
         text-align: center !important;
-    }
-
-    /* Ajuste do ícone do WhatsApp dentro dele */
-    #ftco-nav .nav-item.cta .nav-link span i {
-        font-size: 18px !important;
-        margin-right: 5px !important;
-        color: #ffffff !important; /* Cor do texto e ícone (Branco atual) */
-    }
-
-        #ftco-nav .nav-item.cta .nav-link:hover {
-        background: #0056b3 !important; /* Cor que aparece ao clicar/passar o mouse */
-        border-color: #004085 !important;
         color: #fff !important;
-}
+        
+        /* REMOVI o transform daqui para o texto não descer junto */
     }
+
+    /* 2. O ÍCONE - Aqui controlamos APENAS o desenho do WhatsApp */
+    #ftco-nav .nav-item.cta .nav-link i {
+        font-size: 20px !important;
+        color: #ffffff !important;
+        margin-right: 8px !important;
+        display: inline-block !important;
+        
+        /* O SEGREDO: Só o ícone desce agora */
+        transform: translateY(3px) !important; 
+        /* Ou use margin-top se preferir, mas o transform é mais preciso */
+    }
+
+    /* 3. EFEITO HOVER */
+    #ftco-nav .nav-item.cta .nav-link:hover {
+        background: #0056b3 !important;
+        border-color: #004085 !important;
+    }
+}
