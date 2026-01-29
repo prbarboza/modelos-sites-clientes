@@ -16825,42 +16825,39 @@ display: none !important;
 
 /* ===== MOBILE MENU ESTILO DESKTOP ===== */
 @media (max-width: 991px) {
-
-  /* CAIXA DO MENU MOBILE */
+  /* Forçamos o menu a ser um bloco fixo que a gente controla */
   .navbar-collapse {
-    background: #fff;
-    margin: 0;
-    border-radius: 16px;
-    padding: 0;
     position: absolute !important;
     top: 100%;
     left: 0;
     right: 0;
+    background: #fff;
+    border-radius: 16px;
     z-index: 999;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);       
-    transition: transform .25s ease, opacity .2s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    
+    /* Estado Fechado: Invisível e deslocado para baixo */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease-in-out;
+    
+    display: block !important; /* Impede o Bootstrap de dar display:none */
+    height: auto !important;   /* Impede o Bootstrap de achatar a altura */
   }
 
-  /* ITENS DO MENU */
-  .navbar-nav .nav-link {
-    color: #222 !important;
-    padding: 12px 20px;
-    text-align: left;
-    font-weight: 600;
+  /* Estado Aberto: Bootstrap adiciona a classe .show */
+  .navbar-collapse.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
-  /* DROPDOWN DENTRO DO MENU */
-  .navbar-nav .dropdown-menu {
-    background: #f9f9f9;
-    border-radius: 8px;
-    margin: 8px 16px;
-    padding: 8px 0;
-    box-shadow: none;
-  }
-
-  .navbar-nav .dropdown-menu a {
-    padding: 10px 16px;
-    font-weight: 500;
+  /* Anulamos a classe de transição do Bootstrap para não dar conflito */
+  .collapsing {
+    display: block !important;
+    height: auto !important;
+    transition: none !important;
   }
 }
 
