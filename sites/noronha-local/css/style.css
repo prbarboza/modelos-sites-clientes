@@ -14589,6 +14589,7 @@ body {
     display: flex !important;
     align-items: center !important;
     padding: 0 !important;
+    margin-top: 0 !important;
   }
 }
 
@@ -16371,7 +16372,7 @@ display: none !important;
 
 /* Ajuste por causa do header fixo */
 .ta-hero {
-  margin-top: 96px; /* altura do menu */
+  margin-top: 70px; /* altura do menu */
 }
 
 .ta-hero-btn {
@@ -16761,6 +16762,10 @@ display: none !important;
     height: 200px;              /* 🔥 altura retangular */
     overflow: hidden;
     border-radius: 12px 12px 0 0;
+  }
+
+  .ta-hero {
+    margin-top: 50px; /* mobile */
   }
 
   .ta-hero-content {
